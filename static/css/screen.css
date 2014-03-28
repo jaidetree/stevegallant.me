@@ -1,0 +1,736 @@
+@import url(/static/fonts/oswald/stylesheet.css);
+@import url(/static/fonts/crimson/stylesheet.css);
+/* line 17, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/_base.scss */
+body {
+  font-family: Crimson, Georgia, 'Times New Roman', serif;
+  background: url(/static/images/home_bg.png);
+}
+
+/* line 1, ../sass/_layout.scss */
+#l-header {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 3, ../sass/_layout.scss */
+#l-header #logo {
+  float: left;
+  width: 40%;
+}
+/* line 7, ../sass/_layout.scss */
+#l-header #navbar {
+  float: right;
+  width: 60%;
+  text-align: right;
+}
+/* line 11, ../sass/_layout.scss */
+#l-header #navbar li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 1.5em;
+}
+/* line 14, ../sass/_layout.scss */
+#l-header #navbar li a {
+  display: block;
+  width: 110px;
+  height: 110px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  line-height: 110px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 26, ../sass/_layout.scss */
+#l-header #navbar li a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 30, ../sass/_layout.scss */
+#l-header #navbar li.work a {
+  background: #00d97d;
+}
+/* line 32, ../sass/_layout.scss */
+#l-header #navbar li.work a:hover {
+  background: #0dff98;
+}
+/* line 36, ../sass/_layout.scss */
+#l-header #navbar li.resume a {
+  background: #7ed800;
+}
+/* line 38, ../sass/_layout.scss */
+#l-header #navbar li.resume a:hover {
+  background: #9aff0c;
+}
+/* line 42, ../sass/_layout.scss */
+#l-header #navbar li.contact a {
+  background: #d8eb00;
+}
+/* line 44, ../sass/_layout.scss */
+#l-header #navbar li.contact a:hover {
+  background: #edff1f;
+}
+
+/* line 51, ../sass/_layout.scss */
+#l-main {
+  margin-top: 2em;
+}
+/* line 53, ../sass/_layout.scss */
+#l-main section {
+  max-height: 0;
+  border-top: 10px solid #0083fd;
+  overflow: hidden;
+  -webkit-transition: max-height 500ms ease-in-out;
+  -moz-transition: max-height 500ms ease-in-out;
+  -ms-transition: max-height 500ms ease-in-out;
+  -o-transition: max-height 500ms ease-in-out;
+  transition: max-height 500ms ease-in-out;
+}
+/* line 62, ../sass/_layout.scss */
+#l-main section.active {
+  max-height: 2000px;
+  -webkit-transition: max-height 500ms ease-in-out;
+  -moz-transition: max-height 500ms ease-in-out;
+  -ms-transition: max-height 500ms ease-in-out;
+  -o-transition: max-height 500ms ease-in-out;
+  transition: max-height 500ms ease-in-out;
+}
+/* line 71, ../sass/_layout.scss */
+#l-main section header h2 {
+  color: #fff;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+/* line 77, ../sass/_layout.scss */
+#l-main section header h3 {
+  color: #fff;
+  font-family: OswaldLight, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+/* line 83, ../sass/_layout.scss */
+#l-main section header h2, #l-main section header h3 {
+  display: inline;
+  font-size: 1.4em;
+}
+/* line 87, ../sass/_layout.scss */
+#l-main section header .inner {
+  position: relative;
+  padding: 0.8em;
+}
+/* line 90, ../sass/_layout.scss */
+#l-main section header .inner:before {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 19px;
+  height: 50px;
+  content: '.';
+  font-size: 0;
+  margin-right: 2px;
+}
+/* line 98, ../sass/_layout.scss */
+#l-main section header .inner:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 11px;
+  content: '.';
+  font-size: 0;
+}
+/* line 109, ../sass/_layout.scss */
+#l-main section header .title {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding-top: 0.3em;
+}
+/* line 115, ../sass/_layout.scss */
+#l-main .content {
+  background: #fff;
+  padding: 2em 1em;
+}
+
+/* line 1, ../sass/_modules.scss */
+#wrapper {
+  width: 90%;
+  margin: 2em auto;
+}
+
+/* line 6, ../sass/_modules.scss */
+section#home:hover {
+  border-top-color: #319cff;
+}
+/* line 9, ../sass/_modules.scss */
+section#home.active:hover {
+  border-top-color: #0083fd;
+}
+/* line 12, ../sass/_modules.scss */
+section#home header {
+  background: #0083fd;
+}
+/* line 15, ../sass/_modules.scss */
+section#home header .inner:before {
+  background: url(/static/images/home_illustration.svg) no-repeat;
+}
+/* line 18, ../sass/_modules.scss */
+section#home header .inner:after {
+  background: url(/static/images/home_header.png) repeat-x;
+}
+/* line 23, ../sass/_modules.scss */
+section#home .video {
+  border: 1px solid #0083fd;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+/* line 27, ../sass/_modules.scss */
+section#home .video .inner {
+  height: 480px;
+  background: #0083fd url(/static/images/play_reel.svg) no-repeat 50% 50%;
+}
+/* line 30, ../sass/_modules.scss */
+section#home .video .inner:hover {
+  background-image: url(/static/images/play_reel_hover.svg);
+}
+
+/* line 36, ../sass/_modules.scss */
+section#work {
+  border-top-color: #00d97d;
+}
+/* line 38, ../sass/_modules.scss */
+section#work:hover {
+  border-top-color: #0dff98;
+}
+/* line 41, ../sass/_modules.scss */
+section#work.active:hover {
+  border-top-color: #00d97d;
+}
+/* line 44, ../sass/_modules.scss */
+section#work header {
+  background: #00d97d;
+}
+/* line 47, ../sass/_modules.scss */
+section#work header .inner:before {
+  background: url(/static/images/work_illustration.svg) no-repeat;
+}
+/* line 50, ../sass/_modules.scss */
+section#work header .inner:after {
+  background: url(/static/images/work_header.png) repeat-x;
+}
+
+/* line 56, ../sass/_modules.scss */
+section#resume {
+  border-top-color: #7ed800;
+}
+/* line 58, ../sass/_modules.scss */
+section#resume:hover {
+  border-top-color: #9aff0c;
+}
+/* line 61, ../sass/_modules.scss */
+section#resume.active:hover {
+  border-top-color: #7ed800;
+}
+/* line 64, ../sass/_modules.scss */
+section#resume header {
+  background: #7ed800;
+}
+/* line 67, ../sass/_modules.scss */
+section#resume header .inner:before {
+  background: url(/static/images/resume_illustration.svg) no-repeat;
+}
+/* line 70, ../sass/_modules.scss */
+section#resume header .inner:after {
+  background: url(/static/images/resume_header.png) repeat-x;
+}
+
+/* line 76, ../sass/_modules.scss */
+section#contact {
+  border-top-color: #d8eb00;
+}
+/* line 78, ../sass/_modules.scss */
+section#contact:hover {
+  border-top-color: #edff1f;
+}
+/* line 81, ../sass/_modules.scss */
+section#contact.active:hover {
+  border-top-color: #d8eb00;
+}
+/* line 84, ../sass/_modules.scss */
+section#contact header {
+  background: #d8eb00;
+}
+/* line 86, ../sass/_modules.scss */
+section#contact header h2, section#contact header h3 {
+  color: #585800;
+}
+/* line 90, ../sass/_modules.scss */
+section#contact header .inner:before {
+  background: url(/static/images/contact_illustration.svg) no-repeat;
+}
+/* line 93, ../sass/_modules.scss */
+section#contact header .inner:after {
+  background: url(/static/images/contact_header.png) repeat-x;
+}
+/* line 98, ../sass/_modules.scss */
+section#contact .contact-view {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 101, ../sass/_modules.scss */
+section#contact .form {
+  float: left;
+  width: 55%;
+}
+/* line 105, ../sass/_modules.scss */
+section#contact .about {
+  float: right;
+  width: 43%;
+  margin-left: 2%;
+}
+
+/* line 112, ../sass/_modules.scss */
+.resume-sections .inner {
+  padding: 2rem 0;
+}
+/* line 115, ../sass/_modules.scss */
+.resume-sections .header {
+  background: url(/static/images/resume_section_bg.png) repeat-x 0 0.3em;
+}
+/* line 117, ../sass/_modules.scss */
+.resume-sections .header .title {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0.3em 0.5em 0.5em;
+  padding-right: 1.8em;
+  border-top: 1px solid #7ed800;
+  background: #fff;
+  color: #7ed800;
+  font-family: 'Oswald';
+  font-size: 2em;
+  text-transform: uppercase;
+}
+/* line 128, ../sass/_modules.scss */
+.resume-sections .header .title:before {
+  position: absolute;
+  right: 0.5rem;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 2.4rem;
+  height: 2rem;
+  content: '.';
+  font-size: 0;
+  z-index: 100;
+}
+/* line 138, ../sass/_modules.scss */
+.resume-sections .header .title:after {
+  position: absolute;
+  top: 0;
+  right: -2.1rem;
+  border: 2.1rem solid transparent;
+  border-top: 3rem solid #fff;
+  height: 1rem;
+  content: '.';
+  font-size: 0;
+}
+/* line 152, ../sass/_modules.scss */
+.resume-sections .jobs .header .title:before {
+  background: url(/static/images/resume_jobs_icon.svg) no-repeat;
+}
+/* line 157, ../sass/_modules.scss */
+.resume-sections .job-list {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 159, ../sass/_modules.scss */
+.resume-sections .job-list h3 {
+  font-family: 'OswaldLight';
+  font-size: 1.5rem;
+}
+/* line 163, ../sass/_modules.scss */
+.resume-sections .job-list p {
+  color: #3a3a3a;
+  line-height: 1.8em;
+}
+/* line 167, ../sass/_modules.scss */
+.resume-sections .job-list .job {
+  position: relative;
+  float: left;
+  width: 33%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-left: 4.5rem;
+}
+/* line 175, ../sass/_modules.scss */
+.resume-sections .job-list .year {
+  position: absolute;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #7ed800;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 4rem;
+}
+/* line 191, ../sass/_modules.scss */
+.resume-sections .education .header .title:before {
+  background: url(/static/images/resume_education_icon.svg) no-repeat;
+}
+/* line 195, ../sass/_modules.scss */
+.resume-sections .education .inner {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+/* line 200, ../sass/_modules.scss */
+.resume-sections .timeline {
+  position: relative;
+  width: 95%;
+  height: 3rem;
+  border-right: 3px solid #7ed800;
+  border-left: 3px solid #7ed800;
+  margin: 0 auto;
+  background: url(/static/images/resume_timeline_bg.png) repeat-x 0 50%;
+}
+/* line 208, ../sass/_modules.scss */
+.resume-sections .timeline .event {
+  position: absolute;
+  margin-top: 1.6rem;
+}
+/* line 211, ../sass/_modules.scss */
+.resume-sections .timeline .event h3 {
+  font-family: 'OswaldLight';
+  text-transform: uppercase;
+}
+/* line 215, ../sass/_modules.scss */
+.resume-sections .timeline .event .year, .resume-sections .timeline .event h3 {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 218, ../sass/_modules.scss */
+.resume-sections .timeline .event .year {
+  font-family: 'Oswald';
+}
+/* line 221, ../sass/_modules.scss */
+.resume-sections .timeline .event .location {
+  margin-top: 0.3rem;
+}
+/* line 224, ../sass/_modules.scss */
+.resume-sections .timeline .event.above {
+  top: -4.7rem;
+}
+/* line 227, ../sass/_modules.scss */
+.resume-sections .timeline .event.below:before {
+  display: block;
+  margin-bottom: 0.3rem;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  font-size: 0;
+  content: '.';
+}
+/* line 235, ../sass/_modules.scss */
+.resume-sections .timeline .event.above:after {
+  display: block;
+  margin-top: 0.3rem;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+  font-size: 0;
+  content: '.';
+}
+/* line 243, ../sass/_modules.scss */
+.resume-sections .timeline .event.below.short:before {
+  height: 2rem;
+}
+/* line 246, ../sass/_modules.scss */
+.resume-sections .timeline .event.above.short:after {
+  height: 2rem;
+}
+/* line 249, ../sass/_modules.scss */
+.resume-sections .timeline .event.long.below:before {
+  height: 6rem;
+  border-color: #777;
+}
+/* line 253, ../sass/_modules.scss */
+.resume-sections .timeline .event.long.above {
+  top: -8.8rem;
+}
+/* line 256, ../sass/_modules.scss */
+.resume-sections .timeline .event.long.above:after {
+  height: 6rem;
+  border-color: #777;
+}
+/* line 264, ../sass/_modules.scss */
+.resume-sections .extra .header .title:before {
+  background: url(/static/images/resume_extra_icon.svg) no-repeat;
+}
+
+/* line 270, ../sass/_modules.scss */
+form.contact {
+  padding: 1px;
+  border: 1px solid #585c00;
+}
+/* line 273, ../sass/_modules.scss */
+form.contact ul {
+  padding: 1em;
+  background: #d8eb00;
+}
+/* line 277, ../sass/_modules.scss */
+form.contact li {
+  position: relative;
+  padding: 1px;
+  margin: 1em 0;
+  border: 1px solid #585c00;
+}
+/* line 282, ../sass/_modules.scss */
+form.contact li:after {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  font-size: 0;
+  content: '.';
+}
+/* line 293, ../sass/_modules.scss */
+form.contact li.name:after {
+  background-image: url(/static/images/contact_icon_name.svg);
+}
+/* line 296, ../sass/_modules.scss */
+form.contact li.email:after {
+  background-image: url(/static/images/contact_icon_email.svg);
+}
+/* line 299, ../sass/_modules.scss */
+form.contact li.message:after {
+  background-image: url(/static/images/contact_icon_message.svg);
+}
+/* line 302, ../sass/_modules.scss */
+form.contact li.cartoon {
+  display: none;
+}
+/* line 305, ../sass/_modules.scss */
+form.contact li.actions {
+  border: none;
+  text-align: right;
+}
+/* line 310, ../sass/_modules.scss */
+form.contact label {
+  display: none;
+}
+/* line 313, ../sass/_modules.scss */
+form.contact input[type="text"], form.contact textarea {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  border-left: 3rem solid #585c00;
+  background: none;
+  color: 000;
+  font-size: 1.3rem;
+  font-family: Oswald;
+}
+/* line 325, ../sass/_modules.scss */
+form.contact input[type="text"]:hover, form.contact textarea:hover {
+  background: #ebff05;
+}
+/* line 328, ../sass/_modules.scss */
+form.contact input[type="text"]:focus, form.contact textarea:focus {
+  background: #c1d200;
+}
+/* line 332, ../sass/_modules.scss */
+form.contact textarea {
+  min-height: 10rem;
+}
+/* line 336, ../sass/_modules.scss */
+form.contact input::-webkit-input-placeholder,
+form.contact textarea::-webkit-input-placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+/* line 340, ../sass/_modules.scss */
+form.contact input::-moz-placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+/* line 344, ../sass/_modules.scss */
+form.contact input::-ms-input-placeholder {
+  color: #000;
+  text-transform: uppercase;
+}
+/* line 348, ../sass/_modules.scss */
+form.contact button[type="submit"] {
+  position: relative;
+  border: 1px solid #585c00;
+  padding: 0.5rem 1rem;
+  padding-left: 4rem;
+  border-radius: 0.4rem;
+  background: none;
+  color: #585c00;
+  font-size: 1.3rem;
+  font-family: Oswald;
+  text-transform: uppercase;
+}
+/* line 359, ../sass/_modules.scss */
+form.contact button[type="submit"]:before {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 3rem;
+  background: #585c00 url(/static/images/contact_icon_send.svg) no-repeat 50% 50%;
+  background-size: 50%;
+  -moz-border-radius-topleft: 0.4rem;
+  -webkit-border-top-left-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  -moz-border-radius-bottomleft: 0.4rem;
+  -webkit-border-bottom-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  font-size: 0;
+  content: '.';
+}
+/* line 371, ../sass/_modules.scss */
+form.contact button[type="submit"]:hover {
+  background: #ebff05;
+}
+/* line 375, ../sass/_modules.scss */
+form.contact .header {
+  padding: 1em;
+  background: #585c00;
+  color: #fff;
+  font-size: 1.2em;
+}
+/* line 380, ../sass/_modules.scss */
+form.contact .header strong {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+/* line 385, ../sass/_modules.scss */
+form.contact .header span {
+  font-family: OswaldLight;
+  text-transform: lowercase;
+}
+
+/* line 392, ../sass/_modules.scss */
+.about h3 {
+  margin-bottom: 0.25em;
+  border-top: 1px solid #585c00;
+  padding-top: 3px;
+  color: #000;
+  font-size: 3em;
+  font-family: Oswald;
+  text-transform: uppercase;
+}
+/* line 401, ../sass/_modules.scss */
+.about p {
+  line-height: 2rem;
+}
