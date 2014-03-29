@@ -734,3 +734,77 @@ form.contact .header span {
 .about p {
   line-height: 2rem;
 }
+
+/* line 405, ../sass/_modules.scss */
+.work-category {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 3rem;
+}
+/* line 408, ../sass/_modules.scss */
+.work-category h2 {
+  margin-bottom: 1rem;
+  color: #00d97d;
+  font-family: Oswald;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+/* line 415, ../sass/_modules.scss */
+.work-category .gallery {
+  float: left;
+  width: 65%;
+}
+/* line 419, ../sass/_modules.scss */
+.work-category .content {
+  float: right;
+  width: 30%;
+  border-top: 1px solid #00d97d;
+}
+/* line 423, ../sass/_modules.scss */
+.work-category .content p {
+  line-height: 1.6rem;
+}
+/* line 427, ../sass/_modules.scss */
+.work-category .works {
+  padding: 3px;
+  border: 3px solid #00d97d;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  border-radius: 10rem;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 433, ../sass/_modules.scss */
+.work-category .work {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid #aaa;
+  background: #ccc;
+}
+/* line 442, ../sass/_modules.scss */
+.work-category .work img {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: #999;
+  line-height: 50%;
+}

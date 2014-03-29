@@ -278,9 +278,7 @@
             </div>
         </script>
         <script type="text/x-template" id="work-template">
-            <li class="work">
-                <img src="<%= model.escape('thumb') %>" alt="<%= model.escape('title') %>">
-            </li>
+            <img src="<%= model.escape('thumb') %>" alt="<%= model.escape('title') %>">
         </script>
         <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
     </body>
