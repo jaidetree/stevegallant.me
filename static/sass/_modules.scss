@@ -1,6 +1,14 @@
+.app-steve-portfolio {
+}
 #wrapper {
-    width: 90%;
-    margin: 2em auto;
+    padding: 10%;
+    background: url(/static/images/home_bg.png);
+    @include transition(all 300ms ease-in-out);
+    @include transform(scale(1.0));
+    &.has-modal {
+        @include transition(all 800ms ease-in-out);
+        @include transform(scale(0.9));
+    }
 }
 section#home {
     &:hover {
@@ -451,5 +459,93 @@ form.contact {
             background: #999;
             line-height: 50%;
         }
+    }
+}
+.modal-view {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 300;
+    @include transition(all 800ms ease-in-out);
+    @include transform(scale(1.4));
+    &.active {
+        @include transition(all 800ms ease-in-out);
+        @include transform(scale(1.0));
+    }
+    .ui {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 4.5rem;
+        box-sizing: border-box;
+        @include clearfix;
+        padding: 1rem;
+        background: $work;
+        nav {
+            float: left;
+            width: 80%;
+        }
+        button {
+            padding: 0.5rem;
+            border: none;
+            background: #fff;
+            background-repeat: no-repeat;
+            background-size: 18%;
+            color: $work;
+            font-size: 1rem;
+            @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
+            &:hover {
+                background-color: rgba(0,0,0,0.4);
+                color: #fff;
+                @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
+            }
+        }
+        .close {
+            float: right;
+        }
+        .next {
+            padding-right: 2rem;
+            background-image: url(/static/images/work_nav_right.svg);
+            background-position: 80% 50%;
+            &:hover {
+                background-position: 90% 50%;
+            }
+        }
+        .prev {
+            padding-left: 2rem;
+            background-image: url(/static/images/work_nav_left.svg);
+            background-position: 0.5rem 50%;
+            &:hover {
+                background-position: 0.2rem 50%;
+            }
+        }
+    }
+    .fill {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .modal {
+        position: absolute;
+        top: 4.5rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: auto;
+    }
+    .modal-body {
+        width: 800px;
+        height: 40rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        @include border-radius(0.5rem);
+        background: #fff;
+        @include box-shadow(rgba(0,0,0,0.5) 0 0 10px 0);
     }
 }

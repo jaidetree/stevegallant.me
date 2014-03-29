@@ -44,8 +44,34 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     },
 
     Templates = {
-        workCategory: document.getElementById('work-category-template').innerHTML,
-        work: document.getElementById('work-template').innerHTML
+        templates: {
+            work: 'work-template',
+            workCategory: 'work-category-template',
+            workModal: 'modal-template',
+            workModalVimeo: 'modal-vimeo-template',
+            workModalImage: 'modal-image-template'
+        },
+
+        _html: {},
+
+        get: function (name) {
+            if (this._html.hasOwnProperty(name)) {
+                return this._html[name];
+            } else {
+                return this.set(name, this.load(this.templates[name]));
+            }
+        },
+
+        load: function (id) {
+            return document.getElementById(id).innerHTML;
+        },
+
+        set: function (name, html) {
+            this._html[name] = html;
+
+            return html;
+        }
+
     };
 
     App.routers.Workspace = Backbone.Router.extend({
@@ -100,7 +126,6 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         playReel: function (e) {
             e.preventDefault();
-            console.log('Play that reel!');
             this.render();
         },
 
@@ -109,10 +134,52 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         }
     });
 
+    App.views.WorkModal = Backbone.View.extend({
+        className: 'modal-view',
+        template: _.template(Templates.get('workModal')),
+        events: {
+            'click button.close': 'close',
+            'click button.next': 'next',
+            'click button.prev': 'prev'
+        },
+
+        initialize: function (options) {
+            Backbone.View.prototype.initialize.apply(this, options);
+            this.modalTemplate = options.modalTemplate;
+            this.render();
+        },
+
+        close: function (e) {
+            this.remove();
+            steveGallant.$el.find('#wrapper').removeClass('has-modal');
+        },
+
+        next: function () {
+
+        },
+
+        prev: function () {
+
+        },
+
+        render: function () {
+            this.$el.html(this.template({
+                model: this.model
+            }));
+            this.$el.find('.modal-content').html(this.modalTemplate({
+                model: this.model
+            }));
+            return this;
+        }
+    });
+
     App.views.WorkThumbnail = Backbone.View.extend({
         tagName: 'li',
         className: 'work',
-        template: _.template(Templates.work),
+        template: _.template(Templates.get('work')),
+        events: {
+            'click': 'showModal'
+        },
 
         initialize: function (options) {
             Backbone.View.prototype.initialize.apply(this, options);
@@ -122,21 +189,23 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         render: function () {
             this.$el.html(this.template({ model: this.model }));
             return this;
+        },
+
+        showModal: function (e) {
+            e.preventDefault();
+            this.trigger('showWork', this.model);
         }
     });
 
     App.views.WorkCategory = Backbone.View.extend({
         tagName: 'li',
         className: 'work-category',
-        template: _.template(Templates.workCategory),
-
-        events: {
-            'click .work': 'showWork'
-        },
+        template: _.template(Templates.get('workCategory')),
 
         initialize: function (options) {
             Backbone.View.prototype.initialize.apply(this, options);
             this.views = {};
+            this.modalView = {};
             this.render();
         },
 
@@ -155,15 +224,33 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             return this;
         },
 
-        showWork: function (e) {
-            e.preventDefault();
+        showModal: function (work) {
             // Load work modal & send it the correct model.
+            var template, self = this;
+
+            if (work.get('workType') === 'vimeo') {
+                template = Templates.get('workModalViemo');
+            }
+            else if (work.get('workType') === 'image') {
+                template = Templates.get('workModalImage');
+            }
+
+            this.modalView = new App.views.WorkModal({
+                model: work,
+                modalTemplate: _.template(template),
+            });
+            steveGallant.$el.append(this.modalView.$el);
+            steveGallant.$el.find('#wrapper').addClass('has-modal');
+            setTimeout(function () {
+                self.modalView.$el.addClass('active');
+            }, 0);
         },
 
         _addView: function (model) {
             var view = new App.views.WorkThumbnail({
                 model: model,
             });
+            view.on('showWork', this.showModal, this);
             this.views[model.cid] = view;
             view.render();
         },
