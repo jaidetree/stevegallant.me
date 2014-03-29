@@ -44,8 +44,8 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     },
 
     Templates = {
-        workCategory: document.getElementById('#work-category-template').innerHTML,
-        work: document.getElementById('#work-template').innerHTML
+        workCategory: document.getElementById('work-category-template').innerHTML,
+        work: document.getElementById('work-template').innerHTML
     };
 
     App.routers.Workspace = Backbone.Router.extend({
@@ -141,13 +141,16 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         render: function () {
+            this.$el.html(this.template({
+                model: this.model
+            }));
             this.$el.find('.works').html('');
             this.collection.each(function (model) {
                 this._removeView(model.cid);
                 this._addView(model);
-                this.$el.find('.works').append(this.template({
-                    model: model
-                }));
+                this.$el.find('.works').append(
+                    this.views[model.cid].render().$el
+                );
             }, this);
             return this;
         },
@@ -195,6 +198,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         _addView: function (model) {
             var view = new App.views.WorkCategory({
+                model: model,
                 collection: new App.models.WorkCollection(this.workCollection.where({ workCategory: model.id })),
             });
             this.views[model.cid] = view;

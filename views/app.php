@@ -44,25 +44,6 @@
                     </header>
                     <div class="content">
                         <ul class="work-categories">
-                            <!-- make this a template -->
-                            <li class="work-category">
-                                <div class="gallery">
-                                    <div class="header">
-                                        <h2>Category Title</h2>
-                                    </div>
-                                    <ul class="works">
-                                        <!-- make this a template -->
-                                        <li class="work">
-                                            <img src="" alt="Title">
-                                        </li>
-                                        <!-- /end template -->
-                                    </ul>
-                                </div>
-                                <div class="content">
-                                    <p>Work Category Description placeholder text</p>
-                                </div>
-                            </li>
-                            <!-- /end template -->
                         </ul>
                     </div>
                 </section>
@@ -227,17 +208,17 @@
             var DataBootstrap = {};
             DataBootstrap.WorkCategories = [{
                 id: 1,
-                label: 'After Effects Animation',
+                title: 'After Effects Animation',
                 text: 'Whatever man, it is just cool stuff okay?'
             },
             {
                 id: 2,
-                label: 'Hand-Made Animation',
+                title: 'Hand-Made Animation',
                 text: 'Yeah, I am so cool for school they would not even let me in the building one day. Seriously, it was really terrifying and it has been a very rough 6 years.'
             },
             {
                 id: 3,
-                label: 'Drawings & Paintings',
+                title: 'Drawings & Paintings',
                 text: 'Sigh.... just too talented I guess...'
             }];
 
@@ -285,8 +266,21 @@
             <img src="<%= model.get('url'); %>" alt="<%= model.escape('title'); %>" class="gallery-image" />
         </script>
         <script type="text/x-template" id="work-category-template">
+            <div class="gallery">
+                <div class="header">
+                    <h2><%= model.escape('title') %></h2>
+                </div>
+                <ul class="works">
+                </ul>
+            </div>
+            <div class="content">
+                <p><%= model.escape('text') %></p>
+            </div>
         </script>
         <script type="text/x-template" id="work-template">
+            <li class="work">
+                <img src="<%= model.escape('thumb') %>" alt="<%= model.escape('title') %>">
+            </li>
         </script>
         <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
     </body>
