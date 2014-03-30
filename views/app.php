@@ -240,7 +240,7 @@
                 text: 'Mmmm cat photo...',
                 workType: 'image',
                 url: 'http://placekitten.com/800/600/',
-                thumb: ''
+                thumb: 'http://placekitten.com/100/100'
             },
             {
                 id: 3,
@@ -248,6 +248,7 @@
                 title: 'Skull Mountain',
                 text: 'Part of Senior Film project at SCAD.',
                 workType: 'image',
+                date: 'Spring 2013',
                 url: 'skull_mountain.jpg',
                 thumb: 'skull_mountain.jpg'
             }];
@@ -264,16 +265,19 @@
                             <button type="button" class="close">&#x2715; Close</button>
                         </div>
                         <div class="modal-body"> 
-                            <div class="modal-content">
-                                <% if (model.get('workType') === 'image') { %>
-                                    <img src="<%= model.get('url') %>" alt="<%= model.escape('title') %>" class="gallery-image" />
-                                <% } else { %>
-                                    <iframe src="<%= model.get('url') %>" width="461" height="259" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                <% } %>
-                            </div>
-                            <div class="info">
-                                <h2 class="title"><%= model.escape('title') %></h2>
-                                <p><%= model.escape('text') %></p>
+                            <div class="inner">
+                                <div class="modal-content">
+                                    <% if (model.get('workType') === 'image') { %>
+                                        <img src="/works/images/<%= model.get('url') %>" alt="<%= model.escape('title') %>" class="gallery-image" />
+                                    <% } else { %>
+                                        <iframe src="<%= model.get('url') %>" width="461" height="259" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    <% } %>
+                                </div>
+                                <div class="info">
+                                    <h2 class="title"><%= model.escape('title') %></h2>
+                                    <div class="date"><span class="label">Created:</span> <%= model.escape('date') %></div>
+                                    <p><%= model.escape('text') %></p>
+                                </div>
                             </div>
                         </div>
                     </div>

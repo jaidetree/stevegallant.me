@@ -1,9 +1,7 @@
-.app-steve-portfolio {
-}
 #wrapper {
     padding: 5% 10%;
     background: url(/static/images/home_bg.png);
-    @include transition(all 300ms ease-in-out);
+    @include transition(all 500ms ease-in-out);
     @include transform(scale(1.0));
     &.has-modal {
         @include transition(all 800ms ease-in-out);
@@ -467,13 +465,9 @@ form.contact {
     right: 0;
     top: 0;
     bottom: 0;
+    @include scale(1.4);
     z-index: 300;
-    @include transition(all 800ms ease-in-out);
-    @include transform(scale(1.4));
-    &.active {
-        @include transition(all 800ms ease-in-out);
-        @include transform(scale(1.0));
-    }
+    opacity: 0;
     .ui {
         position: fixed;
         left: 0;
@@ -531,21 +525,57 @@ form.contact {
         right: 0;
         background: rgba(255, 255, 255, 0.9);
     }
-    .modal {
+    .modal-body {
         position: absolute;
         top: 4.5rem;
         bottom: 0;
         left: 0;
         right: 0;
+        padding: 2rem;
+        box-sizing: border-box;
         overflow: auto;
     }
-    .modal-body {
-        width: 800px;
-        height: 40rem;
-        margin: 2rem auto;
+    .modal-body .inner {
+        width: 80%;
+        margin: 2em auto;
         padding: 2rem;
-        @include border-radius(0.5rem);
+        @include border-radius(0.8rem);
+        border: 1px solid #eee;
         background: #fff;
-        @include box-shadow(rgba(0,0,0,0.5) 0 0 10px 0);
+        &:after {
+            display: table;
+            clear: both;
+            content: '.';
+        }
+    }
+    .modal-content {
+        float: left;
+        width: 70%;
+        img {
+            width: auto;
+        }
+    }
+    .info {
+        float: right;
+        width: 30%; 
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid $work;
+        .title {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-family: Oswald;
+            text-transform: uppercase;
+        }
+        .date {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-family: OswaldLight;
+            text-transform: uppercase;
+            .label {
+                margin-right: 0.5rem;
+                color: #888;
+            }
+        }
     }
 }

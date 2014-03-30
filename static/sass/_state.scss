@@ -1,0 +1,30 @@
+@include keyframes(show-modal-animation) {
+    0% {
+        @include scale(1.4);
+        opacity: 0;
+    }
+    40% {
+        @include scale(1.4);
+        opacity: 0;
+    }
+    100% {
+        @include scale(1);
+        opacity: 1.0;
+    }
+}
+@include keyframes(hide-modal-animation) {
+    0% {
+        @include scale(1);
+        opacity: 1.0;
+    }
+    100% {
+        @include scale(1.4);
+        opacity: 0;
+    }
+}
+.show-modal-animation {
+    @include animation(show-modal-animation 800ms forwards);
+}
+.hide-modal-animation {
+    @include animation(hide-modal-animation 300ms forwards);
+}
