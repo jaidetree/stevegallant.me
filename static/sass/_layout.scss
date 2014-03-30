@@ -79,18 +79,14 @@
         max-height: 0;
         border-top: 10px solid $home;
         overflow: hidden;
-        -webkit-transition: max-height 500ms ease-in-out;
-        -moz-transition: max-height 500ms ease-in-out;
-        -ms-transition: max-height 500ms ease-in-out;
-        -o-transition: max-height 500ms ease-in-out;
-        transition: max-height 500ms ease-in-out;
+        @include transition(max-height 500ms ease-in-out);
         &.active {
             max-height: 2000px;
-            -webkit-transition: max-height 500ms ease-in-out;
-            -moz-transition: max-height 500ms ease-in-out;
-            -ms-transition: max-height 500ms ease-in-out;
-            -o-transition: max-height 500ms ease-in-out;
-            transition: max-height 500ms ease-in-out;
+            @include transition(max-height 500ms ease-in-out);
+            header .title {
+                text-indent: 0;
+                @include transition(text-indent 500ms ease-in-out);
+            }
         }
         header {
             h2 {
@@ -134,6 +130,9 @@
             .title  {
                 @include inline-block;
                 padding-top: 0.3em;
+                text-indent: -300px;
+                overflow: hidden;
+                @include transition(text-indent 500ms ease-in-out);
             }
         }
     }

@@ -187,44 +187,50 @@ body {
   overflow: hidden;
   -webkit-transition: max-height 500ms ease-in-out;
   -moz-transition: max-height 500ms ease-in-out;
-  -ms-transition: max-height 500ms ease-in-out;
   -o-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
 }
-/* line 87, ../sass/_layout.scss */
+/* line 83, ../sass/_layout.scss */
 #l-main section.active {
   max-height: 2000px;
   -webkit-transition: max-height 500ms ease-in-out;
   -moz-transition: max-height 500ms ease-in-out;
-  -ms-transition: max-height 500ms ease-in-out;
   -o-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
 }
-/* line 96, ../sass/_layout.scss */
+/* line 86, ../sass/_layout.scss */
+#l-main section.active header .title {
+  text-indent: 0;
+  -webkit-transition: text-indent 500ms ease-in-out;
+  -moz-transition: text-indent 500ms ease-in-out;
+  -o-transition: text-indent 500ms ease-in-out;
+  transition: text-indent 500ms ease-in-out;
+}
+/* line 92, ../sass/_layout.scss */
 #l-main section header h2 {
   color: #fff;
   font-family: Oswald, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: normal;
 }
-/* line 102, ../sass/_layout.scss */
+/* line 98, ../sass/_layout.scss */
 #l-main section header h3 {
   color: #fff;
   font-family: OswaldLight, Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-transform: lowercase;
 }
-/* line 108, ../sass/_layout.scss */
+/* line 104, ../sass/_layout.scss */
 #l-main section header h2, #l-main section header h3 {
   display: inline;
   font-size: 1.4em;
 }
-/* line 112, ../sass/_layout.scss */
+/* line 108, ../sass/_layout.scss */
 #l-main section header .inner {
   position: relative;
   padding: 0.8em;
 }
-/* line 115, ../sass/_layout.scss */
+/* line 111, ../sass/_layout.scss */
 #l-main section header .inner:before {
   display: -moz-inline-stack;
   display: inline-block;
@@ -238,7 +244,7 @@ body {
   font-size: 0;
   margin-right: 2px;
 }
-/* line 123, ../sass/_layout.scss */
+/* line 119, ../sass/_layout.scss */
 #l-main section header .inner:after {
   position: absolute;
   top: 100%;
@@ -249,7 +255,7 @@ body {
   content: '.';
   font-size: 0;
 }
-/* line 134, ../sass/_layout.scss */
+/* line 130, ../sass/_layout.scss */
 #l-main section header .title {
   display: -moz-inline-stack;
   display: inline-block;
@@ -258,8 +264,14 @@ body {
   zoom: 1;
   *display: inline;
   padding-top: 0.3em;
+  text-indent: -300px;
+  overflow: hidden;
+  -webkit-transition: text-indent 500ms ease-in-out;
+  -moz-transition: text-indent 500ms ease-in-out;
+  -o-transition: text-indent 500ms ease-in-out;
+  transition: text-indent 500ms ease-in-out;
 }
-/* line 140, ../sass/_layout.scss */
+/* line 139, ../sass/_layout.scss */
 #l-main .content {
   background: #fff;
   padding: 2em 1em;
