@@ -893,7 +893,7 @@ form.contact .header span {
 /* line 481, ../sass/_modules.scss */
 .modal-view .ui nav {
   float: left;
-  width: 80%;
+  width: 25%;
 }
 /* line 485, ../sass/_modules.scss */
 .modal-view .ui button {
@@ -918,31 +918,63 @@ form.contact .header span {
   -o-transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
 }
-/* line 500, ../sass/_modules.scss */
-.modal-view .ui .close {
-  float: right;
+/* line 499, ../sass/_modules.scss */
+.modal-view .ui button:disabled {
+  opacity: 0.2;
 }
-/* line 503, ../sass/_modules.scss */
+/* line 501, ../sass/_modules.scss */
+.modal-view .ui button:disabled:hover {
+  background-color: #fff;
+  color: #00d97d;
+}
+/* line 507, ../sass/_modules.scss */
+.modal-view .ui .page-info {
+  float: left;
+  width: 50%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1.8em;
+  text-align: center;
+}
+/* line 514, ../sass/_modules.scss */
+.modal-view .ui .page-info .index, .modal-view .ui .page-info .total {
+  color: #fff;
+}
+/* line 518, ../sass/_modules.scss */
+.modal-view .ui .actions {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+/* line 523, ../sass/_modules.scss */
 .modal-view .ui .next {
   padding-right: 2rem;
   background-image: url(/static/images/work_nav_right.svg);
   background-position: 85% 50%;
 }
-/* line 507, ../sass/_modules.scss */
+/* line 527, ../sass/_modules.scss */
 .modal-view .ui .next:hover {
   background-position: 90% 50%;
 }
-/* line 511, ../sass/_modules.scss */
+/* line 529, ../sass/_modules.scss */
+.modal-view .ui .next:hover:disabled {
+  background-position: 85% 50%;
+}
+/* line 534, ../sass/_modules.scss */
 .modal-view .ui .prev {
   padding-left: 2rem;
   background-image: url(/static/images/work_nav_left.svg);
   background-position: 0.5rem 50%;
 }
-/* line 515, ../sass/_modules.scss */
+/* line 538, ../sass/_modules.scss */
 .modal-view .ui .prev:hover {
   background-position: 0.2rem 50%;
 }
-/* line 520, ../sass/_modules.scss */
+/* line 540, ../sass/_modules.scss */
+.modal-view .ui .prev:hover:disabled {
+  background-position: 0.5rem 50%;
+}
+/* line 546, ../sass/_modules.scss */
 .modal-view .fill {
   position: absolute;
   top: 0;
@@ -951,7 +983,7 @@ form.contact .header span {
   right: 0;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 528, ../sass/_modules.scss */
+/* line 554, ../sass/_modules.scss */
 .modal-view .modal-body {
   position: absolute;
   top: 4.5rem;
@@ -962,7 +994,7 @@ form.contact .header span {
   box-sizing: border-box;
   overflow: auto;
 }
-/* line 538, ../sass/_modules.scss */
+/* line 564, ../sass/_modules.scss */
 .modal-view .modal-body .inner {
   width: 80%;
   margin: 2em auto;
@@ -975,22 +1007,22 @@ form.contact .header span {
   border: 1px solid #eee;
   background: #fff;
 }
-/* line 545, ../sass/_modules.scss */
+/* line 571, ../sass/_modules.scss */
 .modal-view .modal-body .inner:after {
   display: table;
   clear: both;
   content: '.';
 }
-/* line 551, ../sass/_modules.scss */
+/* line 577, ../sass/_modules.scss */
 .modal-view .modal-content {
   float: left;
   width: 65%;
 }
-/* line 554, ../sass/_modules.scss */
+/* line 580, ../sass/_modules.scss */
 .modal-view .modal-content img {
   width: auto;
 }
-/* line 558, ../sass/_modules.scss */
+/* line 584, ../sass/_modules.scss */
 .modal-view .info {
   float: right;
   width: 30%;
@@ -998,21 +1030,21 @@ form.contact .header span {
   padding-top: 1rem;
   border-top: 1px solid #00d97d;
 }
-/* line 564, ../sass/_modules.scss */
+/* line 590, ../sass/_modules.scss */
 .modal-view .info .title {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-family: Oswald;
   text-transform: uppercase;
 }
-/* line 570, ../sass/_modules.scss */
+/* line 596, ../sass/_modules.scss */
 .modal-view .info .date {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   font-family: OswaldLight;
   text-transform: uppercase;
 }
-/* line 575, ../sass/_modules.scss */
+/* line 601, ../sass/_modules.scss */
 .modal-view .info .date .label {
   margin-right: 0.5rem;
   color: #888;

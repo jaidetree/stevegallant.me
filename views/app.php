@@ -251,6 +251,16 @@
                 date: 'Spring 2013',
                 url: 'skull_mountain.jpg',
                 thumb: 'skull_mountain.jpg'
+            },
+            {
+                id: 4,
+                workCategory: 3,
+                title: 'Skeleton',
+                text: 'I see dead people.',
+                workType: 'image',
+                date: 'Fall 2013',
+                url: 'skeleton.jpg',
+                thumb: 'skeleton.jpg'
             }];
         </script>
         <script type="text/x-template" id="modal-template">
@@ -259,10 +269,17 @@
                     <div class="modal">
                         <div class="ui">
                             <nav>
-                                <button type="button" class="prev">Back</button>
-                                <button type="button" class="next">Next</button>
+                                <button type="button" class="prev" <% if (index <= 1 || total < 1) { %>disabled<% } %>>Back</button>
+                                <button type="button" class="next" <% if (index >= total || total < 1) { %>disabled<% } %>>Next</button>
                             </nav>
-                            <button type="button" class="close">&#x2715; Close</button>
+                            <div class="page-info">
+                                <span class="index"><%= index %></span>
+                                <span class="divider">/</span>
+                                <span class="total"><%= total %></span>
+                            </div>
+                            <div class="actions">
+                                <button type="button" class="close">&#x2715; Close</button>
+                            </div>
                         </div>
                         <div class="modal-body"> 
                             <div class="inner">

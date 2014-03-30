@@ -480,7 +480,7 @@ form.contact {
         background: $work;
         nav {
             float: left;
-            width: 80%;
+            width: 25%;
         }
         button {
             padding: 0.5rem;
@@ -496,9 +496,29 @@ form.contact {
                 color: #fff;
                 @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
             }
+            &:disabled {
+                opacity: 0.2;
+                &:hover {
+                    background-color: #fff;
+                    color: $work;
+                }
+            }
         }
-        .close {
+        .page-info {
+            float: left;
+            width: 50%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            font-size: 1.8em;
+            text-align: center;
+            .index, .total {
+                color: #fff;
+            }
+        }
+        .actions {
             float: right;
+            width: 25%;
+            text-align: right;
         }
         .next {
             padding-right: 2rem;
@@ -506,6 +526,9 @@ form.contact {
             background-position: 85% 50%;
             &:hover {
                 background-position: 90% 50%;
+                &:disabled {
+                    background-position: 85% 50%;
+                }
             }
         }
         .prev {
@@ -514,6 +537,9 @@ form.contact {
             background-position: 0.5rem 50%;
             &:hover {
                 background-position: 0.2rem 50%;
+                &:disabled {
+                    background-position: 0.5rem 50%;
+                }
             }
         }
     }

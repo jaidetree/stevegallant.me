@@ -97,6 +97,10 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         showWork: function (work_id) {
             var work;
+            if (steveGallant.views.workModal) {
+                steveGallant.views.workModal.remove();
+            }
+            
             App.vent.trigger('navigate', 'work');
 
             work = steveGallant.models.works.get(work_id);
@@ -179,18 +183,49 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             steveGallant.$el.find('#wrapper').removeClass('has-modal');
         },
 
+        getPosition: function () {
+            var collection = steveGallant.models.works.where({ workCategory: this.model.get('workCategory') }),
+                total = collection.length,
+                index = collection.indexOf(this.model);
+            return { index: index, length: total, collection: collection };
+        },
+
         next: function () {
-            steveGallant.routers.workspace.navigate('!/work', { trigger: true });
+            var info = this.getPosition(), 
+                model;
+
+            if (info.index < info.length) {
+                model = info.collection[info.index + 1];
+            } else {
+                model = info.collection[0];
+            }
+
+            steveGallant.routers.workspace.navigate('!/work/' + model.get('id'));
+            this.model = model;
+            this.render();
         },
 
         prev: function () {
+            var info = this.getPosition(), 
+                model;
+
+            if (info.index > 0) {
+                model = info.collection[info.index - 1];
+            } else {
+                model = info.collection[info.length - 1];
+            }
+
+            steveGallant.routers.workspace.navigate('!/work/' + model.get('id'));
+            this.model = model;
+            this.render();
         },
 
         render: function () {
-            this.$el.removeClass('show-modal-animation');
-            this.$el.removeClass('hide-modal-animation');
+            var info = this.getPosition();
             this.$el.html(this.template({
-                model: this.model
+                model: this.model,
+                index: info.index + 1,
+                total: info.length
             }));
             this.$el.addClass('show-modal-animation');
             return this;
