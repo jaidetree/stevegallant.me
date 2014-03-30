@@ -208,6 +208,7 @@
         </div>
         <script>
             var DataBootstrap = {};
+            DataBootstrap.ReelURL = '//player.vimeo.com/video/44061996';
             DataBootstrap.WorkCategories = [{
                 id: 1,
                 title: 'After Effects Animation',
@@ -315,6 +316,9 @@
         </script>
         <script type="text/x-template" id="work-template">
             <img src="/works/thumbnails/<%= model.escape('thumb') %>" alt="<%= model.escape('title') %>">
+        </script>
+        <script type="text/x-template" id="reel-template">
+            <iframe src="<%= url %>?autoplay=1" width="100%" height="480" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </script>
         <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
     </body>

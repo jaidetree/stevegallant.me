@@ -47,7 +47,8 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         templates: {
             work: 'work-template',
             workCategory: 'work-category-template',
-            workModal: 'modal-template'
+            workModal: 'modal-template',
+            reel: 'reel-template'
         },
 
         _html: {},
@@ -100,7 +101,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             if (steveGallant.views.workModal) {
                 steveGallant.views.workModal.remove();
             }
-            
+
             App.vent.trigger('navigate', 'work');
 
             work = steveGallant.models.works.get(work_id);
@@ -140,13 +141,16 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
     App.views.Home = Backbone.View.extend({
         el: '#home',
+        template: _.template(Templates.get('reel')),
         events: {
             'click .video': 'playReel'
         },
 
         playReel: function (e) {
             e.preventDefault();
-            this.render();
+            this.$el.find('.video .inner').html(this.template({
+                url: DataBootstrap.ReelURL
+            }));
         },
 
         render: function () {
