@@ -926,7 +926,7 @@ form.contact .header span {
 .modal-view .ui .next {
   padding-right: 2rem;
   background-image: url(/static/images/work_nav_right.svg);
-  background-position: 80% 50%;
+  background-position: 85% 50%;
 }
 /* line 507, ../sass/_modules.scss */
 .modal-view .ui .next:hover {
@@ -984,7 +984,7 @@ form.contact .header span {
 /* line 551, ../sass/_modules.scss */
 .modal-view .modal-content {
   float: left;
-  width: 70%;
+  width: 65%;
 }
 /* line 554, ../sass/_modules.scss */
 .modal-view .modal-content img {

@@ -96,15 +96,15 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         showWork: function (work_id) {
-            var work, modalView;
+            var work;
             App.vent.trigger('navigate', 'work');
 
             work = steveGallant.models.works.get(work_id);
-            modalView = new App.views.WorkModal({
+            steveGallant.views.workModal = new App.views.WorkModal({
                 model: work
             });
 
-            steveGallant.$el.append(modalView.$el);
+            steveGallant.$el.append(steveGallant.views.workModal.$el);
             steveGallant.$el.find('#wrapper').addClass('has-modal');
         },
 
@@ -167,7 +167,9 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         close: function (e) {
             var self = this;
-            this.$el.removeClass('show-modal-animation').addClass('hide-modal-animation');
+            console.log('close');
+            this.$el.removeClass('show-modal-animation');
+            this.$el.addClass('hide-modal-animation');
 
             setTimeout(function () {
                 self.remove();
@@ -178,14 +180,15 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         next: function () {
-
+            steveGallant.routers.workspace.navigate('!/work', { trigger: true });
         },
 
         prev: function () {
-
         },
 
         render: function () {
+            this.$el.removeClass('show-modal-animation');
+            this.$el.removeClass('hide-modal-animation');
             this.$el.html(this.template({
                 model: this.model
             }));

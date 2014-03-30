@@ -231,7 +231,7 @@
                 text: 'This is a video thing I made.',
                 workType: 'vimeo',
                 url: '//player.vimeo.com/video/43994248',
-                thumb: ''
+                thumb: 'senior_film.jpg'
             },
             {
                 id: 2,
@@ -270,7 +270,7 @@
                                     <% if (model.get('workType') === 'image') { %>
                                         <img src="/works/images/<%= model.get('url') %>" alt="<%= model.escape('title') %>" class="gallery-image" />
                                     <% } else { %>
-                                        <iframe src="<%= model.get('url') %>" width="461" height="259" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                        <iframe src="<%= model.get('url') %>" width="100%" height="480" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                     <% } %>
                                 </div>
                                 <div class="info">
