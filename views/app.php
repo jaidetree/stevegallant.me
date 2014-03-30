@@ -264,7 +264,13 @@
                             <button type="button" class="close">&#x2715; Close</button>
                         </div>
                         <div class="modal-body"> 
-                            <div class="modal-content"></div>
+                            <div class="modal-content">
+                                <% if (model.get('workType') === 'image') { %>
+                                    <img src="<%= model.get('url') %>" alt="<%= model.escape('title') %>" class="gallery-image" />
+                                <% } else { %>
+                                    <iframe src="<%= model.get('url') %>" width="461" height="259" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <% } %>
+                            </div>
                             <div class="info">
                                 <h2 class="title"><%= model.escape('title') %></h2>
                                 <p><%= model.escape('text') %></p>
@@ -273,12 +279,6 @@
                     </div>
                 </div>
            </div> 
-        </script>
-        <script type="text/x-template" id="modal-vimeo-template">
-            <iframe src="<%= model.get('url') %>" width="461" height="259" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </script>
-        <script type="text/x-template" id="modal-image-template">
-            <img src="<%= model.get('url') %>" alt="<%= model.escape('title') %>" class="gallery-image" />
         </script>
         <script type="text/x-template" id="work-category-template">
             <div class="gallery">

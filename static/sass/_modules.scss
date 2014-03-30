@@ -1,7 +1,7 @@
 .app-steve-portfolio {
 }
 #wrapper {
-    padding: 10%;
+    padding: 5% 10%;
     background: url(/static/images/home_bg.png);
     @include transition(all 300ms ease-in-out);
     @include transform(scale(1.0));

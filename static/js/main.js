@@ -47,9 +47,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         templates: {
             work: 'work-template',
             workCategory: 'work-category-template',
-            workModal: 'modal-template',
-            workModalVimeo: 'modal-vimeo-template',
-            workModalImage: 'modal-image-template'
+            workModal: 'modal-template'
         },
 
         _html: {},
@@ -57,8 +55,13 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         get: function (name) {
             if (this._html.hasOwnProperty(name)) {
                 return this._html[name];
-            } else {
+            } 
+            else if (this.templates.hasOwnProperty(name))
+            {
                 return this.set(name, this.load(this.templates[name]));
+            } else {
+                throw new Error("Template name: \"" + name + "\" does not exist.");
+                return '';
             }
         },
 
@@ -166,9 +169,6 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             this.$el.html(this.template({
                 model: this.model
             }));
-            this.$el.find('.modal-content').html(this.modalTemplate({
-                model: this.model
-            }));
             return this;
         }
     });
@@ -228,16 +228,8 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             // Load work modal & send it the correct model.
             var template, self = this;
 
-            if (work.get('workType') === 'vimeo') {
-                template = Templates.get('workModalViemo');
-            }
-            else if (work.get('workType') === 'image') {
-                template = Templates.get('workModalImage');
-            }
-
             this.modalView = new App.views.WorkModal({
                 model: work,
-                modalTemplate: _.template(template),
             });
             steveGallant.$el.append(this.modalView.$el);
             steveGallant.$el.find('#wrapper').addClass('has-modal');
@@ -311,6 +303,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         }
     });
 
+
     App.views.LayoutManager = Backbone.View.extend({
         events: {
             'click section': 'onSection'
@@ -337,6 +330,9 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             var id = '#' + name;
             this.$el.find('section').removeClass('active');
             this.$el.find(id).addClass('active');
+
+            steveGallant.$el.find('#navbar li').removeClass('active');
+            steveGallant.$el.find('#navbar li.' + name).addClass('active');
 
             if (Pages.pageExists(name)) {
                 this.currentView = Pages.getPageView(name);

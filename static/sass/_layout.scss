@@ -1,5 +1,10 @@
 #l-header {
-    @include clearfix;
+    &:after {
+        height: 0;
+        display: table;
+        font-size: 0;
+        content: '.';
+    }
     #logo {
         float: left;
         width: 40%;
@@ -9,8 +14,11 @@
         width: 60%;
         text-align: right;
         li {
+            position: relative;
+            z-index: 20;
             @include inline-block;
             margin-left: 1.5em;
+            @include transition(all 250ms ease-in-out);
             a {
                 display: block;
                 width: 110px;
@@ -27,11 +35,22 @@
                     color: rgba(0,0,0,0.5);
                 }
             }
+            &.active {
+                -moz-transform: scale(1.2) translateY(-10px);
+                -webkit-transform: scale(1.2) translateY(-10px);
+                -o-transform: scale(1.2) translateY(-10px);
+                -ms-transform: scale(1.2) translateY(-10px);
+                transform: scale(1.2) translateY(-10px);
+                @include transition(all 250ms ease-in-out);
+            }
             &.work a {
                 background: $work;
                 &:hover {
                     background: adjust-lightness($work, 10);
                 }
+            }
+            &.work.active a {
+                background: adjust-lightness($work, 20);
             }
             &.resume a {
                 background: $resume;
@@ -39,11 +58,17 @@
                     background: adjust-lightness($resume, 10);
                 }
             }
+            &.resume.active a {
+                background: adjust-lightness($resume, 20);
+            }
             &.contact a {
                 background: $contact;
                 &:hover {
                     background: adjust-lightness($contact, 10);
                 }
+            }
+            &.contact.active a {
+                background: adjust-lightness($contact, 20);
             }
         }
     }
