@@ -1,6 +1,6 @@
 #wrapper {
     padding: 5% 10%;
-    background: url(/static/images/home_bg.png);
+    background: #fff url(/static/images/home_bg.png);
     @include transition(all 500ms ease-in-out);
     @include transform(scale(1.0));
     &.has-modal {
@@ -514,6 +514,10 @@ form.contact {
             .index, .total {
                 color: #fff;
             }
+            .divider {
+                color: #fff;
+                opacity: 0.8;
+            }
         }
         .actions {
             float: right;
@@ -578,7 +582,9 @@ form.contact {
         float: left;
         width: 65%;
         img {
+            max-width: 100%;
             width: auto;
+            height: auto;
         }
     }
     .info {

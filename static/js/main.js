@@ -388,6 +388,8 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             } else {
                 this.currentView = false;
             }
+
+            steveGallant.$el.find('#wrapper').removeClass().addClass('is-' + name);
         }
 
     });

@@ -22,9 +22,53 @@
         opacity: 0;
     }
 }
+@include keyframes(show-home-bg) {
+    0% {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background: #f7f7f7 url(/static/images/home_bg.png);
+    }
+}
+@include keyframes(show-work-bg) {
+    0% {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background: #f7f7f7 url(/static/images/work_bg.png);
+    }
+}
+@include keyframes(show-resume-bg) {
+    0% {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background: #f7f7f7 url(/static/images/resume_bg.png);
+    }
+}
+@include keyframes(show-contact-bg) {
+    0% {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        background: #f7f7f7 url(/static/images/contact_bg.png);
+    }
+}
 .show-modal-animation {
     @include animation(show-modal-animation 800ms forwards);
 }
 .hide-modal-animation {
     @include animation(hide-modal-animation 300ms forwards);
+}
+.is-home {
+    @include animation(show-home-bg 1500ms forwards);
+}
+.is-work {
+    @include animation(show-work-bg 1500ms forwards);
+}
+.is-resume {
+    @include animation(show-resume-bg 1500ms forwards);
+}
+.is-contact {
+    @include animation(show-contact-bg 1500ms forwards);
 }

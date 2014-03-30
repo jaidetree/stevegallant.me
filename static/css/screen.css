@@ -268,7 +268,7 @@ body {
 /* line 1, ../sass/_modules.scss */
 #wrapper {
   padding: 5% 10%;
-  background: url(/static/images/home_bg.png);
+  background: white url(/static/images/home_bg.png);
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
@@ -940,41 +940,46 @@ form.contact .header span {
 .modal-view .ui .page-info .index, .modal-view .ui .page-info .total {
   color: #fff;
 }
-/* line 518, ../sass/_modules.scss */
+/* line 517, ../sass/_modules.scss */
+.modal-view .ui .page-info .divider {
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 522, ../sass/_modules.scss */
 .modal-view .ui .actions {
   float: right;
   width: 25%;
   text-align: right;
 }
-/* line 523, ../sass/_modules.scss */
+/* line 527, ../sass/_modules.scss */
 .modal-view .ui .next {
   padding-right: 2rem;
   background-image: url(/static/images/work_nav_right.svg);
   background-position: 85% 50%;
 }
-/* line 527, ../sass/_modules.scss */
+/* line 531, ../sass/_modules.scss */
 .modal-view .ui .next:hover {
   background-position: 90% 50%;
 }
-/* line 529, ../sass/_modules.scss */
+/* line 533, ../sass/_modules.scss */
 .modal-view .ui .next:hover:disabled {
   background-position: 85% 50%;
 }
-/* line 534, ../sass/_modules.scss */
+/* line 538, ../sass/_modules.scss */
 .modal-view .ui .prev {
   padding-left: 2rem;
   background-image: url(/static/images/work_nav_left.svg);
   background-position: 0.5rem 50%;
 }
-/* line 538, ../sass/_modules.scss */
+/* line 542, ../sass/_modules.scss */
 .modal-view .ui .prev:hover {
   background-position: 0.2rem 50%;
 }
-/* line 540, ../sass/_modules.scss */
+/* line 544, ../sass/_modules.scss */
 .modal-view .ui .prev:hover:disabled {
   background-position: 0.5rem 50%;
 }
-/* line 546, ../sass/_modules.scss */
+/* line 550, ../sass/_modules.scss */
 .modal-view .fill {
   position: absolute;
   top: 0;
@@ -983,7 +988,7 @@ form.contact .header span {
   right: 0;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 554, ../sass/_modules.scss */
+/* line 558, ../sass/_modules.scss */
 .modal-view .modal-body {
   position: absolute;
   top: 4.5rem;
@@ -994,7 +999,7 @@ form.contact .header span {
   box-sizing: border-box;
   overflow: auto;
 }
-/* line 564, ../sass/_modules.scss */
+/* line 568, ../sass/_modules.scss */
 .modal-view .modal-body .inner {
   width: 80%;
   margin: 2em auto;
@@ -1007,22 +1012,24 @@ form.contact .header span {
   border: 1px solid #eee;
   background: #fff;
 }
-/* line 571, ../sass/_modules.scss */
+/* line 575, ../sass/_modules.scss */
 .modal-view .modal-body .inner:after {
   display: table;
   clear: both;
   content: '.';
 }
-/* line 577, ../sass/_modules.scss */
+/* line 581, ../sass/_modules.scss */
 .modal-view .modal-content {
   float: left;
   width: 65%;
 }
-/* line 580, ../sass/_modules.scss */
-.modal-view .modal-content img {
-  width: auto;
-}
 /* line 584, ../sass/_modules.scss */
+.modal-view .modal-content img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+/* line 590, ../sass/_modules.scss */
 .modal-view .info {
   float: right;
   width: 30%;
@@ -1030,21 +1037,21 @@ form.contact .header span {
   padding-top: 1rem;
   border-top: 1px solid #00d97d;
 }
-/* line 590, ../sass/_modules.scss */
+/* line 596, ../sass/_modules.scss */
 .modal-view .info .title {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-family: Oswald;
   text-transform: uppercase;
 }
-/* line 596, ../sass/_modules.scss */
+/* line 602, ../sass/_modules.scss */
 .modal-view .info .date {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   font-family: OswaldLight;
   text-transform: uppercase;
 }
-/* line 601, ../sass/_modules.scss */
+/* line 607, ../sass/_modules.scss */
 .modal-view .info .date .label {
   margin-right: 0.5rem;
   color: #888;
@@ -1240,7 +1247,247 @@ form.contact .header span {
   }
 }
 
-/* line 25, ../sass/_state.scss */
+@-moz-keyframes show-home-bg {
+  /* line 26, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 29, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/home_bg.png);
+  }
+}
+
+@-webkit-keyframes show-home-bg {
+  /* line 26, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 29, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/home_bg.png);
+  }
+}
+
+@-o-keyframes show-home-bg {
+  /* line 26, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 29, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/home_bg.png);
+  }
+}
+
+@-ms-keyframes show-home-bg {
+  /* line 26, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 29, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/home_bg.png);
+  }
+}
+
+@keyframes show-home-bg {
+  /* line 26, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 29, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/home_bg.png);
+  }
+}
+
+@-moz-keyframes show-work-bg {
+  /* line 34, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 37, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/work_bg.png);
+  }
+}
+
+@-webkit-keyframes show-work-bg {
+  /* line 34, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 37, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/work_bg.png);
+  }
+}
+
+@-o-keyframes show-work-bg {
+  /* line 34, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 37, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/work_bg.png);
+  }
+}
+
+@-ms-keyframes show-work-bg {
+  /* line 34, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 37, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/work_bg.png);
+  }
+}
+
+@keyframes show-work-bg {
+  /* line 34, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 37, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/work_bg.png);
+  }
+}
+
+@-moz-keyframes show-resume-bg {
+  /* line 42, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 45, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/resume_bg.png);
+  }
+}
+
+@-webkit-keyframes show-resume-bg {
+  /* line 42, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 45, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/resume_bg.png);
+  }
+}
+
+@-o-keyframes show-resume-bg {
+  /* line 42, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 45, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/resume_bg.png);
+  }
+}
+
+@-ms-keyframes show-resume-bg {
+  /* line 42, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 45, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/resume_bg.png);
+  }
+}
+
+@keyframes show-resume-bg {
+  /* line 42, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 45, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/resume_bg.png);
+  }
+}
+
+@-moz-keyframes show-contact-bg {
+  /* line 50, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 53, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/contact_bg.png);
+  }
+}
+
+@-webkit-keyframes show-contact-bg {
+  /* line 50, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 53, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/contact_bg.png);
+  }
+}
+
+@-o-keyframes show-contact-bg {
+  /* line 50, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 53, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/contact_bg.png);
+  }
+}
+
+@-ms-keyframes show-contact-bg {
+  /* line 50, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 53, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/contact_bg.png);
+  }
+}
+
+@keyframes show-contact-bg {
+  /* line 50, ../sass/_state.scss */
+  0% {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* line 53, ../sass/_state.scss */
+  100% {
+    background: #f7f7f7 url(/static/images/contact_bg.png);
+  }
+}
+
+/* line 57, ../sass/_state.scss */
 .show-modal-animation {
   -webkit-animation: show-modal-animation 800ms forwards;
   -moz-animation: show-modal-animation 800ms forwards;
@@ -1249,11 +1496,47 @@ form.contact .header span {
   animation: show-modal-animation 800ms forwards;
 }
 
-/* line 28, ../sass/_state.scss */
+/* line 60, ../sass/_state.scss */
 .hide-modal-animation {
   -webkit-animation: hide-modal-animation 300ms forwards;
   -moz-animation: hide-modal-animation 300ms forwards;
   -ms-animation: hide-modal-animation 300ms forwards;
   -o-animation: hide-modal-animation 300ms forwards;
   animation: hide-modal-animation 300ms forwards;
+}
+
+/* line 63, ../sass/_state.scss */
+.is-home {
+  -webkit-animation: show-home-bg 1500ms forwards;
+  -moz-animation: show-home-bg 1500ms forwards;
+  -ms-animation: show-home-bg 1500ms forwards;
+  -o-animation: show-home-bg 1500ms forwards;
+  animation: show-home-bg 1500ms forwards;
+}
+
+/* line 66, ../sass/_state.scss */
+.is-work {
+  -webkit-animation: show-work-bg 1500ms forwards;
+  -moz-animation: show-work-bg 1500ms forwards;
+  -ms-animation: show-work-bg 1500ms forwards;
+  -o-animation: show-work-bg 1500ms forwards;
+  animation: show-work-bg 1500ms forwards;
+}
+
+/* line 69, ../sass/_state.scss */
+.is-resume {
+  -webkit-animation: show-resume-bg 1500ms forwards;
+  -moz-animation: show-resume-bg 1500ms forwards;
+  -ms-animation: show-resume-bg 1500ms forwards;
+  -o-animation: show-resume-bg 1500ms forwards;
+  animation: show-resume-bg 1500ms forwards;
+}
+
+/* line 72, ../sass/_state.scss */
+.is-contact {
+  -webkit-animation: show-contact-bg 1500ms forwards;
+  -moz-animation: show-contact-bg 1500ms forwards;
+  -ms-animation: show-contact-bg 1500ms forwards;
+  -o-animation: show-contact-bg 1500ms forwards;
+  animation: show-contact-bg 1500ms forwards;
 }
