@@ -1,0 +1,30 @@
+form table {
+  input[type="text"], textarea {
+    width: 90%;
+    display: block;
+  }
+  textarea {
+    height: 15em;
+  }
+  input[type="submit"] {
+    margin: 0 1em;
+    display: inline-block;
+  }
+}
+form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    margin-bottom: 0.5em;
+  }
+  label {
+    display: block;
+  }
+  input[type="text"] {
+    padding: 6px;
+    display: block;
+    width: 90%;
+  }
+}

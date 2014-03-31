@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+  border: none;
+  margin: 2em 0;
+  td, th {
+    background: #fff;
+    padding: 5px;
+  }
+  th {
+    background: #f0f0f0;
+  }
+  td {
+    font-size: 80%;
+  }
+}
+table.display, table.edit {
+  margin: 2em 0;
+  border-spacing: 1px;
+  border-collapse: separate;
+  background: #999;
+}

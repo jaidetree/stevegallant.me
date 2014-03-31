@@ -1,0 +1,8 @@
+#wrapper {
+}
+#content {
+  margin: 2em;
+}
+.navbar, .navbar-inner {
+  @include border-radius(0px);
+}

@@ -346,7 +346,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             'submit form.contact': 'submitForm'
         },
 
-        submitForm: function () {
+        submitForm: function (e) {
             // Send model to PHP API & process response to show either success or error message.
         }
     });

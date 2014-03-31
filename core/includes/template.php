@@ -14,13 +14,25 @@ function render($file, $args=array())
     $template_file = str_replace( $parts[0] . '/', '', $file);
     $app_dir = "";
 
+    if( Context::get('cd') )
+    {
+        $app_dir = Context::get('cd');
+    }
+    else
+    {
+        $app_dir = APP::dir('app') . 'apps/' . $parts[0] . '/views/';
+        Context::set('cd', $app_dir);
+    }
+
     /**
      * Give priority to app views but also include
      * sub app views.
      */
 
     $files = array(
-        ROOT_DIR . '/views/' . $file . ".php",
+        $app_dir . $file . ".php",
+        APP::dir('app') . 'views/' . $file . ".php",
+        APP::dir('app') . 'apps/' . $parts[0] . '/views/' . $template_file . '.php'
     );
 
     foreach($files as $file)
@@ -39,6 +51,16 @@ function render($file, $args=array())
 }
 function static_url($uri=false)
 {
-    echo SITE_URL . 'static/';
+    if( ! $uri )
+    {
+        echo APP::vars('url') . 'static/';
+    }
+    else
+    {
+        $parts = explode('/', $uri);
+        $app = $parts[0];
+        array_shift($parts);
+        echo APP::vars('url') . 'app/apps/' . $app . '/static/' . implode('/', $parts);
+    }
 }
 ?>

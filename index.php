@@ -1,9 +1,5 @@
 <?php
-session_start();
-include "includes/template.php";
-
-define('ROOT_DIR', dirname(__FILE__));
-define('SITE_URL', 'http://stevegallant.dev/');
-
-echo render('app');
+include "bootstrap.php";
+use jframe\APP as APP;
+APP::module('router')->load_route(preg_replace('/^\//', '', $_SERVER['REQUEST_URI']) );
 ?>

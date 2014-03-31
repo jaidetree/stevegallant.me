@@ -1,0 +1,24 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "base";
+
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/utilities";
+
+@import "project/_base";
+@import "project/_project";
+
+@import "pages/_dashboard";
+
+@import "ui/tables";
+@import "ui/forms";
+@import "ui/modal";
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+
+.container {
+  @include container;
+}

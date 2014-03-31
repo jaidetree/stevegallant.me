@@ -1,0 +1,15 @@
+#page-dashboard {
+  .logo-upload {
+    @include clearfix;
+    .current {
+      float: left;
+      background: #000;
+      padding: 2em;
+      margin-right: 2em;
+      color: #fff;
+      img {
+        display: block;
+      }
+    }
+  }
+}
