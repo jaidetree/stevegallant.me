@@ -162,7 +162,7 @@
                             <div class="inner">
                                 <div class="contact-view">
                                     <div class="form">
-                                        <form method="post" action="#" class="contact">
+                                        <form method="post" action="http://google.com" class="contact">
                                             <div class="header">
                                                 <strong>Send me a digital mail message</strong>
                                                 <span>they&rsquo;re convenient!</span>
@@ -185,7 +185,8 @@
                                                     <input type="text" name="cartoon" id="id_cartoon" value="">
                                                 </li>
                                                 <li class="actions">
-                                                    <button type="submit">Zoot!</button>
+                                                    <div class="status"></div>
+                                                    <button class="send">Zoot!</button>
                                                 </li>
                                             </ul>
                                         </form>
@@ -197,6 +198,14 @@
                                             </div>
                                             <p>Steve is a 23 year old Animator hailing from...many places from a sham of a childhood keeping him from making any lasting connections having had moved over a dozen times. With nothing more than a pair of pajamas and a magic banjo Steve aims to take the world of Animation by storm with his free spirit and self-assured rad-attitude: raditude&reg;.
                                             </p>
+                                            <ul class="links">
+                                                <li class="email">
+                                                    <a href="mailto:steve@stevegallant.me">steve@stevegallant.me</a>
+                                                </li>
+                                                <li class="in">
+                                                    <a href="#">Steve on LinkedIn</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -207,8 +216,11 @@
             </div>
         </div>
         <script>
-            var DataBootstrap = {};
-            DataBootstrap.ReelURL = '//player.vimeo.com/video/44061996';
+            var DataBootstrap = {
+                urls: {}
+            };
+            DataBootstrap.urls.EmailAPI = '/api/v1/email/';
+            DataBootstrap.urls.ReelURL = '//player.vimeo.com/video/44061996';
             DataBootstrap.WorkCategories = [{
                 id: 1,
                 title: 'After Effects Animation',

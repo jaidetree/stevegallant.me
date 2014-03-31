@@ -162,7 +162,7 @@
                             <div class="inner">
                                 <div class="contact-view">
                                     <div class="form">
-                                        <form method="post" action="#" class="contact">
+                                        <form method="post" action="google.com" class="contact">
                                             <div class="header">
                                                 <strong>Send me a digital mail message</strong>
                                                 <span>they&rsquo;re convenient!</span>
@@ -185,7 +185,8 @@
                                                     <input type="text" name="cartoon" id="id_cartoon" value="">
                                                 </li>
                                                 <li class="actions">
-                                                    <button type="submit">Zoot!</button>
+                                                    <div class="status"></div>
+                                                    <input type="submit" class="send" value="Zoot!">
                                                 </li>
                                             </ul>
                                         </form>

@@ -149,7 +149,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         playReel: function (e) {
             e.preventDefault();
             this.$el.find('.video .inner').html(this.template({
-                url: DataBootstrap.ReelURL
+                url: DataBootstrap.urls.ReelURL
             }));
         },
 
@@ -343,11 +343,34 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     App.views.Contact = Backbone.View.extend({
         el: '#contact',
         events: {
-            'submit form.contact': 'submitForm'
+            'submit form': 'submitForm',
+            'click .send': 'submitForm'
+        },
+
+        initialize: function (options) {
+            Backbone.View.prototype.initialize.apply(this, options);
+            this.render();
         },
 
         submitForm: function (e) {
-            // Send model to PHP API & process response to show either success or error message.
+            var data = {},
+                self = this;
+            data.name = this.$el.find('#id_name').val();
+            data.email = this.$el.find('#id_email').val();
+            data.message = this.$el.find('#id_message').val();
+            data.cartoon = this.$el.find('#id_cartoon').val();
+
+            this.$el.find('.send').prop('disabled', true);
+            $.post(DataBootstrap.urls.EmailAPI + 'create/', data)
+                .done(function (data) { 
+                    self.$el.find('.status').removeClass('error');
+                    self.$el.find('.status').text(data.message);
+                })
+                .fail(function (jqXHR, status, message) {
+                    self.$el.find('.status').removeClass('error');
+                    self.$el.find('.status').addClass('error').text(jqXHR.responseJSON.message);
+                    self.$el.find('.send').prop('disabled', false);
+                });
         }
     });
 

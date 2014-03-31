@@ -87,14 +87,20 @@ class Error404Response extends TemplateResponse
 class JSONResponse extends Response
 {
     protected $_data = array();
+    protected $_code = 200;
 
-    public function __construct($data) 
+    public function __construct($data, $code=200) 
     {
         $this->_data = $data;
+        $this->_code = $code;
     }
     public function render()
     {
         header('Content-Type: text/json');
+        if( $this->_code != 200 )
+        {
+            header(' ', true, $this->_code);
+        }
         echo json_encode($this->_data);
         return parent::render();
     }

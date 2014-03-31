@@ -9,7 +9,7 @@ var paths = {
     'sass': [_base + 'static/sass/**/*.scss'],
     'css': [_base + 'static/css/**/*.css'],
     'js': [_base + 'static/js/*.js', _base + 'static/js/**/*.js'],
-    'templates': [_base + 'views/**/*.php'],
+    'templates': [_base + 'views/**/*.php', _base + 'app/views/**/*.php'],
     'assets': [],
     'static_url': function (file) {
         return this.static_dir + file;

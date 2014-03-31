@@ -351,7 +351,7 @@ form.contact {
         color: #000;
         text-transform: uppercase;
     }
-    button[type="submit"] {
+    .send {
         position: relative;
         border: 1px solid $contact-dark;
         padding: 0.5rem 1rem;
@@ -377,6 +377,14 @@ form.contact {
         &:hover {
             background: adjust-lightness($contact, 5);
         }
+    }
+    .status {
+        position: absolute;
+        right: 9rem;
+        left: 0;
+        padding: 0.5rem;
+        margin-top: 0.3rem;
+        text-align: left;
     }
     .header {
         padding: 1em;
@@ -406,6 +414,27 @@ form.contact {
     }
     p {
         line-height: 2rem;
+    }
+    .links {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #999;
+        li {
+            margin: 1rem 0;
+        }
+        a {
+            padding-left: 2.5rem;
+            color: #000;
+            font-size: 1.2rem;
+            font-family: Oswald;
+            text-transform: uppercase;
+        }
+        .email a {
+            background: url(/static/images/contact_btn_email.svg) no-repeat 0% 50%;
+        }
+        .in a {
+            background: url(/static/images/contact_btn_linkedin.svg) no-repeat 0% 50%;
+        }
     }
 }
 .work-category {
