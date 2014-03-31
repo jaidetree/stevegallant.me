@@ -2,81 +2,78 @@ require.config({
     paths: {
         backbone: 'lib/backbone',
         jquery: 'lib/jquery',
-        underscore: 'lib/underscore',
+        underscore: 'lib/underscore'
     }
 });
 
 require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     var App = {
-        vent: _.extend({}, Backbone.Events),
-        views: {},
-        models: {},
-        routers: {}
-    },
+            vent: _.extend({}, Backbone.Events),
+            views: {},
+            models: {},
+            routers: {}
+        },
 
-    Pages = { 
-        pages: {
-            'home': function () {
-                return steveGallant.views.home;
+        Pages = {
+            pages: {
+                'home': function () {
+                    return steveGallant.views.home;
+                },
+                'contact': function () {
+                    return steveGallant.views.contact;
+                },
+                'work': function () {
+                    return steveGallant.views.work;
+                }
             },
-            'contact': function () {
-                return steveGallant.views.contact;
+
+            pageExists: function (page) {
+                if (this.pages.hasOwnProperty(page)) {
+                    return true;
+                }
+                return false;
             },
-            'work': function () {
-                return steveGallant.views.work;
+
+            getPageView: function (page) {
+                if (!this.pageExists(page)) {
+                    return false;
+                }
+                return this.pages[page]();
             }
         },
 
-        pageExists: function (page) {
-            if (this.pages.hasOwnProperty(page)) {
-                return true;
-            } else {
-                return false;
-            }
-        },
+        Templates = {
+            templates: {
+                work: 'work-template',
+                workCategory: 'work-category-template',
+                workModal: 'modal-template',
+                reel: 'reel-template'
+            },
 
-        getPageView: function (page) {
-            if (!this.pageExists(page)) {
-                return false;
-            }
-            return this.pages[page]();
-        }
-    },
+            _html: {},
 
-    Templates = {
-        templates: {
-            work: 'work-template',
-            workCategory: 'work-category-template',
-            workModal: 'modal-template',
-            reel: 'reel-template'
-        },
+            get: function (name) {
+                if (this._html.hasOwnProperty(name)) {
+                    return this._html[name];
+                }
+                if (this.templates.hasOwnProperty(name)) {
+                    return this.set(name, this.load(this.templates[name]));
+                }
 
-        _html: {},
-
-        get: function (name) {
-            if (this._html.hasOwnProperty(name)) {
-                return this._html[name];
-            } 
-            else if (this.templates.hasOwnProperty(name))
-            {
-                return this.set(name, this.load(this.templates[name]));
-            } else {
                 throw new Error("Template name: \"" + name + "\" does not exist.");
-                return '';
+            },
+
+            load: function (id) {
+                return document.getElementById(id).innerHTML;
+            },
+
+            set: function (name, html) {
+                this._html[name] = html;
+
+                return html;
             }
-        },
 
-        load: function (id) {
-            return document.getElementById(id).innerHTML;
-        },
-
-        set: function (name, html) {
-            this._html[name] = html;
-
-            return html;
-        }
-
-    };
+        };
 
     App.routers.Workspace = Backbone.Router.extend({
         routes: {
@@ -175,7 +172,6 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         close: function (e) {
             var self = this;
-            console.log('close');
             this.$el.removeClass('show-modal-animation');
             this.$el.addClass('hide-modal-animation');
 
@@ -195,7 +191,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         next: function () {
-            var info = this.getPosition(), 
+            var info = this.getPosition(),
                 model;
 
             if (info.index < info.length) {
@@ -210,7 +206,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         prev: function () {
-            var info = this.getPosition(), 
+            var info = this.getPosition(),
                 model;
 
             if (info.index > 0) {
@@ -289,7 +285,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
         _addView: function (model) {
             var view = new App.views.WorkThumbnail({
-                model: model,
+                model: model
             });
             this.views[model.cid] = view;
             view.render();
@@ -324,10 +320,11 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
         },
 
         _addView: function (model) {
-            var view = new App.views.WorkCategory({
-                model: model,
-                collection: new App.models.WorkCollection(this.workCollection.where({ workCategory: model.id })),
-            });
+            var collection = new App.models.WorkCollection(this.workCollection.where({ workCategory: model.id })),
+                view = new App.views.WorkCategory({
+                    model: model,
+                    collection: collection
+                });
             this.views[model.cid] = view;
         },
 
@@ -362,7 +359,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
             this.$el.find('.send').prop('disabled', true);
             $.post(DataBootstrap.urls.EmailAPI + 'create/', data)
-                .done(function (data) { 
+                .done(function (data) {
                     self.$el.find('.status').removeClass('error');
                     self.$el.find('.status').text(data.message);
                 })
