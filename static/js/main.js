@@ -143,6 +143,17 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             'click .video': 'playReel'
         },
 
+        initialize: function (options) {
+          Backbone.View.prototype.initialize.apply(this, options);
+          App.vent.on('navigate', this.onNavigate, this);
+        },
+
+        onNavigate: function (name) {
+          if (name !== 'home') {
+            this.$el.find('.video .inner').html('&nbsp;');
+          }
+        },
+
         playReel: function (e) {
             e.preventDefault();
             this.$el.find('.video .inner').html(this.template({
