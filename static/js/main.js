@@ -426,7 +426,7 @@ App.views.LayoutManager = Backbone.View.extend({
 
     steveGallant.$el.find('#navbar li').removeClass('active');
     steveGallant.$el.find('#navbar li.' + name).addClass('active');
-    $('html, body').animate({
+    $(window).animate({
       scrollTop: 0
     }, 500);
 
