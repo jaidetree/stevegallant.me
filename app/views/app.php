@@ -8,7 +8,9 @@
     <body>
         <div class="app-steve-portfolio">
             <div id="l-background">
-                &nbsp;
+                <div id="l-footer">
+                    <img src="/static/images/footer.svg" alt="Site Footer" />
+                </div>
             </div>
 
             <div id="wrapper">
@@ -25,7 +27,7 @@
                     </nav>
                 </header> 
                 <div id="l-main">
-                    <section id="home">
+                    <section id="home" class="page">
                         <header>
                             <div class="inner">
                                 <div class="title">
@@ -38,7 +40,7 @@
                             <div class="video"><div class="inner">&nbsp;</div></div>
                         </div>
                     </section>
-                    <section id="work">
+                    <section id="work" class="page">
                         <header>
                             <div class="inner">
                                 <div class="title">
@@ -52,7 +54,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section id="resume">
+                    <section id="resume" class="page">
                         <header>
                             <div class="inner">
                                 <div class="title">
@@ -188,7 +190,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section id="contact">
+                    <section id="contact" class="page active">
                         <header>
                             <div class="inner">
                                 <div class="title">
@@ -242,7 +244,7 @@
                                                     <a href="mailto:steve@stevegallant.me">steve@stevegallant.me</a>
                                                 </li>
                                                 <li class="in">
-                                                    <a href="#">Steve on LinkedIn</a>
+                                                    <a href="https://www.linkedin.com/profile/view?id=167694907">Steve on LinkedIn</a>
                                                 </li>
                                             </ul>
                                         </div>

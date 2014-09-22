@@ -385,7 +385,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
   App.views.LayoutManager = Backbone.View.extend({
     events: {
-      'click section': 'onSection'
+      'click section.page': 'onSection'
     },
 
     initialize: function (options) {
@@ -400,6 +400,9 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     },
 
     onSection: function (e) {
+      if (! this.$el.find(e.target).hasClass('page')) {
+        return;
+      }
       e.preventDefault();
       var name = $(e.currentTarget).attr('id');
       this.app.routers.workspace.navigate('!/' + name, { trigger: true });

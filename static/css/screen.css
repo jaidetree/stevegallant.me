@@ -108,13 +108,18 @@ body {
   float: left;
   width: 40%;
 }
-/* line 13, ../sass/_layout.scss */
+/* line 12, ../sass/_layout.scss */
+#l-header #logo img {
+  width: 100%;
+  height: auto;
+}
+/* line 17, ../sass/_layout.scss */
 #l-header #navbar {
   float: right;
   width: 60%;
   text-align: right;
 }
-/* line 17, ../sass/_layout.scss */
+/* line 21, ../sass/_layout.scss */
 #l-header #navbar li {
   position: relative;
   z-index: 20;
@@ -130,7 +135,7 @@ body {
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-/* line 23, ../sass/_layout.scss */
+/* line 27, ../sass/_layout.scss */
 #l-header #navbar li a {
   display: block;
   width: 110px;
@@ -146,11 +151,11 @@ body {
   text-align: center;
   text-decoration: none;
 }
-/* line 34, ../sass/_layout.scss */
+/* line 38, ../sass/_layout.scss */
 #l-header #navbar li a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
-/* line 38, ../sass/_layout.scss */
+/* line 42, ../sass/_layout.scss */
 #l-header #navbar li.active {
   -moz-transform: scale(1.2) translateY(-10px);
   -webkit-transform: scale(1.2) translateY(-10px);
@@ -162,48 +167,48 @@ body {
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
-/* line 46, ../sass/_layout.scss */
+/* line 50, ../sass/_layout.scss */
 #l-header #navbar li.work a {
   background: #00d97d;
 }
-/* line 48, ../sass/_layout.scss */
+/* line 52, ../sass/_layout.scss */
 #l-header #navbar li.work a:hover {
   background: #0dff98;
 }
-/* line 52, ../sass/_layout.scss */
+/* line 56, ../sass/_layout.scss */
 #l-header #navbar li.work.active a {
   background: #40ffae;
 }
-/* line 55, ../sass/_layout.scss */
+/* line 59, ../sass/_layout.scss */
 #l-header #navbar li.resume a {
   background: #7ed800;
 }
-/* line 57, ../sass/_layout.scss */
+/* line 61, ../sass/_layout.scss */
 #l-header #navbar li.resume a:hover {
   background: #9aff0c;
 }
-/* line 61, ../sass/_layout.scss */
+/* line 65, ../sass/_layout.scss */
 #l-header #navbar li.resume.active a {
   background: #afff3f;
 }
-/* line 64, ../sass/_layout.scss */
+/* line 68, ../sass/_layout.scss */
 #l-header #navbar li.contact a {
   background: #d8eb00;
 }
-/* line 66, ../sass/_layout.scss */
+/* line 70, ../sass/_layout.scss */
 #l-header #navbar li.contact a:hover {
   background: #edff1f;
 }
-/* line 70, ../sass/_layout.scss */
+/* line 74, ../sass/_layout.scss */
 #l-header #navbar li.contact.active a {
   background: #f1ff52;
 }
 
-/* line 76, ../sass/_layout.scss */
+/* line 80, ../sass/_layout.scss */
 #l-main {
   margin-top: 2em;
 }
-/* line 78, ../sass/_layout.scss */
+/* line 82, ../sass/_layout.scss */
 #l-main section {
   width: 100%;
   max-height: 0;
@@ -215,7 +220,7 @@ body {
   -o-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
 }
-/* line 85, ../sass/_layout.scss */
+/* line 89, ../sass/_layout.scss */
 #l-main section.active {
   max-height: 2000px;
   -webkit-transition: max-height 500ms ease-in-out;
@@ -223,7 +228,7 @@ body {
   -o-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
 }
-/* line 88, ../sass/_layout.scss */
+/* line 92, ../sass/_layout.scss */
 #l-main section.active header .title {
   text-indent: 0;
   -webkit-transition: text-indent 500ms ease-in-out;
@@ -231,27 +236,27 @@ body {
   -o-transition: text-indent 500ms ease-in-out;
   transition: text-indent 500ms ease-in-out;
 }
-/* line 94, ../sass/_layout.scss */
+/* line 98, ../sass/_layout.scss */
 #l-main section header h2 {
   color: #fff;
   font-size: 2.5em;
 }
-/* line 99, ../sass/_layout.scss */
+/* line 103, ../sass/_layout.scss */
 #l-main section header h3 {
   color: #fff;
   font-size: 1.4em;
   text-transform: uppercase;
 }
-/* line 105, ../sass/_layout.scss */
+/* line 109, ../sass/_layout.scss */
 #l-main section header h2, #l-main section header h3 {
   display: inline;
 }
-/* line 108, ../sass/_layout.scss */
+/* line 112, ../sass/_layout.scss */
 #l-main section header .inner {
   position: relative;
   padding: 0.8em;
 }
-/* line 112, ../sass/_layout.scss */
+/* line 116, ../sass/_layout.scss */
 #l-main section header .title {
   display: -moz-inline-stack;
   display: inline-block;
@@ -267,25 +272,39 @@ body {
   -o-transition: text-indent 500ms ease-in-out;
   transition: text-indent 500ms ease-in-out;
 }
-/* line 121, ../sass/_layout.scss */
+/* line 125, ../sass/_layout.scss */
 #l-main .content {
   background: #fff;
   padding: 2em 1em;
 }
 
-/* line 126, ../sass/_layout.scss */
+/* line 130, ../sass/_layout.scss */
 #l-background {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cce8e1), color-stop(100%, #f1f2c3));
   background: -webkit-linear-gradient(#cce8e1, #f1f2c3);
   background: -moz-linear-gradient(#cce8e1, #f1f2c3);
   background: -o-linear-gradient(#cce8e1, #f1f2c3);
   background: linear-gradient(#cce8e1, #f1f2c3);
+}
+
+/* line 139, ../sass/_layout.scss */
+#l-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+/* line 145, ../sass/_layout.scss */
+#l-footer img {
+  width: 100%;
+  height: auto;
 }
 
 /* line 1, ../sass/_modules.scss */
@@ -295,7 +314,7 @@ body {
   right: 0;
   top: 0;
   min-height: 100%;
-  padding: 5% 10% 10%;
+  padding: 5% 10% 20%;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
@@ -353,116 +372,118 @@ section#home .video {
 section#home .video .inner {
   height: 480px;
   background: #0083fd url(/static/images/play_reel.svg) no-repeat 50% 50%;
+  background-size: cover;
 }
-/* line 40, ../sass/_modules.scss */
+/* line 41, ../sass/_modules.scss */
 section#home .video .inner:hover {
   background-image: url(/static/images/play_reel_hover.svg);
+  background-size: cover;
 }
 
-/* line 46, ../sass/_modules.scss */
+/* line 48, ../sass/_modules.scss */
 section#work {
   border-top-color: #00d97d;
 }
-/* line 48, ../sass/_modules.scss */
+/* line 50, ../sass/_modules.scss */
 section#work:hover {
   border-top-color: #0dff98;
 }
-/* line 51, ../sass/_modules.scss */
+/* line 53, ../sass/_modules.scss */
 section#work.active:hover {
   border-top-color: #00d97d;
 }
-/* line 54, ../sass/_modules.scss */
+/* line 56, ../sass/_modules.scss */
 section#work header {
   background: #00d97d;
 }
-/* line 57, ../sass/_modules.scss */
+/* line 59, ../sass/_modules.scss */
 section#work header .inner:before {
   background: url(/static/images/work_illustration.svg) no-repeat;
 }
-/* line 60, ../sass/_modules.scss */
+/* line 62, ../sass/_modules.scss */
 section#work header .inner:after {
   background: url(/static/images/work_header.png) repeat-x;
 }
 
-/* line 66, ../sass/_modules.scss */
+/* line 68, ../sass/_modules.scss */
 section#resume {
   border-top-color: #7ed800;
 }
-/* line 68, ../sass/_modules.scss */
+/* line 70, ../sass/_modules.scss */
 section#resume:hover {
   border-top-color: #9aff0c;
 }
-/* line 71, ../sass/_modules.scss */
+/* line 73, ../sass/_modules.scss */
 section#resume.active:hover {
   border-top-color: #7ed800;
 }
-/* line 74, ../sass/_modules.scss */
+/* line 76, ../sass/_modules.scss */
 section#resume header {
   background: #7ed800;
 }
-/* line 77, ../sass/_modules.scss */
+/* line 79, ../sass/_modules.scss */
 section#resume header .inner:before {
   background: url(/static/images/resume_illustration.svg) no-repeat;
 }
-/* line 80, ../sass/_modules.scss */
+/* line 82, ../sass/_modules.scss */
 section#resume header .inner:after {
   background: url(/static/images/resume_header.png) repeat-x;
 }
 
-/* line 86, ../sass/_modules.scss */
+/* line 88, ../sass/_modules.scss */
 section#contact {
   border-top-color: #d8eb00;
 }
-/* line 88, ../sass/_modules.scss */
+/* line 90, ../sass/_modules.scss */
 section#contact:hover {
   border-top-color: #edff1f;
 }
-/* line 91, ../sass/_modules.scss */
+/* line 93, ../sass/_modules.scss */
 section#contact.active:hover {
   border-top-color: #d8eb00;
 }
-/* line 94, ../sass/_modules.scss */
+/* line 96, ../sass/_modules.scss */
 section#contact header {
   background: #d8eb00;
 }
-/* line 96, ../sass/_modules.scss */
+/* line 98, ../sass/_modules.scss */
 section#contact header h2, section#contact header h3 {
   color: #585800;
 }
-/* line 100, ../sass/_modules.scss */
+/* line 102, ../sass/_modules.scss */
 section#contact header .inner:before {
   background: url(/static/images/contact_illustration.svg) no-repeat;
 }
-/* line 103, ../sass/_modules.scss */
+/* line 105, ../sass/_modules.scss */
 section#contact header .inner:after {
   background: url(/static/images/contact_header.png) repeat-x;
 }
-/* line 108, ../sass/_modules.scss */
+/* line 110, ../sass/_modules.scss */
 section#contact .contact-view {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 111, ../sass/_modules.scss */
+/* line 113, ../sass/_modules.scss */
 section#contact .form {
   float: left;
   width: 55%;
 }
-/* line 115, ../sass/_modules.scss */
+/* line 117, ../sass/_modules.scss */
 section#contact .about {
   float: right;
   width: 43%;
   margin-left: 2%;
 }
 
-/* line 122, ../sass/_modules.scss */
+/* line 124, ../sass/_modules.scss */
 .resume-sections .inner {
   padding: 2rem 0;
 }
-/* line 125, ../sass/_modules.scss */
+/* line 127, ../sass/_modules.scss */
 .resume-sections .header {
   background: url(/static/images/resume_section_bg.png) repeat-x 0 0.3em;
 }
-/* line 127, ../sass/_modules.scss */
+/* line 129, ../sass/_modules.scss */
 .resume-sections .header .title {
   position: relative;
   display: -moz-inline-stack;
@@ -477,7 +498,7 @@ section#contact .about {
   color: #7ed800;
   font-size: 2em;
 }
-/* line 136, ../sass/_modules.scss */
+/* line 138, ../sass/_modules.scss */
 .resume-sections .header .title:before {
   position: absolute;
   right: 0.5rem;
@@ -493,7 +514,7 @@ section#contact .about {
   font-size: 0;
   z-index: 100;
 }
-/* line 146, ../sass/_modules.scss */
+/* line 148, ../sass/_modules.scss */
 .resume-sections .header .title:after {
   position: absolute;
   top: 0;
@@ -504,28 +525,28 @@ section#contact .about {
   content: '.';
   font-size: 0;
 }
-/* line 159, ../sass/_modules.scss */
+/* line 161, ../sass/_modules.scss */
 .resume-sections .intro h2 {
   font-size: 2rem;
 }
-/* line 163, ../sass/_modules.scss */
+/* line 165, ../sass/_modules.scss */
 .resume-sections .intro .inner {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 166, ../sass/_modules.scss */
+/* line 168, ../sass/_modules.scss */
 .resume-sections .intro .overview {
   float: left;
   width: 65%;
 }
-/* line 170, ../sass/_modules.scss */
+/* line 172, ../sass/_modules.scss */
 .resume-sections .intro .download {
   float: right;
   width: 33%;
   padding-top: 3rem;
   text-align: center;
 }
-/* line 176, ../sass/_modules.scss */
+/* line 178, ../sass/_modules.scss */
 .resume-sections .intro .download-link {
   display: -moz-inline-stack;
   display: inline-block;
@@ -554,7 +575,7 @@ section#contact .about {
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 187, ../sass/_modules.scss */
+/* line 189, ../sass/_modules.scss */
 .resume-sections .intro .download-link:hover {
   background: #8df200;
   -webkit-transition: all 250ms ease;
@@ -568,7 +589,7 @@ section#contact .about {
   -o-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 192, ../sass/_modules.scss */
+/* line 194, ../sass/_modules.scss */
 .resume-sections .intro .download-link:active {
   background: #60a500;
   color: #fff;
@@ -583,47 +604,47 @@ section#contact .about {
   -o-transform: scale(0.9, 0.9);
   transform: scale(0.9, 0.9);
 }
-/* line 199, ../sass/_modules.scss */
+/* line 201, ../sass/_modules.scss */
 .resume-sections .intro p {
   font-size: 0.85rem;
   line-height: 1.4rem;
 }
-/* line 206, ../sass/_modules.scss */
+/* line 208, ../sass/_modules.scss */
 .resume-sections .jobs .header .title:before {
   background: url(/static/images/resume_jobs_icon.svg) no-repeat;
 }
-/* line 211, ../sass/_modules.scss */
+/* line 213, ../sass/_modules.scss */
 .resume-sections .job-list {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 213, ../sass/_modules.scss */
+/* line 215, ../sass/_modules.scss */
 .resume-sections .job-list h3 {
   font-size: 1.5rem;
 }
-/* line 217, ../sass/_modules.scss */
+/* line 219, ../sass/_modules.scss */
 .resume-sections .job-list p, .resume-sections .job-list ul {
   margin-top: 1rem;
   color: #3a3a3a;
   line-height: 1.3rem;
 }
-/* line 222, ../sass/_modules.scss */
+/* line 224, ../sass/_modules.scss */
 .resume-sections .job-list ul li {
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
-/* line 226, ../sass/_modules.scss */
+/* line 228, ../sass/_modules.scss */
 .resume-sections .job-list ul li ul {
   margin-left: 1.5rem;
   font-size: 0.9rem;
   line-height: 1.1rem;
 }
-/* line 231, ../sass/_modules.scss */
+/* line 233, ../sass/_modules.scss */
 .resume-sections .job-list strong {
   font-weight: normal;
   display: block;
 }
-/* line 236, ../sass/_modules.scss */
+/* line 238, ../sass/_modules.scss */
 .resume-sections .job-list .job {
   position: relative;
   float: left;
@@ -632,7 +653,7 @@ section#contact .about {
   padding: 1rem;
   padding-left: 5.5rem;
 }
-/* line 244, ../sass/_modules.scss */
+/* line 246, ../sass/_modules.scss */
 .resume-sections .job-list .year {
   position: absolute;
   left: 0;
@@ -650,26 +671,26 @@ section#contact .about {
   text-align: center;
   padding-top: 1em;
 }
-/* line 257, ../sass/_modules.scss */
+/* line 259, ../sass/_modules.scss */
 .resume-sections .job-list .year.single {
   padding-top: 0;
   line-height: 5rem;
 }
-/* line 262, ../sass/_modules.scss */
+/* line 264, ../sass/_modules.scss */
 .resume-sections .job-list .end {
   display: block;
   font-size: 0.8em;
 }
-/* line 270, ../sass/_modules.scss */
+/* line 272, ../sass/_modules.scss */
 .resume-sections .education .header .title:before {
   background: url(/static/images/resume_education_icon.svg) no-repeat;
 }
-/* line 274, ../sass/_modules.scss */
+/* line 276, ../sass/_modules.scss */
 .resume-sections .education .inner {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
-/* line 279, ../sass/_modules.scss */
+/* line 281, ../sass/_modules.scss */
 .resume-sections .timeline {
   position: relative;
   width: 95%;
@@ -679,13 +700,13 @@ section#contact .about {
   margin: 0 auto;
   background: url(/static/images/resume_timeline_bg.png) repeat-x 0 50%;
 }
-/* line 287, ../sass/_modules.scss */
+/* line 289, ../sass/_modules.scss */
 .resume-sections .timeline .event {
   position: absolute;
   margin-top: 1.8rem;
   background: rgba(255, 255, 255, 0.5);
 }
-/* line 294, ../sass/_modules.scss */
+/* line 296, ../sass/_modules.scss */
 .resume-sections .timeline .event .year, .resume-sections .timeline .event h3 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -694,16 +715,16 @@ section#contact .about {
   zoom: 1;
   *display: inline;
 }
-/* line 300, ../sass/_modules.scss */
+/* line 302, ../sass/_modules.scss */
 .resume-sections .timeline .event .location {
   margin-top: 0.3rem;
   font-weight: normal;
 }
-/* line 305, ../sass/_modules.scss */
+/* line 307, ../sass/_modules.scss */
 .resume-sections .timeline .event.above {
   top: -5.3rem;
 }
-/* line 308, ../sass/_modules.scss */
+/* line 310, ../sass/_modules.scss */
 .resume-sections .timeline .event.below:before {
   display: block;
   margin-bottom: 0.3rem;
@@ -712,7 +733,7 @@ section#contact .about {
   font-size: 0;
   content: '.';
 }
-/* line 316, ../sass/_modules.scss */
+/* line 318, ../sass/_modules.scss */
 .resume-sections .timeline .event.above:after {
   display: block;
   margin-top: 0.3rem;
@@ -721,51 +742,51 @@ section#contact .about {
   font-size: 0;
   content: '.';
 }
-/* line 324, ../sass/_modules.scss */
+/* line 326, ../sass/_modules.scss */
 .resume-sections .timeline .event.below.short:before {
   height: 2rem;
 }
-/* line 327, ../sass/_modules.scss */
+/* line 329, ../sass/_modules.scss */
 .resume-sections .timeline .event.above.short:after {
   height: 2rem;
 }
-/* line 330, ../sass/_modules.scss */
+/* line 332, ../sass/_modules.scss */
 .resume-sections .timeline .event.long.below:before {
   height: 6rem;
   border-color: #777;
 }
-/* line 334, ../sass/_modules.scss */
+/* line 336, ../sass/_modules.scss */
 .resume-sections .timeline .event.long.above {
   top: -8.8rem;
 }
-/* line 337, ../sass/_modules.scss */
+/* line 339, ../sass/_modules.scss */
 .resume-sections .timeline .event.long.above:after {
   height: 6rem;
   border-color: #777;
 }
-/* line 345, ../sass/_modules.scss */
+/* line 347, ../sass/_modules.scss */
 .resume-sections .extra .header .title:before {
   background: url(/static/images/resume_extra_icon.svg) no-repeat;
 }
 
-/* line 351, ../sass/_modules.scss */
+/* line 353, ../sass/_modules.scss */
 form.contact {
   padding: 1px;
   border: 1px solid #585c00;
 }
-/* line 354, ../sass/_modules.scss */
+/* line 356, ../sass/_modules.scss */
 form.contact ul {
   padding: 1em;
   background: #d8eb00;
 }
-/* line 358, ../sass/_modules.scss */
+/* line 360, ../sass/_modules.scss */
 form.contact li {
   position: relative;
   padding: 1px;
   margin: 1em 0;
   border: 1px solid #585c00;
 }
-/* line 363, ../sass/_modules.scss */
+/* line 365, ../sass/_modules.scss */
 form.contact li:after {
   position: absolute;
   top: 15px;
@@ -777,32 +798,32 @@ form.contact li:after {
   font-size: 0;
   content: '.';
 }
-/* line 374, ../sass/_modules.scss */
+/* line 376, ../sass/_modules.scss */
 form.contact li.name:after {
   background-image: url(/static/images/contact_icon_name.svg);
 }
-/* line 377, ../sass/_modules.scss */
+/* line 379, ../sass/_modules.scss */
 form.contact li.email:after {
   background-image: url(/static/images/contact_icon_email.svg);
 }
-/* line 380, ../sass/_modules.scss */
+/* line 382, ../sass/_modules.scss */
 form.contact li.message:after {
   background-image: url(/static/images/contact_icon_message.svg);
 }
-/* line 383, ../sass/_modules.scss */
+/* line 385, ../sass/_modules.scss */
 form.contact li.cartoon {
   display: none;
 }
-/* line 386, ../sass/_modules.scss */
+/* line 388, ../sass/_modules.scss */
 form.contact li.actions {
   border: none;
   text-align: right;
 }
-/* line 391, ../sass/_modules.scss */
+/* line 393, ../sass/_modules.scss */
 form.contact label {
   display: none;
 }
-/* line 394, ../sass/_modules.scss */
+/* line 396, ../sass/_modules.scss */
 form.contact input[type="text"], form.contact textarea {
   width: 100%;
   display: block;
@@ -815,35 +836,35 @@ form.contact input[type="text"], form.contact textarea {
   color: 000;
   font-size: 1.3rem;
 }
-/* line 406, ../sass/_modules.scss */
+/* line 408, ../sass/_modules.scss */
 form.contact input[type="text"]:hover, form.contact textarea:hover {
   background: #ebff05;
 }
-/* line 409, ../sass/_modules.scss */
+/* line 411, ../sass/_modules.scss */
 form.contact input[type="text"]:focus, form.contact textarea:focus {
   background: #c1d200;
 }
-/* line 413, ../sass/_modules.scss */
+/* line 415, ../sass/_modules.scss */
 form.contact textarea {
   min-height: 10rem;
 }
-/* line 417, ../sass/_modules.scss */
+/* line 419, ../sass/_modules.scss */
 form.contact input::-webkit-input-placeholder,
 form.contact textarea::-webkit-input-placeholder {
   color: #000;
   text-transform: uppercase;
 }
-/* line 421, ../sass/_modules.scss */
+/* line 423, ../sass/_modules.scss */
 form.contact input::-moz-placeholder {
   color: #000;
   text-transform: uppercase;
 }
-/* line 425, ../sass/_modules.scss */
+/* line 427, ../sass/_modules.scss */
 form.contact input::-ms-input-placeholder {
   color: #000;
   text-transform: uppercase;
 }
-/* line 429, ../sass/_modules.scss */
+/* line 431, ../sass/_modules.scss */
 form.contact .send {
   position: relative;
   border: 1px solid #585c00;
@@ -854,7 +875,7 @@ form.contact .send {
   color: #585c00;
   font-size: 1.3rem;
 }
-/* line 439, ../sass/_modules.scss */
+/* line 441, ../sass/_modules.scss */
 form.contact .send:before {
   position: absolute;
   left: 1px;
@@ -872,11 +893,11 @@ form.contact .send:before {
   font-size: 0;
   content: '.';
 }
-/* line 451, ../sass/_modules.scss */
+/* line 453, ../sass/_modules.scss */
 form.contact .send:hover {
   background: #ebff05;
 }
-/* line 455, ../sass/_modules.scss */
+/* line 457, ../sass/_modules.scss */
 form.contact .status {
   position: absolute;
   right: 9rem;
@@ -885,23 +906,23 @@ form.contact .status {
   margin-top: 0.3rem;
   text-align: left;
 }
-/* line 463, ../sass/_modules.scss */
+/* line 465, ../sass/_modules.scss */
 form.contact .header {
   padding: 1em;
   background: #585c00;
   color: #fff;
   font-size: 1.2em;
 }
-/* line 468, ../sass/_modules.scss */
+/* line 470, ../sass/_modules.scss */
 form.contact .header strong {
   font-weight: normal;
 }
-/* line 472, ../sass/_modules.scss */
+/* line 474, ../sass/_modules.scss */
 form.contact .header span {
   text-transform: lowercase;
 }
 
-/* line 479, ../sass/_modules.scss */
+/* line 481, ../sass/_modules.scss */
 .about h3 {
   margin-bottom: 0.25em;
   border-top: 1px solid #585c00;
@@ -909,54 +930,54 @@ form.contact .header span {
   color: #000;
   font-size: 3em;
 }
-/* line 487, ../sass/_modules.scss */
+/* line 489, ../sass/_modules.scss */
 .about p {
   line-height: 2rem;
 }
-/* line 490, ../sass/_modules.scss */
+/* line 492, ../sass/_modules.scss */
 .about .links {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #999;
 }
-/* line 494, ../sass/_modules.scss */
+/* line 496, ../sass/_modules.scss */
 .about .links li {
   margin: 1rem 0;
 }
-/* line 497, ../sass/_modules.scss */
+/* line 499, ../sass/_modules.scss */
 .about .links a {
   padding-left: 2.5rem;
   color: #000;
   font-size: 1.2rem;
 }
-/* line 503, ../sass/_modules.scss */
+/* line 505, ../sass/_modules.scss */
 .about .links .email a {
   background: url(/static/images/contact_btn_email.svg) no-repeat 0% 50%;
 }
-/* line 506, ../sass/_modules.scss */
+/* line 508, ../sass/_modules.scss */
 .about .links .in a {
   background: url(/static/images/contact_btn_linkedin.svg) no-repeat 0% 50%;
 }
 
-/* line 511, ../sass/_modules.scss */
+/* line 513, ../sass/_modules.scss */
 .work-category {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 3rem;
 }
-/* line 514, ../sass/_modules.scss */
+/* line 516, ../sass/_modules.scss */
 .work-category h2 {
   margin-bottom: 1rem;
   color: #00d97d;
   font-size: 2rem;
 }
-/* line 520, ../sass/_modules.scss */
+/* line 522, ../sass/_modules.scss */
 .work-category .gallery {
   width: 58.5em;
   margin: 0 auto;
   margin-bottom: 2em;
 }
-/* line 525, ../sass/_modules.scss */
+/* line 527, ../sass/_modules.scss */
 .work-category .works {
   padding: 3px;
   padding-right: 0;
@@ -969,7 +990,7 @@ form.contact .header span {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 532, ../sass/_modules.scss */
+/* line 534, ../sass/_modules.scss */
 .work-category .work {
   box-sizing: border-box;
   position: relative;
@@ -986,7 +1007,7 @@ form.contact .header span {
   margin-right: 3px;
   cursor: pointer;
 }
-/* line 543, ../sass/_modules.scss */
+/* line 545, ../sass/_modules.scss */
 .work-category .work img {
   box-sizing: border-box;
   position: absolute;
@@ -1003,12 +1024,12 @@ form.contact .header span {
   background: #999;
   line-height: 50%;
 }
-/* line 555, ../sass/_modules.scss */
+/* line 557, ../sass/_modules.scss */
 .work-category .work:hover {
   border: 5px solid #00d97d;
 }
 
-/* line 560, ../sass/_modules.scss */
+/* line 562, ../sass/_modules.scss */
 .modal-view {
   position: fixed;
   left: 0;
@@ -1023,7 +1044,7 @@ form.contact .header span {
   z-index: 300;
   opacity: 0;
 }
-/* line 569, ../sass/_modules.scss */
+/* line 571, ../sass/_modules.scss */
 .modal-view .ui {
   position: fixed;
   left: 0;
@@ -1036,12 +1057,12 @@ form.contact .header span {
   padding: 1rem;
   background: #00d97d;
 }
-/* line 579, ../sass/_modules.scss */
+/* line 581, ../sass/_modules.scss */
 .modal-view .ui nav {
   float: left;
   width: 25%;
 }
-/* line 583, ../sass/_modules.scss */
+/* line 585, ../sass/_modules.scss */
 .modal-view .ui button {
   padding: 0.5rem;
   border: none;
@@ -1055,7 +1076,7 @@ form.contact .header span {
   -o-transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
 }
-/* line 592, ../sass/_modules.scss */
+/* line 594, ../sass/_modules.scss */
 .modal-view .ui button:hover {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
@@ -1064,16 +1085,16 @@ form.contact .header span {
   -o-transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
 }
-/* line 597, ../sass/_modules.scss */
+/* line 599, ../sass/_modules.scss */
 .modal-view .ui button:disabled {
   opacity: 0.2;
 }
-/* line 599, ../sass/_modules.scss */
+/* line 601, ../sass/_modules.scss */
 .modal-view .ui button:disabled:hover {
   background-color: #fff;
   color: #00d97d;
 }
-/* line 605, ../sass/_modules.scss */
+/* line 607, ../sass/_modules.scss */
 .modal-view .ui .page-info {
   float: left;
   width: 50%;
@@ -1082,50 +1103,50 @@ form.contact .header span {
   font-size: 1.8em;
   text-align: center;
 }
-/* line 612, ../sass/_modules.scss */
+/* line 614, ../sass/_modules.scss */
 .modal-view .ui .page-info .index, .modal-view .ui .page-info .total {
   color: #fff;
 }
-/* line 615, ../sass/_modules.scss */
+/* line 617, ../sass/_modules.scss */
 .modal-view .ui .page-info .divider {
   color: #fff;
   opacity: 0.8;
 }
-/* line 620, ../sass/_modules.scss */
+/* line 622, ../sass/_modules.scss */
 .modal-view .ui .actions {
   float: right;
   width: 25%;
   text-align: right;
 }
-/* line 625, ../sass/_modules.scss */
+/* line 627, ../sass/_modules.scss */
 .modal-view .ui .next {
   padding-right: 2rem;
   background-image: url(/static/images/work_nav_right.svg);
   background-position: 85% 50%;
 }
-/* line 629, ../sass/_modules.scss */
+/* line 631, ../sass/_modules.scss */
 .modal-view .ui .next:hover {
   background-position: 90% 50%;
 }
-/* line 631, ../sass/_modules.scss */
+/* line 633, ../sass/_modules.scss */
 .modal-view .ui .next:hover:disabled {
   background-position: 85% 50%;
 }
-/* line 636, ../sass/_modules.scss */
+/* line 638, ../sass/_modules.scss */
 .modal-view .ui .prev {
   padding-left: 2rem;
   background-image: url(/static/images/work_nav_left.svg);
   background-position: 0.5rem 50%;
 }
-/* line 640, ../sass/_modules.scss */
+/* line 642, ../sass/_modules.scss */
 .modal-view .ui .prev:hover {
   background-position: 0.2rem 50%;
 }
-/* line 642, ../sass/_modules.scss */
+/* line 644, ../sass/_modules.scss */
 .modal-view .ui .prev:hover:disabled {
   background-position: 0.5rem 50%;
 }
-/* line 648, ../sass/_modules.scss */
+/* line 650, ../sass/_modules.scss */
 .modal-view .fill {
   position: absolute;
   top: 0;
@@ -1134,7 +1155,7 @@ form.contact .header span {
   right: 0;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 656, ../sass/_modules.scss */
+/* line 658, ../sass/_modules.scss */
 .modal-view .modal-body {
   position: absolute;
   top: 4.5rem;
@@ -1145,7 +1166,7 @@ form.contact .header span {
   box-sizing: border-box;
   overflow: auto;
 }
-/* line 666, ../sass/_modules.scss */
+/* line 668, ../sass/_modules.scss */
 .modal-view .modal-body .inner {
   width: 80%;
   margin: 2em auto;
@@ -1158,24 +1179,24 @@ form.contact .header span {
   border: 1px solid #eee;
   background: #fff;
 }
-/* line 673, ../sass/_modules.scss */
+/* line 675, ../sass/_modules.scss */
 .modal-view .modal-body .inner:after {
   display: table;
   clear: both;
   content: '.';
 }
-/* line 679, ../sass/_modules.scss */
+/* line 681, ../sass/_modules.scss */
 .modal-view .modal-content {
   float: left;
   width: 65%;
 }
-/* line 682, ../sass/_modules.scss */
+/* line 684, ../sass/_modules.scss */
 .modal-view .modal-content img {
   max-width: 100%;
   width: auto;
   height: auto;
 }
-/* line 688, ../sass/_modules.scss */
+/* line 690, ../sass/_modules.scss */
 .modal-view .info {
   float: right;
   width: 30%;
@@ -1183,17 +1204,17 @@ form.contact .header span {
   padding-top: 1rem;
   border-top: 1px solid #00d97d;
 }
-/* line 694, ../sass/_modules.scss */
+/* line 696, ../sass/_modules.scss */
 .modal-view .info .title {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
-/* line 699, ../sass/_modules.scss */
+/* line 701, ../sass/_modules.scss */
 .modal-view .info .date {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
-/* line 703, ../sass/_modules.scss */
+/* line 705, ../sass/_modules.scss */
 .modal-view .info .date .label {
   margin-right: 0.5rem;
   color: #888;

@@ -4,7 +4,7 @@
   right: 0;
   top: 0;
   min-height: 100%;
-  padding: 5% 10% 10%;
+  padding: 5% 10% 20%;
   @include transition(all 500ms ease-in-out);
   @include transform(scale(1.0));
   &.has-modal {
@@ -37,8 +37,10 @@ section#home {
     .inner {
       height: 480px;
       background: $home url(/static/images/play_reel.svg) no-repeat 50% 50%;
+      background-size: cover;
       &:hover {
         background-image: url(/static/images/play_reel_hover.svg);
+        background-size: cover;
       }
     }
   }

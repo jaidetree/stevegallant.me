@@ -9,6 +9,10 @@
   #logo {
     float: left;
     width: 40%;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   #navbar {
     float: right;
@@ -129,6 +133,17 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   @include background(linear-gradient(#cce8e1, #f1f2c3));
+}
+#l-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
