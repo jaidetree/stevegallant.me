@@ -142,6 +142,8 @@
       @include scale(1.0);
       &:after {
         position: absolute;
+        top: 0;
+        bottom: 0;
         width: 20px;
         height: 20px;
         right: 15px;

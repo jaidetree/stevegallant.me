@@ -319,6 +319,8 @@ body {
 /* line 143, ../sass/_layout.scss */
 #l-main .nav .page-nav:after {
   position: absolute;
+  top: 0;
+  bottom: 0;
   width: 20px;
   height: 20px;
   right: 15px;
@@ -332,7 +334,7 @@ body {
   -o-transition: all 150ms ease;
   transition: all 150ms ease;
 }
-/* line 155, ../sass/_layout.scss */
+/* line 157, ../sass/_layout.scss */
 #l-main .nav .page-nav:hover {
   -webkit-transform: scale(1.05, 1.05);
   -moz-transform: scale(1.05, 1.05);
@@ -344,7 +346,7 @@ body {
   -o-transition: all 150ms ease;
   transition: all 150ms ease;
 }
-/* line 158, ../sass/_layout.scss */
+/* line 160, ../sass/_layout.scss */
 #l-main .nav .page-nav:hover:after {
   right: 8px;
   -webkit-transition: all 150ms ease;
@@ -352,7 +354,7 @@ body {
   -o-transition: all 150ms ease;
   transition: all 150ms ease;
 }
-/* line 163, ../sass/_layout.scss */
+/* line 165, ../sass/_layout.scss */
 #l-main .nav .page-nav:active {
   -webkit-transition: all 150ms ease;
   -moz-transition: all 150ms ease;
@@ -364,51 +366,51 @@ body {
   -o-transform: scale(0.95, 0.95);
   transform: scale(0.95, 0.95);
 }
-/* line 167, ../sass/_layout.scss */
+/* line 169, ../sass/_layout.scss */
 #l-main .nav .page-nav.work {
   background: #00d97d;
 }
-/* line 169, ../sass/_layout.scss */
+/* line 171, ../sass/_layout.scss */
 #l-main .nav .page-nav.work:hover {
   background: #00ed89;
 }
-/* line 172, ../sass/_layout.scss */
+/* line 174, ../sass/_layout.scss */
 #l-main .nav .page-nav.work:active {
   background: #00c06e;
 }
-/* line 176, ../sass/_layout.scss */
+/* line 178, ../sass/_layout.scss */
 #l-main .nav .page-nav.resume {
   background: #7ed800;
 }
-/* line 178, ../sass/_layout.scss */
+/* line 180, ../sass/_layout.scss */
 #l-main .nav .page-nav.resume:hover {
   background: #8aec00;
 }
-/* line 181, ../sass/_layout.scss */
+/* line 183, ../sass/_layout.scss */
 #l-main .nav .page-nav.resume:active {
   background: #6fbf00;
 }
-/* line 185, ../sass/_layout.scss */
+/* line 187, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact {
   background: #d8eb00;
   color: #000;
 }
-/* line 188, ../sass/_layout.scss */
+/* line 190, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact:after {
   background-image: url(/static/images/page_nav_right_black.svg);
 }
-/* line 191, ../sass/_layout.scss */
+/* line 193, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact:hover {
   background: #eaff00;
   color: #000;
 }
-/* line 195, ../sass/_layout.scss */
+/* line 197, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact:active {
   background: #c1d200;
   color: #000;
 }
 
-/* line 203, ../sass/_layout.scss */
+/* line 205, ../sass/_layout.scss */
 #l-background {
   position: fixed;
   top: 0;
@@ -423,7 +425,7 @@ body {
   background: linear-gradient(#cce8e1, #f1f2c3);
 }
 
-/* line 212, ../sass/_layout.scss */
+/* line 214, ../sass/_layout.scss */
 #l-footer {
   position: fixed;
   bottom: 0;
@@ -431,7 +433,7 @@ body {
   right: 0;
   z-index: -1;
 }
-/* line 218, ../sass/_layout.scss */
+/* line 220, ../sass/_layout.scss */
 #l-footer img {
   width: 100%;
   height: auto;
