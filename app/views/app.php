@@ -3,7 +3,7 @@
     <head>
         <title>Steve Gallant: 2D Animator</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="<?php static_url(); ?>css/screen.css">
+        <link rel="stylesheet" href="<?php static_url(); ?>css/build/screen.css">
     </head>
     <body>
         <div class="app-steve-portfolio">
@@ -615,6 +615,11 @@
         <script type="text/x-template" id="reel-template">
             <iframe src="<%= url %>?autoplay=1" width="854" height="480" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </script>
+        <script src="/static/js/build/app.js"></script>
+        <?php 
+        /*
         <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
+        */
+        ?>
     </body>
 </html>
