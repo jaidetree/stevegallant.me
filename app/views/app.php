@@ -4,6 +4,7 @@
         <title>Steve Gallant: 2D Animator</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="<?php static_url(); ?>css/build/screen.css">
+        <link rel="icon" type="image/png" href="/static/images/favicon.png" />
     </head>
     <body>
         <div class="app-steve-portfolio">
