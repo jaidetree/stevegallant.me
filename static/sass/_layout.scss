@@ -126,6 +126,79 @@
     background: #fff;
     padding: 2em 1em;
   }
+  .nav {
+    text-align: center;
+    padding-bottom: 3em;
+    .page-nav {
+      @include inline-block;
+      position: relative;
+      padding: 1rem 2rem;
+      padding-right: 3em;
+      @include border-radius(1rem);
+      @include border-right-radius(3rem);
+      color: #fff;
+      text-decoration: none;
+      @include transition( all 150ms ease);
+      @include scale(1.0);
+      &:after {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 15px;
+        margin: auto;
+        background: url(/static/images/page_nav_right.svg) no-repeat 50% 50%;
+        background-size: 120%;
+        font-size: 0;
+        content: '.';
+        @include transition( all 150ms ease);
+      }
+      &:hover {
+        @include scale(1.05);
+        @include transition( all 150ms ease);
+        &:after {
+          right: 8px;
+          @include transition( all 150ms ease);
+        }
+      }
+      &:active {
+        @include transition( all 150ms ease);
+        @include scale(0.95);
+      }
+      &.work {
+        background: $work;
+        &:hover {
+          background: adjust-lightness($work, 4);
+        }
+        &:active {
+          background: adjust-lightness($work, -5);
+        }
+      }
+      &.resume {
+        background: $resume;
+        &:hover {
+          background: adjust-lightness($resume, 4);
+        }
+        &:active {
+          background: adjust-lightness($resume, -5);
+        }
+      }
+      &.contact {
+        background: $contact;
+        color: #000;
+        &:after {
+          background-image: url(/static/images/page_nav_right_black.svg);
+        }
+        &:hover {
+          background: adjust-lightness($contact, 4);
+          color: #000;
+        }
+        &:active {
+          background: adjust-lightness($contact, -5);
+          color: #000;
+        }
+      }
+    }
+  }
 }
 #l-background {
   position: fixed;

@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="nav">
-                            <a href="#!/work">Continue to Work</a>
+                            <a href="#!/work" class="page-nav work">View my Work</a>
                         </div>
                     </section>
                     <section id="work" class="page">
@@ -59,6 +59,9 @@
                         <div class="content">
                             <ul class="work-categories">
                             </ul>
+                        </div>
+                        <div class="nav">
+                            <a href="#!/resume" class="page-nav resume">See my Resume</a>
                         </div>
                     </section>
                     <section id="resume" class="page">
@@ -195,6 +198,9 @@
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="nav">
+                            <a href="#!/contact" class="page-nav contact">Get in Touch</a>
                         </div>
                     </section>
                     <section id="contact" class="page">
