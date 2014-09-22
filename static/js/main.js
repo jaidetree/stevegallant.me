@@ -159,7 +159,6 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
       this.$el.find('.video .inner').html(this.template({
         url: DataBootstrap.urls.ReelURL
       }));
-      this.$el.find('.video').addClass('playing');
     },
 
     render: function () {
