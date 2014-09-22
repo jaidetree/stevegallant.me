@@ -28,40 +28,70 @@
                     </nav>
                 </header> 
                 <div id="l-main">
-                    <section id="home" class="page">
+                    <section id="contact" class="page">
                         <header>
                             <div class="inner">
                                 <div class="title">
-                                    <h2>Home:</h2>
-                                    <h3>Reel</h3>
+                                    <h2>Contact:</h2>
+                                    <h3>say hi</h3>
                                 </div>
                             </div>
                         </header>
                         <div class="content">
-                            <div class="video"><div class="inner">&nbsp;</div></div>
-                            <div class="shotlist">
-                                <p>Download the reel <a href="/static/downloads/shotlist2014sm.pdf" target="_blank">shotlist</a></p>
-                            </div>
-                        </div>
-                        <div class="nav">
-                            <a href="#!/work" class="page-nav work">View my Work</a>
-                        </div>
-                    </section>
-                    <section id="work" class="page">
-                        <header>
                             <div class="inner">
-                                <div class="title">
-                                    <h2>Work:</h2>
-                                    <h3>animation, drawing &amp; painting</h3>
+                                <div class="contact-view">
+                                    <div class="form">
+                                        <form method="post" action="http://google.com" class="contact">
+                                            <div class="header">
+                                                <strong>Send me a digital mail message</strong>
+                                                <span>they&rsquo;re convenient!</span>
+                                            </div>
+                                            <ul>
+                                                <li class="name">
+                                                    <label for="id_name">Name</label>
+                                                    <input type="text" name="name" id="id_name" placeholder="name">
+                                                </li>
+                                                <li class="email">
+                                                    <label for="id_email">Email</label>
+                                                    <input type="text" name="email" id="id_email" placeholder="email">
+                                                </li>
+                                                <li class="message">
+                                                    <label for="id_message">Message</label>
+                                                    <textarea name="message" id="id_message" placeholder="message"></textarea>
+                                                </li>
+                                                <li class="cartoon">
+                                                    <label for="id_cartoon">If you are human please leave this field blank.</label>
+                                                    <input type="text" name="cartoon" id="id_cartoon" value="">
+                                                </li>
+                                                <li class="actions">
+                                                    <div class="status"></div>
+                                                    <button class="send">Zoot!</button>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                    <div class="about">
+                                        <div class="inner">
+                                            <div class="header">
+                                                <h3>A little about Steve</h3>
+                                            </div>
+                                            <p>My name is Steve Gallant. I’m an animator by trade and I graduated with a BFA in animation from the Savannah College of Art and Design. I’ve always loved cartoons and being able to pursue animation professionally has been a dream come true.</p>
+
+                                            <p>Most recently I worked as an Animation Director for a small animation studio called Dunnamic located in Langhorne, PA. I grew a lot as an artist and a team member during my time there, and have come to love both the technical and creative sides of animation.</p>
+
+                                            <p>Outside of work I love improv comedy and have dabbled in performing stand up. I think you’ll like what’s on my site and I can’t wait to hear from you!</p>
+                                            <ul class="links">
+                                                <li class="email">
+                                                    <a href="mailto:steve@stevegallant.me">steve@stevegallant.me</a>
+                                                </li>
+                                                <li class="in">
+                                                    <a href="https://www.linkedin.com/profile/view?id=167694907">Steve on LinkedIn</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </header>
-                        <div class="content">
-                            <ul class="work-categories">
-                            </ul>
-                        </div>
-                        <div class="nav">
-                            <a href="#!/resume" class="page-nav resume">See my Resume</a>
                         </div>
                     </section>
                     <section id="resume" class="page">
@@ -203,70 +233,40 @@
                             <a href="#!/contact" class="page-nav contact">Get in Touch</a>
                         </div>
                     </section>
-                    <section id="contact" class="page">
+                    <section id="work" class="page">
                         <header>
                             <div class="inner">
                                 <div class="title">
-                                    <h2>Contact:</h2>
-                                    <h3>say hi</h3>
+                                    <h2>Work:</h2>
+                                    <h3>animation, drawing &amp; painting</h3>
                                 </div>
                             </div>
                         </header>
                         <div class="content">
+                            <ul class="work-categories">
+                            </ul>
+                        </div>
+                        <div class="nav">
+                            <a href="#!/resume" class="page-nav resume">See my Resume</a>
+                        </div>
+                    </section>
+                    <section id="home" class="page">
+                        <header>
                             <div class="inner">
-                                <div class="contact-view">
-                                    <div class="form">
-                                        <form method="post" action="http://google.com" class="contact">
-                                            <div class="header">
-                                                <strong>Send me a digital mail message</strong>
-                                                <span>they&rsquo;re convenient!</span>
-                                            </div>
-                                            <ul>
-                                                <li class="name">
-                                                    <label for="id_name">Name</label>
-                                                    <input type="text" name="name" id="id_name" placeholder="name">
-                                                </li>
-                                                <li class="email">
-                                                    <label for="id_email">Email</label>
-                                                    <input type="text" name="email" id="id_email" placeholder="email">
-                                                </li>
-                                                <li class="message">
-                                                    <label for="id_message">Message</label>
-                                                    <textarea name="message" id="id_message" placeholder="message"></textarea>
-                                                </li>
-                                                <li class="cartoon">
-                                                    <label for="id_cartoon">If you are human please leave this field blank.</label>
-                                                    <input type="text" name="cartoon" id="id_cartoon" value="">
-                                                </li>
-                                                <li class="actions">
-                                                    <div class="status"></div>
-                                                    <button class="send">Zoot!</button>
-                                                </li>
-                                            </ul>
-                                        </form>
-                                    </div>
-                                    <div class="about">
-                                        <div class="inner">
-                                            <div class="header">
-                                                <h3>A little about Steve</h3>
-                                            </div>
-                                            <p>My name is Steve Gallant. I’m an animator by trade and I graduated with a BFA in animation from the Savannah College of Art and Design. I’ve always loved cartoons and being able to pursue animation professionally has been a dream come true.</p>
-
-                                            <p>Most recently I worked as an Animation Director for a small animation studio called Dunnamic located in Langhorne, PA. I grew a lot as an artist and a team member during my time there, and have come to love both the technical and creative sides of animation.</p>
-
-                                            <p>Outside of work I love improv comedy and have dabbled in performing stand up. I think you’ll like what’s on my site and I can’t wait to hear from you!</p>
-                                            <ul class="links">
-                                                <li class="email">
-                                                    <a href="mailto:steve@stevegallant.me">steve@stevegallant.me</a>
-                                                </li>
-                                                <li class="in">
-                                                    <a href="https://www.linkedin.com/profile/view?id=167694907">Steve on LinkedIn</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="title">
+                                    <h2>Home:</h2>
+                                    <h3>Reel</h3>
                                 </div>
                             </div>
+                        </header>
+                        <div class="content">
+                            <div class="video"><div class="inner">&nbsp;</div></div>
+                            <div class="shotlist">
+                                <p>Download the reel <a href="/static/downloads/shotlist2014sm.pdf" target="_blank">shotlist</a></p>
+                            </div>
+                        </div>
+                        <div class="nav">
+                            <a href="#!/work" class="page-nav work">View my Work</a>
                         </div>
                     </section>
                 </div>
