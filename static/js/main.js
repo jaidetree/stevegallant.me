@@ -424,7 +424,7 @@ App.views.LayoutManager = Backbone.View.extend({
         id = '#' + name;
 
     $('html, body').animate({
-      scrollTop: this.$el.offset().top - 100
+      scrollTop: 0
     }, 300, 'swing', function () {
       self.$el.find('section').removeClass('active');
       self.$el.find(id).addClass('active');
