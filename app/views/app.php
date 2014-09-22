@@ -397,6 +397,86 @@
                 workType: 'image',
                 url: 'characters/04.png',
                 thumb: '0204.jpg'
+            },
+            {
+                id: 14,
+                workCategory: 3,
+                title: 'Posed Woman',
+                text: 'Long pose drawing of a woman in a hat.',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'life/01.png',
+                thumb: '0301.jpg'
+            },
+            {
+                id: 15,
+                workCategory: 3,
+                title: 'Skeleton Study',
+                text: 'Anatomical illustration of a skeleton.',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'life/02.jpg',
+                thumb: '0302.jpg'
+            },
+            {
+                id: 16,
+                workCategory: 3,
+                title: '2 Min Gesture',
+                text: '2 min gesture drawing',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'life/03.png',
+                thumb: '0303.jpg'
+            },
+            {
+                id: 17,
+                workCategory: 3,
+                title: '1 Min Gesture',
+                text: '1 min gesture drawing',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'life/04.jpg',
+                thumb: '0304.jpg'
+            },
+            {
+                id: 18,
+                workCategory: 3,
+                title: '2 Min Gesture',
+                text: '2 min gesture drawing',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'life/05.jpg',
+                thumb: '0305.jpg'
+            },
+            {
+                id: 19,
+                workCategory: 3,
+                title: 'The Musician',
+                text: 'Abstract painting made with acrylic paints',
+                medium: 'Acrylic',
+                workType: 'image',
+                url: 'life/06.jpg',
+                thumb: '0306.jpg'
+            },
+            {
+                id: 20,
+                workCategory: 3,
+                title: 'Jacket',
+                text: 'Drawing of a jacket',
+                medium: 'Conte Crayon',
+                workType: 'image',
+                url: 'life/07.JPG',
+                thumb: '0307.jpg'
+            },
+            {
+                id: 21,
+                workCategory: 3,
+                title: 'Found Object',
+                text: 'Found object self portrait',
+                medium: 'Oil Pastel',
+                workType: 'image',
+                url: 'life/08.JPG',
+                thumb: '0308.jpg'
             }];
         </script>
         <script type="text/x-template" id="modal-template">
