@@ -43,6 +43,9 @@
                                 <p>Download the reel <a href="/static/downloads/shotlist2014sm.pdf" target="_blank">shotlist</a></p>
                             </div>
                         </div>
+                        <div class="nav">
+                            <a href="#!/work">Continue to Work</a>
+                        </div>
                     </section>
                     <section id="work" class="page">
                         <header>
