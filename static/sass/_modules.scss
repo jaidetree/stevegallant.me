@@ -1,647 +1,710 @@
 #wrapper {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    min-height: 100%;
-    padding: 5% 10%;
-    background: #fff url(/static/images/home_bg.png);
-    @include transition(all 500ms ease-in-out);
-    @include transform(scale(1.0));
-    &.has-modal {
-        @include transition(all 800ms ease-in-out);
-        @include transform(scale(0.9));
-    }
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  min-height: 100%;
+  padding: 5% 10% 10%;
+  @include transition(all 500ms ease-in-out);
+  @include transform(scale(1.0));
+  &.has-modal {
+    @include transition(all 800ms ease-in-out);
+    @include transform(scale(0.9));
+  }
 }
 section#home {
-    &:hover {
-        border-top-color: adjust-lightness($home, 10);
+  &:hover {
+    border-top-color: adjust-lightness($home, 10);
+  }
+  &.active:hover {
+    border-top-color: $home;
+  }
+  header {
+    background: $home;
+    .inner {
+      &:before {
+        background: url(/static/images/home_illustration.svg) no-repeat;
+      }
+      &:after {
+        background: url(/static/images/home_header.png) repeat-x;
+      }
     }
-    &.active:hover {
-        border-top-color: $home;
+  }
+  .video {
+    border: 1px solid $home;
+    @include border-radius(0.5em);
+    padding: 1em;
+    .inner {
+      height: 480px;
+      background: $home url(/static/images/play_reel.svg) no-repeat 50% 50%;
+      &:hover {
+        background-image: url(/static/images/play_reel_hover.svg);
+      }
     }
-    header {
-        background: $home;
-        .inner {
-            &:before {
-                background: url(/static/images/home_illustration.svg) no-repeat;
-            }
-            &:after {
-                background: url(/static/images/home_header.png) repeat-x;
-            }
-        }
-    }
-    .video {
-        border: 1px solid $home;
-        @include border-radius(0.5em);
-        padding: 1em;
-        .inner {
-            height: 480px;
-            background: $home url(/static/images/play_reel.svg) no-repeat 50% 50%;
-            &:hover {
-                background-image: url(/static/images/play_reel_hover.svg);
-            }
-        }
-    }
+  }
 }
 section#work {
+  border-top-color: $work;
+  &:hover {
+    border-top-color: adjust-lightness($work, 10);
+  }
+  &.active:hover {
     border-top-color: $work;
-    &:hover {
-        border-top-color: adjust-lightness($work, 10);
+  }
+  header {
+    background: $work;
+    .inner {
+      &:before {
+        background: url(/static/images/work_illustration.svg) no-repeat;
+      }
+      &:after {
+        background: url(/static/images/work_header.png) repeat-x;
+      }
     }
-    &.active:hover {
-        border-top-color: $work;
-    }
-    header {
-        background: $work;
-        .inner {
-            &:before {
-                background: url(/static/images/work_illustration.svg) no-repeat;
-            }
-            &:after {
-                background: url(/static/images/work_header.png) repeat-x;
-            }
-        }
-    }
+  }
 }
 section#resume {
+  border-top-color: $resume;
+  &:hover {
+    border-top-color: adjust-lightness($resume, 10);
+  }
+  &.active:hover {
     border-top-color: $resume;
-    &:hover {
-        border-top-color: adjust-lightness($resume, 10);
+  }
+  header {
+    background: $resume;
+    .inner {
+      &:before {
+        background: url(/static/images/resume_illustration.svg) no-repeat;
+      }
+      &:after {
+        background: url(/static/images/resume_header.png) repeat-x;
+      }
     }
-    &.active:hover {
-        border-top-color: $resume;
-    }
-    header {
-        background: $resume;
-        .inner {
-            &:before {
-                background: url(/static/images/resume_illustration.svg) no-repeat;
-            }
-            &:after {
-                background: url(/static/images/resume_header.png) repeat-x;
-            }
-        }
-    }
+  }
 }
 section#contact {
+  border-top-color: $contact;
+  &:hover {
+    border-top-color: adjust-lightness($contact, 10);
+  }
+  &.active:hover {
     border-top-color: $contact;
-    &:hover {
-        border-top-color: adjust-lightness($contact, 10);
+  }
+  header {
+    background: $contact;
+    h2, h3 {
+      color: #585800;
     }
-    &.active:hover {
-        border-top-color: $contact;
+    .inner {
+      &:before {
+        background: url(/static/images/contact_illustration.svg) no-repeat;
+      }
+      &:after {
+        background: url(/static/images/contact_header.png) repeat-x;
+      }
     }
-    header {
-        background: $contact;
-        h2, h3 {
-            color: #585800;
-        }
-        .inner {
-            &:before {
-                background: url(/static/images/contact_illustration.svg) no-repeat;
-            }
-            &:after {
-                background: url(/static/images/contact_header.png) repeat-x;
-            }
-        }
-    }
-    .contact-view {
-        @include clearfix;
-    }
-    .form {
-        float: left;
-        width: 55%;
-    }
-    .about {
-        float: right;
-        width: 43%;
-        margin-left: 2%;
-    }
+  }
+  .contact-view {
+    @include clearfix;
+  }
+  .form {
+    float: left;
+    width: 55%;
+  }
+  .about {
+    float: right;
+    width: 43%;
+    margin-left: 2%;
+  }
 }
 .resume-sections {
-    .inner {
-        padding: 2rem 0;
-    }
-    .header {
-        background: url(/static/images/resume_section_bg.png) repeat-x 0 0.3em;
-        .title {
-            position: relative;
-            @include inline-block;
-            padding: 0.3em 0.5em 0.5em;
-            padding-right: 1.8em;
-            border-top: 1px solid $resume;
-            background: #fff;
-            color: $resume;
-            font-family: 'Oswald';
-            font-size: 2em;
-            text-transform: uppercase;
-            &:before {
-                position: absolute;
-                right: 0.5rem;
-                @include inline-block;
-                width: 2.4rem;
-                height: 2rem;
-                content: '.';
-                font-size: 0;
-                z-index: 100;
-            }
-            &:after {
-                position: absolute;
-                top: 0;
-                right: -2.1rem;
-                border: 2.1rem solid transparent;
-                border-top: 3rem solid #fff;
-                height: 1rem;
-                content: '.';
-                font-size: 0;
-            }
-        }
-    }
-    .jobs {
-        .header {
-            .title:before {
-                background: url(/static/images/resume_jobs_icon.svg) no-repeat;
-            }
-        }
-    }
-    .job-list {
-        @include clearfix;
-        h3 {
-            font-family: 'OswaldLight';
-            font-size: 1.5rem;
-        }
-        p {
-            color: $text;
-            line-height: 1.8em;
-        }
-        .job {
-            position: relative;
-            float: left;
-            width: 33%;
-            @include box-sizing(border-box);
-            padding: 1rem;
-            padding-left: 4.5rem;
-        }
-        .year {
-            position: absolute;
-            left: 0;
-            width: 4rem;
-            height: 4rem;
-            @include border-radius(50%);
-            background: $resume;
-            color: #fff;
-            font-family: 'Oswald';
-            font-size: 1.4em;
-            text-align: center;
-            line-height: 4rem;
-        }
-    }
-    .education {
-        .header {
-            .title:before {
-                background: url(/static/images/resume_education_icon.svg) no-repeat;
-            }
-        }
-        .inner {
-            padding-top: 10rem;
-            padding-bottom: 10rem;
-        }
-    }
-    .timeline {
-        position: relative;
-        width: 95%;
-        height: 3rem;
-        border-right: 3px solid $resume;
-        border-left: 3px solid $resume;
-        margin: 0 auto;
-        background: url(/static/images/resume_timeline_bg.png) repeat-x 0 50%;
-        .event {
-            position: absolute;
-            margin-top: 1.6rem;
-            h3 {
-                font-family: 'OswaldLight';
-                text-transform: uppercase;
-            }
-            .year, h3 {
-                @include inline-block;
-            }
-            .year {
-                font-family: 'Oswald';
-            }
-            .location {
-                margin-top: 0.3rem;
-            }
-            &.above {
-                top: -4.7rem;
-            }
-            &.below:before {
-                display: block;
-                margin-bottom: 0.3rem;
-                border-left: 2px solid #000;
-                border-bottom: 2px solid #000;
-                font-size: 0;
-                content: '.';
-            }
-            &.above:after {
-                display: block;
-                margin-top: 0.3rem;
-                border-left: 2px solid #000;
-                border-top: 2px solid #000;
-                font-size: 0;
-                content: '.';
-            }
-            &.below.short:before {
-                height: 2rem;
-            }
-            &.above.short:after {
-                height: 2rem;
-            }
-            &.long.below:before {
-                height: 6rem;
-                border-color: #777;
-            }
-            &.long.above {
-                top: -8.8rem;
-            }
-            &.long.above:after {
-                height: 6rem;
-                border-color: #777;
-            }
-        }
-    }
-    .extra {
-        .header {
-            .title:before {
-                background: url(/static/images/resume_extra_icon.svg) no-repeat;
-            }
-        }
-    }
-}
-form.contact {
-    padding: 1px;
-    border: 1px solid $contact-dark;
-    ul {
-        padding: 1em;
-        background: $contact;
-    }
-    li {
-        position: relative;
-        padding: 1px;
-        margin: 1em 0;
-        border: 1px solid $contact-dark;
-        &:after {
-            position: absolute;
-            top: 15px;
-            left: 10px;
-            width: 30px;
-            height: 30px;
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            font-size: 0;
-            content: '.';
-        }
-        &.name:after {
-            background-image: url(/static/images/contact_icon_name.svg);
-        }
-        &.email:after {
-            background-image: url(/static/images/contact_icon_email.svg);
-        }
-        &.message:after {
-            background-image: url(/static/images/contact_icon_message.svg);
-        }
-        &.cartoon {
-            display: none;
-        }
-        &.actions {
-            border: none;
-            text-align: right;
-        }
-    }
-    label {
-        display: none;
-    }
-    input[type="text"], textarea {
-        width: 100%;
-        display: block;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 1rem;
-        border: none;
-        border-left: 3rem solid $contact-dark;
-        background: none;
-        color: 000;
-        font-size: 1.3rem;
-        font-family: Oswald;
-        &:hover {
-            background: adjust-lightness($contact, 5);
-        }
-        &:focus {
-            background: adjust-lightness($contact, -5);
-        }
-    }
-    textarea {
-        min-height: 10rem;
-    }
-    input::-webkit-input-placeholder,
-    textarea::-webkit-input-placeholder {
-        color: #000;
-        text-transform: uppercase;
-    }
-    input::-moz-placeholder {
-        color: #000;
-        text-transform: uppercase;
-    }
-    input::-ms-input-placeholder {
-        color: #000;
-        text-transform: uppercase;
-    }
-    .send {
-        position: relative;
-        border: 1px solid $contact-dark;
-        padding: 0.5rem 1rem;
-        padding-left: 4rem;
-        border-radius: 0.4rem;
-        background: none;
-        color: $contact-dark;
-        font-size: 1.3rem;
-        font-family: Oswald;
-        text-transform: uppercase;
-        &:before {
-            position: absolute;
-            left: 1px;
-            top: 1px;
-            bottom: 1px;
-            width: 3rem;
-            background: $contact-dark url(/static/images/contact_icon_send.svg) no-repeat 50% 50%;
-            background-size: 50%;
-            @include border-left-radius(0.4rem);
-            font-size: 0;
-            content: '.';
-        }
-        &:hover {
-            background: adjust-lightness($contact, 5);
-        }
-    }
-    .status {
+  .inner {
+    padding: 2rem 0;
+  }
+  .header {
+    background: url(/static/images/resume_section_bg.png) repeat-x 0 0.3em;
+    .title {
+      position: relative;
+      @include inline-block;
+      padding: 0.3em 0.5em 0.5em;
+      padding-right: 1.8em;
+      background: #fff;
+      color: $resume;
+      @extend %font-heading;
+      font-size: 2em;
+      &:before {
         position: absolute;
-        right: 9rem;
-        left: 0;
-        padding: 0.5rem;
-        margin-top: 0.3rem;
-        text-align: left;
+        right: 0.5rem;
+        @include inline-block;
+        width: 2.4rem;
+        height: 2rem;
+        content: '.';
+        font-size: 0;
+        z-index: 100;
+      }
+      &:after {
+        position: absolute;
+        top: 0;
+        right: -2.1rem;
+        border: 2.1rem solid transparent;
+        border-top: 3rem solid #fff;
+        height: 1rem;
+        content: '.';
+        font-size: 0;
+      }
     }
-    .header {
-        padding: 1em;
-        background: $contact-dark;
+  }
+  .intro {
+    h2 {
+      @extend %font-heading;
+      font-size: 2rem;
+    }
+    .inner {
+      @include clearfix;
+    }
+    .overview {
+      float: left;
+      width: 65%;
+    }
+    .download {
+      float: right;
+      width: 33%;
+      padding-top: 3rem;
+      text-align: center;
+    }
+    .download-link {
+      @include inline-block;
+      padding: 1rem 2rem;
+      @include border-radius(1.3rem);
+      background: $resume;
+      color: #000;
+      font-size: 1.3rem;
+      @extend %font-title;
+      text-decoration: none;
+      @include transition(all 250ms ease 0);
+      @include scale(1.0);
+      &:hover {
+        background: adjust-lightness($resume, 5);
+        @include transition(all 250ms ease 0);
+        @include scale(1.2);
+      }
+      &:active {
+        background: adjust-lightness($resume, -10);
         color: #fff;
-        font-size: 1.2em;
-        strong {
-            font-family: Oswald;
-            text-transform: uppercase;
-            font-weight: normal;
-        }
-        span {
-            font-family: OswaldLight;
-            text-transform: lowercase;
-        }
-    }
-}
-.about {
-    h3 {
-        margin-bottom: 0.25em;
-        border-top: 1px solid $contact-dark;
-        padding-top: 3px;
-        color: #000;
-        font-size: 3em;
-        font-family: Oswald;
-        text-transform: uppercase;
+        @include transition(all 250ms ease 0);
+        @include scale(0.9);
+      }
     }
     p {
-        line-height: 2rem;
+      font-size: 0.85rem;
+      line-height: 1.4rem;
     }
-    .links {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid #999;
-        li {
-            margin: 1rem 0;
-        }
-        a {
-            padding-left: 2.5rem;
-            color: #000;
-            font-size: 1.2rem;
-            font-family: Oswald;
-            text-transform: uppercase;
-        }
-        .email a {
-            background: url(/static/images/contact_btn_email.svg) no-repeat 0% 50%;
-        }
-        .in a {
-            background: url(/static/images/contact_btn_linkedin.svg) no-repeat 0% 50%;
-        }
+  }
+  .jobs {
+    .header {
+      .title:before {
+        background: url(/static/images/resume_jobs_icon.svg) no-repeat;
+      }
     }
+  }
+  .job-list {
+    @include clearfix;
+    h3 {
+      @extend %font-heading-light;
+      font-size: 1.5rem;
+    }
+    p, ul {
+      margin-top: 1rem;
+      color: $text;
+      line-height: 1.3rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    ul li ul {
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+    }
+    strong {
+      @extend %font-body;
+      font-weight: normal;
+      display: block;
+    }
+    .job {
+      position: relative;
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 1rem;
+      padding-left: 5.5rem;
+    }
+    .year {
+      position: absolute;
+      left: 0;
+      width: 5rem;
+      height: 5rem;
+      box-sizing: border-box;
+      @include border-radius(50%);
+      background: $resume;
+      color: #fff;
+      @extend %font-heading;
+      font-size: 1.4em;
+      text-align: center;
+      padding-top: 1em;
+      &.single {
+        padding-top: 0;
+        line-height: 5rem;
+      }
+    }
+    .end {
+      display: block;
+      @extend %font-heading-light;
+      font-size: 0.8em;
+    }
+  }
+  .education {
+    .header {
+      .title:before {
+        background: url(/static/images/resume_education_icon.svg) no-repeat;
+      }
+    }
+    .inner {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+  }
+  .timeline {
+    position: relative;
+    width: 95%;
+    height: 3rem;
+    border-right: 3px solid $resume;
+    border-left: 3px solid $resume;
+    margin: 0 auto;
+    background: url(/static/images/resume_timeline_bg.png) repeat-x 0 50%;
+    .event {
+      position: absolute;
+      margin-top: 1.8rem;
+      background: rgba(255, 255, 255, 0.5);
+      h3 {
+        @extend %font-heading-light;
+      }
+      .year, h3 {
+        @include inline-block;
+      }
+      .year {
+        @extend %font-heading;
+      }
+      .location {
+        margin-top: 0.3rem;
+        @extend %font-body;
+        font-weight: normal;
+      }
+      &.above {
+        top: -5.3rem;
+      }
+      &.below:before {
+        display: block;
+        margin-bottom: 0.3rem;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #000;
+        font-size: 0;
+        content: '.';
+      }
+      &.above:after {
+        display: block;
+        margin-top: 0.3rem;
+        border-left: 2px solid #000;
+        border-top: 2px solid #000;
+        font-size: 0;
+        content: '.';
+      }
+      &.below.short:before {
+        height: 2rem;
+      }
+      &.above.short:after {
+        height: 2rem;
+      }
+      &.long.below:before {
+        height: 6rem;
+        border-color: #777;
+      }
+      &.long.above {
+        top: -8.8rem;
+      }
+      &.long.above:after {
+        height: 6rem;
+        border-color: #777;
+      }
+    }
+  }
+  .extra {
+    .header {
+      .title:before {
+        background: url(/static/images/resume_extra_icon.svg) no-repeat;
+      }
+    }
+  }
+}
+form.contact {
+  padding: 1px;
+  border: 1px solid $contact-dark;
+  ul {
+    padding: 1em;
+    background: $contact;
+  }
+  li {
+    position: relative;
+    padding: 1px;
+    margin: 1em 0;
+    border: 1px solid $contact-dark;
+    &:after {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      font-size: 0;
+      content: '.';
+    }
+    &.name:after {
+      background-image: url(/static/images/contact_icon_name.svg);
+    }
+    &.email:after {
+      background-image: url(/static/images/contact_icon_email.svg);
+    }
+    &.message:after {
+      background-image: url(/static/images/contact_icon_message.svg);
+    }
+    &.cartoon {
+      display: none;
+    }
+    &.actions {
+      border: none;
+      text-align: right;
+    }
+  }
+  label {
+    display: none;
+  }
+  input[type="text"], textarea {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+    border: none;
+    border-left: 3rem solid $contact-dark;
+    background: none;
+    color: 000;
+    font-size: 1.3rem;
+    @extend %font-body;
+    &:hover {
+      background: adjust-lightness($contact, 5);
+    }
+    &:focus {
+      background: adjust-lightness($contact, -5);
+    }
+  }
+  textarea {
+    min-height: 10rem;
+  }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: #000;
+    text-transform: uppercase;
+  }
+  input::-moz-placeholder {
+    color: #000;
+    text-transform: uppercase;
+  }
+  input::-ms-input-placeholder {
+    color: #000;
+    text-transform: uppercase;
+  }
+  .send {
+    position: relative;
+    border: 1px solid $contact-dark;
+    padding: 0.5rem 1rem;
+    padding-left: 4rem;
+    border-radius: 0.4rem;
+    background: none;
+    color: $contact-dark;
+    font-size: 1.3rem;
+    @extend %font-heading;
+    &:before {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      bottom: 1px;
+      width: 3rem;
+      background: $contact-dark url(/static/images/contact_icon_send.svg) no-repeat 50% 50%;
+      background-size: 50%;
+      @include border-left-radius(0.4rem);
+      font-size: 0;
+      content: '.';
+    }
+    &:hover {
+      background: adjust-lightness($contact, 5);
+    }
+  }
+  .status {
+    position: absolute;
+    right: 9rem;
+    left: 0;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    text-align: left;
+  }
+  .header {
+    padding: 1em;
+    background: $contact-dark;
+    color: #fff;
+    font-size: 1.2em;
+    strong {
+      @extend %font-heading;
+      font-weight: normal;
+    }
+    span {
+      @extend %font-heading-light;
+      text-transform: lowercase;
+    }
+  }
+}
+.about {
+  h3 {
+    margin-bottom: 0.25em;
+    border-top: 1px solid $contact-dark;
+    padding-top: 3px;
+    color: #000;
+    font-size: 3em;
+    @extend %font-heading;
+  }
+  p {
+    line-height: 2rem;
+  }
+  .links {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #999;
+    li {
+      margin: 1rem 0;
+    }
+    a {
+      padding-left: 2.5rem;
+      color: #000;
+      font-size: 1.2rem;
+      @extend %font-heading;
+    }
+    .email a {
+      background: url(/static/images/contact_btn_email.svg) no-repeat 0% 50%;
+    }
+    .in a {
+      background: url(/static/images/contact_btn_linkedin.svg) no-repeat 0% 50%;
+    }
+  }
 }
 .work-category {
+  @include clearfix;
+  margin-bottom: 3rem;
+  h2 {
+    margin-bottom: 1rem;
+    color: $work;
+    @extend %font-heading;
+    font-size: 2rem;
+  }
+  .gallery {
+    float: left;
+    width: 65%;
+  }
+  .content {
+    float: right;
+    width: 30%;
+    border-top: 1px solid $work;
+    p {
+      line-height: 1.6rem;
+    }
+  }
+  .works {
+    padding: 3px;
+    border: 3px solid $work;
+    @include border-radius(10rem);
     @include clearfix;
-    margin-bottom: 3rem;
-    h2 {
-        margin-bottom: 1rem;
-        color: $work;
-        font-family: Oswald;
-        font-size: 2rem;
-        text-transform: uppercase;
+  }
+  .work {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    @include border-radius(50%);
+    border: 5px solid #aaa;
+    background: #ccc;
+    img {
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include border-radius(50%);
+      border: 2px solid #ddd;
+      background: #999;
+      line-height: 50%;
     }
-    .gallery {
-        float: left;
-        width: 65%;
-    }
-    .content {
-        float: right;
-        width: 30%;
-        border-top: 1px solid $work;
-        p {
-            line-height: 1.6rem;
-        }
-    }
-    .works {
-        padding: 3px;
-        border: 3px solid $work;
-        @include border-radius(10rem);
-        @include clearfix;
-    }
-    .work {
-        box-sizing: border-box;
-        position: relative;
-        float: left;
-        width: 100px;
-        height: 100px;
-        @include border-radius(50%);
-        border: 5px solid #aaa;
-        background: #ccc;
-        img {
-            box-sizing: border-box;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            @include border-radius(50%);
-            border: 2px solid #ddd;
-            background: #999;
-            line-height: 50%;
-        }
-    }
+  }
 }
 .modal-view {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  @include scale(1.4);
+  z-index: 300;
+  opacity: 0;
+  .ui {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+    height: 4.5rem;
+    box-sizing: border-box;
+    @include clearfix;
+    padding: 1rem;
+    background: $work;
+    nav {
+      float: left;
+      width: 25%;
+    }
+    button {
+      padding: 0.5rem;
+      border: none;
+      background: #fff;
+      background-repeat: no-repeat;
+      background-size: 18%;
+      color: $work;
+      font-size: 1rem;
+      @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
+      &:hover {
+        background-color: rgba(0,0,0,0.4);
+        color: #fff;
+        @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
+      }
+      &:disabled {
+        opacity: 0.2;
+        &:hover {
+          background-color: #fff;
+          color: $work;
+        }
+      }
+    }
+    .page-info {
+      float: left;
+      width: 50%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      font-size: 1.8em;
+      text-align: center;
+      .index, .total {
+        color: #fff;
+      }
+      .divider {
+        color: #fff;
+        opacity: 0.8;
+      }
+    }
+    .actions {
+      float: right;
+      width: 25%;
+      text-align: right;
+    }
+    .next {
+      padding-right: 2rem;
+      background-image: url(/static/images/work_nav_right.svg);
+      background-position: 85% 50%;
+      &:hover {
+        background-position: 90% 50%;
+        &:disabled {
+          background-position: 85% 50%;
+        }
+      }
+    }
+    .prev {
+      padding-left: 2rem;
+      background-image: url(/static/images/work_nav_left.svg);
+      background-position: 0.5rem 50%;
+      &:hover {
+        background-position: 0.2rem 50%;
+        &:disabled {
+          background-position: 0.5rem 50%;
+        }
+      }
+    }
+  }
+  .fill {
+    position: absolute;
+    top: 0;
     bottom: 0;
-    @include scale(1.4);
-    z-index: 300;
-    opacity: 0;
-    .ui {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 4.5rem;
-        box-sizing: border-box;
-        @include clearfix;
-        padding: 1rem;
-        background: $work;
-        nav {
-            float: left;
-            width: 25%;
-        }
-        button {
-            padding: 0.5rem;
-            border: none;
-            background: #fff;
-            background-repeat: no-repeat;
-            background-size: 18%;
-            color: $work;
-            font-size: 1rem;
-            @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
-            &:hover {
-                background-color: rgba(0,0,0,0.4);
-                color: #fff;
-                @include transition(background-position 250ms ease-in-out, background-color 250ms ease-in-out);
-            }
-            &:disabled {
-                opacity: 0.2;
-                &:hover {
-                    background-color: #fff;
-                    color: $work;
-                }
-            }
-        }
-        .page-info {
-            float: left;
-            width: 50%;
-            padding: 0.5rem;
-            box-sizing: border-box;
-            font-size: 1.8em;
-            text-align: center;
-            .index, .total {
-                color: #fff;
-            }
-            .divider {
-                color: #fff;
-                opacity: 0.8;
-            }
-        }
-        .actions {
-            float: right;
-            width: 25%;
-            text-align: right;
-        }
-        .next {
-            padding-right: 2rem;
-            background-image: url(/static/images/work_nav_right.svg);
-            background-position: 85% 50%;
-            &:hover {
-                background-position: 90% 50%;
-                &:disabled {
-                    background-position: 85% 50%;
-                }
-            }
-        }
-        .prev {
-            padding-left: 2rem;
-            background-image: url(/static/images/work_nav_left.svg);
-            background-position: 0.5rem 50%;
-            &:hover {
-                background-position: 0.2rem 50%;
-                &:disabled {
-                    background-position: 0.5rem 50%;
-                }
-            }
-        }
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .modal-body {
+    position: absolute;
+    top: 4.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+  .modal-body .inner {
+    width: 80%;
+    margin: 2em auto;
+    padding: 2rem;
+    @include border-radius(0.8rem);
+    border: 1px solid #eee;
+    background: #fff;
+    &:after {
+      display: table;
+      clear: both;
+      content: '.';
     }
-    .fill {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.9);
+  }
+  .modal-content {
+    float: left;
+    width: 65%;
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
     }
-    .modal-body {
-        position: absolute;
-        top: 4.5rem;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 2rem;
-        box-sizing: border-box;
-        overflow: auto;
+  }
+  .info {
+    float: right;
+    width: 30%; 
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid $work;
+    .title {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      @extend %font-heading;
     }
-    .modal-body .inner {
-        width: 80%;
-        margin: 2em auto;
-        padding: 2rem;
-        @include border-radius(0.8rem);
-        border: 1px solid #eee;
-        background: #fff;
-        &:after {
-            display: table;
-            clear: both;
-            content: '.';
-        }
+    .date {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      @extend %font-heading-light;
+      .label {
+        margin-right: 0.5rem;
+        color: #888;
+      }
     }
-    .modal-content {
-        float: left;
-        width: 65%;
-        img {
-            max-width: 100%;
-            width: auto;
-            height: auto;
-        }
-    }
-    .info {
-        float: right;
-        width: 30%; 
-        margin-top: 2rem;
-        padding-top: 1rem;
-        border-top: 1px solid $work;
-        .title {
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-            font-family: Oswald;
-            text-transform: uppercase;
-        }
-        .date {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            font-family: OswaldLight;
-            text-transform: uppercase;
-            .label {
-                margin-right: 0.5rem;
-                color: #888;
-            }
-        }
-    }
+  }
 }

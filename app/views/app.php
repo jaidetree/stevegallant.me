@@ -7,6 +7,10 @@
     </head>
     <body>
         <div class="app-steve-portfolio">
+            <div id="l-background">
+                &nbsp;
+            </div>
+
             <div id="wrapper">
                 <header id="l-header">
                     <h1 id="logo">
@@ -53,12 +57,23 @@
                             <div class="inner">
                                 <div class="title">
                                     <h2>Resume:</h2>
-                                    <h3>experience, jobs, academic accomplishments</h3>
+                                    <h3>jobs, experience, academic accomplishments</h3>
                                 </div>
                             </div>
                         </header>
                         <div class="content">
                             <ul class="resume-sections">
+                                <li class="section intro">
+                                    <div class="inner">
+                                        <div class="overview">
+                                            <h2>Overview</h2>
+                                            <p>Graduate of the Savannah College of Art and Design, magna cum laude, seeks a full-time position as an animator in a professional working environment. Skilled with After Effects, Toon Boom Animate Pro, Illustrator, Flash, and Photoshop. Familiar with the remainder of the Adobe Creative Suite and Autodesk Maya. Dedicated worker, passionate about expanding his abilities as an individual and as a member of a team.</p>
+                                        </div>
+                                        <div class="download">
+                                            <a href="/static/downloads/resume2014sm.pdf" class="download-link">Download Resume</a>
+                                        </div>
+                                    </div>
+                                </li>
                                 <li class="section jobs">
                                     <div class="header">
                                         <h2 class="title">Jobs</h2>
@@ -66,24 +81,38 @@
                                     <div class="inner">
                                         <ul class="job-list">
                                             <li class="job">
-                                                <div class="year">2008</div>
+                                                <div class="year">2013<span class="end">2014</span></div>
                                                 <div class="job-info">
-                                                    <h3>CO-OWNER of an LLC</h3>
-                                                    <p>Co-ran a web design &amp; development studio with Jay Zawrotny who is really awesome and we should hang out more.</p>
+                                                    <h2>DUNNAMIC</h2>
+                                                    <h3>Animation Director</h3>
+                                                    <ul>
+                                                        <li>Oversee commercial and internal animation projects</li>
+                                                        <li>Animate client and internal projects</li>
+                                                        <li>Offer critique of work in a team-based environment</li>
+                                                        <li>
+                                                            Managerial duties such as
+                                                            <ul>
+                                                                <li>Managing deadlines</li>
+                                                                <li>Meeting with clients</li>
+                                                                <li>Proposing projects</li>
+                                                                <li>Working with client feedback</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </li>
                                             <li class="job">
-                                                <div class="year">2013</div>
+                                                <div class="year">2008<span class="end">2013</span></div>
                                                 <div class="job-info">
-                                                    <h3>BARNES &amp; NOBLE</h3>
-                                                    <p>I sold things no one needs to people who don’t want them. It was kinda awesome.</p>
-                                                </div>
-                                            </li>
-                                            <li class="job">
-                                                <div class="year">2014</div>
-                                                <div class="job-info">
-                                                    <h3>DUNNAMIC</h3>
-                                                    <p>Storyboard...guy then eventually animator and like doing other things sometimes guy.</p>
+                                                    <h2>Xugo Stdios, LLC.</h2>
+                                                    <h3>Co-Founder, Project Manager</h3>
+                                                    <ul>
+                                                        <li>Graphic Design for web based projects</li>
+                                                        <li>Seek and meet with potential new clients</li>
+                                                        <li>Pitch projects and manage client feedback</li>
+                                                        <li>Manage resources and deadlines</li>
+                                                        <li>Write contracts and term sheets</li>
+                                                    </ul>
                                                 </div>
                                             </li>
                                         </ul>
@@ -91,34 +120,29 @@
                                 </li>
                                 <li class="section education">
                                     <div class="header">
-                                        <h2 class="title">Jobs</h2>
+                                        <h2 class="title">Experience</h2>
                                     </div>
                                     <div class="inner">
                                         <ul class="timeline">
-                                            <li class="event below short" style="left: 3%;">
-                                                <div class="year">2000</div>
-                                                <h3>Elementary School</h3>
-                                                <div class="location">Grand Rapids, MI</div>
+                                            <li class="event below long" style="left: 15%;">
+                                                <div class="year">2008</div>
+                                                <h3>SCAD Honors Scholarship</h3>
+                                                <div class="location">Northville, MI</div>
                                             </li>
-                                            <li class="event below short" style="left: 20%;">
-                                                <div class="year">2000</div>
-                                                <h3>Elementary School</h3>
-                                                <div class="location">Grand Rapids, MI</div>
+                                            <li class="event below short" style="left: 5%;">
+                                                <div class="year">2008</div>
+                                                <h3>Xugo Studios, LLC</h3>
+                                                <div class="location">Northville, MI</div>
                                             </li>
-                                            <li class="event below long" style="left: 46%;">
-                                                <div class="year">2000</div>
-                                                <h3>Elementary School</h3>
-                                                <div class="location">Grand Rapids, MI</div>
+                                            <li class="event above short" style="left: 20%;">
+                                                <div class="year">2008</div>
+                                                <h3>Savannah College of Art and Design</h3>
+                                                <div class="location">Savannah, GA</div>
                                             </li>
-                                            <li class="event above short" style="left: 64%;">
-                                                <div class="year">2000</div>
-                                                <h3>Elementary School</h3>
-                                                <div class="location">Grand Rapids, MI</div>
-                                            </li>
-                                            <li class="event above long" style="left: 82%;">
-                                                <div class="year">2000</div>
-                                                <h3>Elementary School</h3>
-                                                <div class="location">Grand Rapids, MI</div>
+                                            <li class="event below short" style="left: 76%;">
+                                                <div class="year">2013</div>
+                                                <h3>Dunnamic</h3>
+                                                <div class="location">Langhorne, PA</div>
                                             </li>
                                         </ul>
                                     </div>
@@ -128,19 +152,34 @@
                                         <h2 class="title">Other Stuff</h2>
                                     </div>
                                     <div class="inner">
-                                        <ul class="job-list">
+                                        <ul class="job-list other">
                                             <li class="job">
-                                                <div class="year">2011</div>
+                                                <div class="year">2008<span class="end">2012</span></div>
                                                 <div class="job-info">
-                                                    <h3>PRESIDENT</h3>
-                                                    <p>Of College Improv Group: &ldquo;The Rad Lads&rdquo;</p>
+                                                    <h2>Education</h2>
+                                                    <h3>BFA in Animation</h3>
+                                                    <ul>
+                                                        <li>
+                                                            <strong>Savannah College of Art and Design &ndash; Savanna, GA</strong>
+                                                        </li>
+                                                        <li>
+                                                            Courses taken include:
+                                                            <ul>
+                                                                <li>Life Drawing</li>
+                                                                <li>Art History</li>
+                                                                <li>Interactive Design for Games</li>
+                                                                <li>Performing Arts</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </li>
                                             <li class="job">
-                                                <div class="year">2013</div>
+                                                <div class="year single">2008</div>
                                                 <div class="job-info">
-                                                    <h3>DUNGEON MASTER</h3>
-                                                    <p>Of D&amp;D group with friends once. No one survived, not even a little bit.</p>
+                                                    <h2>Accomplishments</h2>
+                                                    <h3>SCAD Honors Scholarship</h3>
+                                                    <p><strong>Awarded for pre-college academic performance</strong></p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -220,7 +259,7 @@
                 urls: {}
             };
             DataBootstrap.urls.EmailAPI = '/api/v1/email/';
-            DataBootstrap.urls.ReelURL = '//player.vimeo.com/video/44061996';
+            DataBootstrap.urls.ReelURL = '//player.vimeo.com/video/106752069';
             DataBootstrap.WorkCategories = [{
                 id: 1,
                 title: 'After Effects Animation',
