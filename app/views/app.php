@@ -262,57 +262,101 @@
             DataBootstrap.urls.ReelURL = '//player.vimeo.com/video/106752069';
             DataBootstrap.WorkCategories = [{
                 id: 1,
-                title: 'After Effects Animation',
-                text: 'Whatever man, it is just cool stuff okay?'
+                title: 'Animation'
             },
             {
                 id: 2,
-                title: 'Hand-Made Animation',
-                text: 'Yeah, I am so cool for school they would not even let me in the building one day. Seriously, it was really terrifying and it has been a very rough 6 years.'
+                title: 'Character Design'
             },
             {
                 id: 3,
-                title: 'Drawings & Paintings',
-                text: 'Sigh.... just too talented I guess...'
+                title: 'Life Drawing & Painting'
+            },
+            {
+                id: 4,
+                title: 'Environments & Illustrations'
             }];
 
             DataBootstrap.Works = [{
                 id: 1,
                 workCategory: 1,
-                title: 'First Video Work',
-                text: 'This is a video thing I made.',
-                workType: 'vimeo',
-                url: '//player.vimeo.com/video/43994248',
-                thumb: 'senior_film.jpg'
+                title: 'Push',
+                text: 'An animated music video for the song Push by T.89, was one of two animators who completed this project at Dunnamic over the span of 1 ½ weeks.  Assets built in Adobe Illustrator and animated in After Effects.',
+                workType: 'youtube',
+                url: '//www.youtube.com/embed/rYZk0WH60kM',
+                thumb: '0101.jpg'
             },
             {
                 id: 2,
-                workCategory: 3,
-                title: 'Kitten Photo',
-                text: 'Mmmm cat photo...',
-                workType: 'image',
-                url: 'http://placekitten.com/800/600/',
-                thumb: 'http://placekitten.com/100/100'
+                workCategory: 1,
+                title: 'Hunter and Yeti',
+                text: 'A short animation pencil test of a hunter trying to take down a yeti.',
+                workType: 'vimeo',
+                url: '//player.vimeo.com/video/57466098',
+                thumb: '0102.jpg'
             },
             {
                 id: 3,
-                workCategory: 3,
-                title: 'Skull Mountain',
-                text: 'Part of Senior Film project at SCAD.',
-                workType: 'image',
-                date: 'Spring 2013',
-                url: 'skull_mountain.jpg',
-                thumb: 'skull_mountain.jpg'
+                workCategory: 1,
+                title: 'Girls of Olympus Test Animation',
+                text: 'A test done by Dunnamic for an overseas studio producing this show.  I was one of two animators on this project, and composited all of it.',
+                workType: 'youtube',
+                url: '//www.youtube.com/embed/gxsAGnXhq18',
+                thumb: '0103.jpg'
             },
             {
                 id: 4,
-                workCategory: 3,
-                title: 'Skeleton',
-                text: 'I see dead people.',
-                workType: 'image',
-                date: 'Fall 2013',
-                url: 'skeleton.jpg',
-                thumb: 'skeleton.jpg'
+                workCategory: 1,
+                title: 'Robo Lunch',
+                text: 'A 30 second short done in Toon Boom Animate Pro 2.',
+                workType: 'vimeo',
+                url: '//player.vimeo.com/video/37561924',
+                thumb: '0104.jpg'
+            },
+            {
+                id: 5,
+                workCategory: 1,
+                title: 'Yeti Animation Test',
+                text: 'A short traditional pencil test.',
+                workType: 'viemo',
+                url: '//player.vimeo.com/video/57465574',
+                thumb: '0105.jpg'
+            },
+            {
+                id: 6,
+                workCategory: 1,
+                title: 'Bloke Throws a Rock',
+                text: 'An Autodesk Maya animation of a free model (bloke) rigged by me, throwing a rock and getting hit on the head.',
+                workType: 'vimeo',
+                url: '//player.vimeo.com/video/37562165',
+                thumb: '0106.jpg'
+            },
+            {
+                id: 7,
+                workCategory: 1,
+                title: 'Nerdular Ad',
+                text: 'An advertisement for the website Nerdular, created over the span of 2 days while working at Dunnamic with 1 other animator.',
+                workType: 'vimeo',
+                url: '//player.vimeo.com/video/78168447',
+                thumb: '0107.jpg'
+            },
+            {
+                id: 8,
+                workCategory: 1,
+                title: 'Xamaica',
+                text: 'A short promo for an upcoming book done over the course of a couple of weeks while working at Dunnamic in Toon Boom Animate Pro. Was one of 3 artists working on the character animation, cleanup and color for this one.',
+                workType: 'youtube',
+                url: '//www.youtube.com/embed/dy7xb6AvTs4',
+                thumb: '0108.jpg'
+            },
+            {
+                id: 9,
+                workCategory: 1,
+                title: 'Two Brothers',
+                text: 'An Advertisement for the Two Brothers Brewery based in Warrenville, IL.  I was one of two animators working on the project.',
+                workType: 'vimeo',
+                url: '//player.vimeo.com/video/78162511',
+                thumb: '0109.jpg'
             }];
         </script>
         <script type="text/x-template" id="modal-template">
@@ -360,9 +404,6 @@
                 </div>
                 <ul class="works">
                 </ul>
-            </div>
-            <div class="content">
-                <p><%= model.escape('text') %></p>
             </div>
         </script>
         <script type="text/x-template" id="work-template">
