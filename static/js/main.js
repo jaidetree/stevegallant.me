@@ -175,13 +175,23 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     events: {
       'click button.close': 'close',
       'click button.next': 'next',
-      'click button.prev': 'prev'
+      'click button.prev': 'prev',
     },
 
     initialize: function (options) {
       Backbone.View.prototype.initialize.apply(this, options);
       this.modalTemplate = options.modalTemplate;
       this.render();
+      $(document).on('keyup', _.bind(this.arrowKey, this));
+    },
+
+    arrowKey: function (e) {
+      if (e.which === 37) {
+        this.prev();
+      }
+      else if (e.which === 39) {
+        this.next();
+      }
     },
 
     close: function (e) {
@@ -195,6 +205,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
       }, 301);
 
       steveGallant.$el.find('#wrapper').removeClass('has-modal');
+      $(document.body).off('keypress');
     },
 
     getPosition: function () {
