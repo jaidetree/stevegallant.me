@@ -190,7 +190,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section id="contact" class="page active">
+                    <section id="contact" class="page">
                         <header>
                             <div class="inner">
                                 <div class="title">
@@ -237,8 +237,11 @@
                                             <div class="header">
                                                 <h3>A little about Steve</h3>
                                             </div>
-                                            <p>Steve is a 23 year old Animator hailing from...many places from a sham of a childhood keeping him from making any lasting connections having had moved over a dozen times. With nothing more than a pair of pajamas and a magic banjo Steve aims to take the world of Animation by storm with his free spirit and self-assured rad-attitude: raditude&reg;.
-                                            </p>
+                                            <p>My name is Steve Gallant. I’m an animator by trade and I graduated with a BFA in animation from the Savannah College of Art and Design. I’ve always loved cartoons and being able to pursue animation professionally has been a dream come true.</p>
+
+                                            <p>Most recently I worked as an Animation Director for a small animation studio called Dunnamic located in Langhorne, PA. I grew a lot as an artist and a team member during my time there, and have come to love both the technical and creative sides of animation.</p>
+
+                                            <p>Outside of work I love improv comedy and have dabbled in performing stand up. I think you’ll like what’s on my site and I can’t wait to hear from you!</p>
                                             <ul class="links">
                                                 <li class="email">
                                                     <a href="mailto:steve@stevegallant.me">steve@stevegallant.me</a>
