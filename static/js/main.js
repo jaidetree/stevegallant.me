@@ -420,22 +420,24 @@ App.views.LayoutManager = Backbone.View.extend({
   },
 
   showPage: function (name) {
-    var id = '#' + name;
-    this.$el.find('section').removeClass('active');
-    this.$el.find(id).addClass('active');
+    var self = this,
+        id = '#' + name;
 
-    steveGallant.$el.find('#navbar li').removeClass('active');
-    steveGallant.$el.find('#navbar li.' + name).addClass('active');
-    $(window).animate({
-      scrollTop: 0
-    }, 500);
+    $('html, body').animate({
+      scrollTop: this.$el.offset().top - 100
+    }, 300, 'swing', function () {
+      self.$el.find('section').removeClass('active');
+      self.$el.find(id).addClass('active');
+      steveGallant.$el.find('#navbar li').removeClass('active');
+      steveGallant.$el.find('#navbar li.' + name).addClass('active');
+      if (Pages.pageExists(name)) {
+        self.currentView = Pages.getPageView(name);
+        self.currentView.render();
+      } else {
+        self.currentView = false;
+      }
+    });
 
-    if (Pages.pageExists(name)) {
-      this.currentView = Pages.getPageView(name);
-      this.currentView.render();
-    } else {
-      this.currentView = false;
-    }
   }
 
 });
