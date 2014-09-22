@@ -38,6 +38,9 @@
                         </header>
                         <div class="content">
                             <div class="video"><div class="inner">&nbsp;</div></div>
+                            <div class="shotlist">
+                                <p>Download the reel <a href="/static/downloads/shotlist2014sm.pdf">shotlist</a></p>
+                            </div>
                         </div>
                     </section>
                     <section id="work" class="page">
