@@ -146,6 +146,9 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     initialize: function (options) {
       Backbone.View.prototype.initialize.apply(this, options);
       App.vent.on('navigate', this.onNavigate, this);
+      this.image = new Image();
+      this.image.src = '/static/images/play_reel_hover.svg';
+      delete this.image;
     },
 
     onNavigate: function (name) {
