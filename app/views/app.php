@@ -477,6 +477,76 @@
                 workType: 'image',
                 url: 'life/08.JPG',
                 thumb: '0308.jpg'
+            },
+            {
+                id: 22,
+                workCategory: 4,
+                title: 'Stairs',
+                text: 'Layout drawing of an abandoned stairwell',
+                medium: 'Blue Pencil',
+                workType: 'image',
+                url: 'environments/01.jpg',
+                thumb: '0401.jpg'
+            },
+            {
+                id: 23,
+                workCategory: 4,
+                title: 'Cartoon Illustration',
+                text: 'Illustration for “Chloe and the Stars” a cartoon pilot worked on at Dunnamic.',
+                medium: 'Adobe Photoshop',
+                workType: 'image',
+                url: 'environments/02.png',
+                thumb: '0402.jpg'
+            },
+            {
+                id: 24,
+                workCategory: 4,
+                title: 'Underground Mine',
+                text: 'Environment for the mobile game, “Snack Wars.”',
+                medium: 'Adobe Illustrator',
+                workType: 'image',
+                url: 'environments/03.png',
+                thumb: '0403.jpg'
+            },
+            {
+                id: 25,
+                workCategory: 4,
+                title: 'Mountain Path',
+                text: 'Environment for the mobile game, “Snack Wars.” ',
+                medium: 'Adobe Illustrator',
+                workType: 'image',
+                url: 'environments/04.png',
+                thumb: '0404.jpg'
+            },
+            {
+                id: 26,
+                workCategory: 4,
+                title: 'Tree-top Village',
+                text: 'Environment for the mobile game, “Snack Wars.”',
+                medium: 'Adobe Illustrator',
+                workType: 'image',
+                url: 'environments/05.png',
+                thumb: '0405.jpg'
+            },
+            {
+                id: 27,
+                workCategory: 4,
+                title: 'Foggy Swamp',
+                text: 'Environment for the mobile game, “Snack Wars.”',
+                medium: 'Adobe Illustrator',
+                workType: 'image',
+                url: 'environments/06.png',
+                thumb: '0406.jpg'
+            },
+            {
+                id: 28,
+                workCategory: 4,
+                title: 'Robo Lunch',
+                text: 'Layout for animated short “Robo Lunch.”',
+                medium: 'Adobe Photoshop',
+                workType: 'image',
+                url: 'environments/07.jpg',
+                thumb: '0407.jpg'
             }];
         </script>
         <script type="text/x-template" id="modal-template">
