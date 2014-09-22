@@ -174,8 +174,8 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
     template: _.template(Templates.get('workModal')),
     events: {
       'click button.close': 'close',
-      'click button.next': 'next',
-      'click button.prev': 'prev',
+      'click button.next': 'nextWork',
+      'click button.prev': 'prevWork',
     },
 
     initialize: function (options) {
@@ -187,10 +187,10 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
 
     arrowKey: function (e) {
       if (e.which === 37) {
-        this.prev();
+        this.prevWork();
       }
       else if (e.which === 39) {
-        this.next();
+        this.nextWork();
       }
     },
 
@@ -215,11 +215,11 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
       return { index: index, length: total, collection: collection };
     },
 
-    next: function () {
+    nextWork: function () {
       var info = this.getPosition(),
       model;
 
-      if (info.index < info.length) {
+      if (info.index < info.length - 1) {
         model = info.collection[info.index + 1];
       } else {
         model = info.collection[0];
@@ -230,7 +230,7 @@ require(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
       this.render();
     },
 
-    prev: function () {
+    prevWork: function () {
       var info = this.getPosition(),
       model;
 
