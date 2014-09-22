@@ -39,7 +39,7 @@
                         <div class="content">
                             <div class="video"><div class="inner">&nbsp;</div></div>
                             <div class="shotlist">
-                                <p>Download the reel <a href="/static/downloads/shotlist2014sm.pdf">shotlist</a></p>
+                                <p>Download the reel <a href="/static/downloads/shotlist2014sm.pdf" target="_blank">shotlist</a></p>
                             </div>
                         </div>
                     </section>
@@ -75,7 +75,7 @@
                                             <p>Graduate of the Savannah College of Art and Design, magna cum laude, seeks a full-time position as an animator in a professional working environment. Skilled with After Effects, Toon Boom Animate Pro, Illustrator, Flash, and Photoshop. Familiar with the remainder of the Adobe Creative Suite and Autodesk Maya. Dedicated worker, passionate about expanding his abilities as an individual and as a member of a team.</p>
                                         </div>
                                         <div class="download">
-                                            <a href="/static/downloads/resume2014sm.pdf" class="download-link">Download Resume</a>
+                                            <a href="/static/downloads/resume2014sm.pdf" class="download-link" target="_blank">Download Resume</a>
                                         </div>
                                     </div>
                                 </li>
@@ -613,7 +613,7 @@
             <img src="/works/thumbnails/<%= model.escape('thumb') %>" alt="<%= model.escape('title') %>">
         </script>
         <script type="text/x-template" id="reel-template">
-            <iframe src="<%= url %>?autoplay=1" width="100%" height="480" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="<%= url %>?autoplay=1" width="854" height="480" frameborder="0" class="gallery-video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </script>
         <script data-main="/static/js/main" src="/static/js/lib/require.js"></script>
     </body>

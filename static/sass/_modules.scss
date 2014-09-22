@@ -31,22 +31,41 @@ section#home {
     }
   }
   .video {
+    width: 854px;
+    height: 480px;
+    margin: 0 auto;
     border: 1px solid $home;
     @include border-radius(0.5em);
     padding: 1em;
     .inner {
+      display: block;
       height: 480px;
-      background: $home url(/static/images/play_reel.svg) no-repeat 50% 50%;
+      background: url(/static/images/play_reel.svg) no-repeat 50% 50%;
       background-size: cover;
       &:hover {
         background-image: url(/static/images/play_reel_hover.svg);
         background-size: cover;
       }
     }
+    &.playing {
+      .inner {
+        background: #fff;
+        iframe {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
   }
   .shotlist {
     text-align: center;
     margin-top: 2em;
+    a {
+      color: $home;
+      &:hover {
+        color: adjust-lightness($home, 10);
+      }
+    }
   }
 }
 section#work {
