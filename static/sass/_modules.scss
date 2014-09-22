@@ -518,12 +518,13 @@ form.contact {
     font-size: 2rem;
   }
   .gallery {
-    width: 57em;
+    width: 58.5em;
     margin: 0 auto;
     margin-bottom: 2em;
   }
   .works {
     padding: 3px;
+    padding-right: 0;
     border: 3px solid $work;
     @include border-radius(10rem);
     @include clearfix;
@@ -537,6 +538,8 @@ form.contact {
     @include border-radius(50%);
     border: 5px solid #aaa;
     background: #ccc;
+    margin-right: 3px;
+    cursor: pointer;
     img {
       box-sizing: border-box;
       position: absolute;
@@ -548,6 +551,9 @@ form.contact {
       border: 2px solid #ddd;
       background: #999;
       line-height: 50%;
+    }
+    &:hover {
+      border: 5px solid $work;
     }
   }
 }

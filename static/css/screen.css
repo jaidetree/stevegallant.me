@@ -952,13 +952,14 @@ form.contact .header span {
 }
 /* line 520, ../sass/_modules.scss */
 .work-category .gallery {
-  width: 57em;
+  width: 58.5em;
   margin: 0 auto;
   margin-bottom: 2em;
 }
 /* line 525, ../sass/_modules.scss */
 .work-category .works {
   padding: 3px;
+  padding-right: 0;
   border: 3px solid #00d97d;
   -webkit-border-radius: 10rem;
   -moz-border-radius: 10rem;
@@ -968,7 +969,7 @@ form.contact .header span {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 531, ../sass/_modules.scss */
+/* line 532, ../sass/_modules.scss */
 .work-category .work {
   box-sizing: border-box;
   position: relative;
@@ -982,8 +983,10 @@ form.contact .header span {
   border-radius: 50%;
   border: 5px solid #aaa;
   background: #ccc;
+  margin-right: 3px;
+  cursor: pointer;
 }
-/* line 540, ../sass/_modules.scss */
+/* line 543, ../sass/_modules.scss */
 .work-category .work img {
   box-sizing: border-box;
   position: absolute;
@@ -1000,8 +1003,12 @@ form.contact .header span {
   background: #999;
   line-height: 50%;
 }
+/* line 555, ../sass/_modules.scss */
+.work-category .work:hover {
+  border: 5px solid #00d97d;
+}
 
-/* line 554, ../sass/_modules.scss */
+/* line 560, ../sass/_modules.scss */
 .modal-view {
   position: fixed;
   left: 0;
@@ -1016,7 +1023,7 @@ form.contact .header span {
   z-index: 300;
   opacity: 0;
 }
-/* line 563, ../sass/_modules.scss */
+/* line 569, ../sass/_modules.scss */
 .modal-view .ui {
   position: fixed;
   left: 0;
@@ -1029,12 +1036,12 @@ form.contact .header span {
   padding: 1rem;
   background: #00d97d;
 }
-/* line 573, ../sass/_modules.scss */
+/* line 579, ../sass/_modules.scss */
 .modal-view .ui nav {
   float: left;
   width: 25%;
 }
-/* line 577, ../sass/_modules.scss */
+/* line 583, ../sass/_modules.scss */
 .modal-view .ui button {
   padding: 0.5rem;
   border: none;
@@ -1048,7 +1055,7 @@ form.contact .header span {
   -o-transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
 }
-/* line 586, ../sass/_modules.scss */
+/* line 592, ../sass/_modules.scss */
 .modal-view .ui button:hover {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
@@ -1057,16 +1064,16 @@ form.contact .header span {
   -o-transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: background-position 250ms ease-in-out, background-color 250ms ease-in-out;
 }
-/* line 591, ../sass/_modules.scss */
+/* line 597, ../sass/_modules.scss */
 .modal-view .ui button:disabled {
   opacity: 0.2;
 }
-/* line 593, ../sass/_modules.scss */
+/* line 599, ../sass/_modules.scss */
 .modal-view .ui button:disabled:hover {
   background-color: #fff;
   color: #00d97d;
 }
-/* line 599, ../sass/_modules.scss */
+/* line 605, ../sass/_modules.scss */
 .modal-view .ui .page-info {
   float: left;
   width: 50%;
@@ -1075,50 +1082,50 @@ form.contact .header span {
   font-size: 1.8em;
   text-align: center;
 }
-/* line 606, ../sass/_modules.scss */
+/* line 612, ../sass/_modules.scss */
 .modal-view .ui .page-info .index, .modal-view .ui .page-info .total {
   color: #fff;
 }
-/* line 609, ../sass/_modules.scss */
+/* line 615, ../sass/_modules.scss */
 .modal-view .ui .page-info .divider {
   color: #fff;
   opacity: 0.8;
 }
-/* line 614, ../sass/_modules.scss */
+/* line 620, ../sass/_modules.scss */
 .modal-view .ui .actions {
   float: right;
   width: 25%;
   text-align: right;
 }
-/* line 619, ../sass/_modules.scss */
+/* line 625, ../sass/_modules.scss */
 .modal-view .ui .next {
   padding-right: 2rem;
   background-image: url(/static/images/work_nav_right.svg);
   background-position: 85% 50%;
 }
-/* line 623, ../sass/_modules.scss */
+/* line 629, ../sass/_modules.scss */
 .modal-view .ui .next:hover {
   background-position: 90% 50%;
 }
-/* line 625, ../sass/_modules.scss */
+/* line 631, ../sass/_modules.scss */
 .modal-view .ui .next:hover:disabled {
   background-position: 85% 50%;
 }
-/* line 630, ../sass/_modules.scss */
+/* line 636, ../sass/_modules.scss */
 .modal-view .ui .prev {
   padding-left: 2rem;
   background-image: url(/static/images/work_nav_left.svg);
   background-position: 0.5rem 50%;
 }
-/* line 634, ../sass/_modules.scss */
+/* line 640, ../sass/_modules.scss */
 .modal-view .ui .prev:hover {
   background-position: 0.2rem 50%;
 }
-/* line 636, ../sass/_modules.scss */
+/* line 642, ../sass/_modules.scss */
 .modal-view .ui .prev:hover:disabled {
   background-position: 0.5rem 50%;
 }
-/* line 642, ../sass/_modules.scss */
+/* line 648, ../sass/_modules.scss */
 .modal-view .fill {
   position: absolute;
   top: 0;
@@ -1127,7 +1134,7 @@ form.contact .header span {
   right: 0;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 650, ../sass/_modules.scss */
+/* line 656, ../sass/_modules.scss */
 .modal-view .modal-body {
   position: absolute;
   top: 4.5rem;
@@ -1138,7 +1145,7 @@ form.contact .header span {
   box-sizing: border-box;
   overflow: auto;
 }
-/* line 660, ../sass/_modules.scss */
+/* line 666, ../sass/_modules.scss */
 .modal-view .modal-body .inner {
   width: 80%;
   margin: 2em auto;
@@ -1151,24 +1158,24 @@ form.contact .header span {
   border: 1px solid #eee;
   background: #fff;
 }
-/* line 667, ../sass/_modules.scss */
+/* line 673, ../sass/_modules.scss */
 .modal-view .modal-body .inner:after {
   display: table;
   clear: both;
   content: '.';
 }
-/* line 673, ../sass/_modules.scss */
+/* line 679, ../sass/_modules.scss */
 .modal-view .modal-content {
   float: left;
   width: 65%;
 }
-/* line 676, ../sass/_modules.scss */
+/* line 682, ../sass/_modules.scss */
 .modal-view .modal-content img {
   max-width: 100%;
   width: auto;
   height: auto;
 }
-/* line 682, ../sass/_modules.scss */
+/* line 688, ../sass/_modules.scss */
 .modal-view .info {
   float: right;
   width: 30%;
@@ -1176,17 +1183,17 @@ form.contact .header span {
   padding-top: 1rem;
   border-top: 1px solid #00d97d;
 }
-/* line 688, ../sass/_modules.scss */
+/* line 694, ../sass/_modules.scss */
 .modal-view .info .title {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
-/* line 693, ../sass/_modules.scss */
+/* line 699, ../sass/_modules.scss */
 .modal-view .info .date {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
-/* line 697, ../sass/_modules.scss */
+/* line 703, ../sass/_modules.scss */
 .modal-view .info .date .label {
   margin-right: 0.5rem;
   color: #888;

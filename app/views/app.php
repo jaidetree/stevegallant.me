@@ -357,6 +357,46 @@
                 workType: 'vimeo',
                 url: '//player.vimeo.com/video/78162511',
                 thumb: '0109.jpg'
+            },
+            {
+                id: 10,
+                workCategory: 2,
+                title: 'Character Lineup',
+                text: 'Character lineup for an action/adventure cartoon pitch.',
+                medium: 'Adobe Illustrator',
+                workType: 'image',
+                url: 'characters/01.jpg',
+                thumb: '0201.jpg'
+            },
+            {
+                id: 11,
+                workCategory: 2,
+                title: 'Snowman Turnaround',
+                text: 'Character Turnaround for an abominable snowman character.',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'characters/02.png',
+                thumb: '0202.jpg'
+            },
+            {
+                id: 12,
+                workCategory: 2,
+                title: 'Snowman Poses',
+                text: 'Poses and Expressions for an abominable snowman character.',
+                medium: 'Pencil',
+                workType: 'image',
+                url: 'characters/03.jpg',
+                thumb: '0203.jpg'
+            },
+            {
+                id: 13,
+                workCategory: 2,
+                title: 'Gurf Barkslayer',
+                text: 'Orc character designed for a fantasy story.',
+                medium: 'Ink+Digital Coloring (Photoshop)',
+                workType: 'image',
+                url: 'characters/04.png',
+                thumb: '0204.jpg'
             }];
         </script>
         <script type="text/x-template" id="modal-template">
@@ -388,7 +428,12 @@
                                 </div>
                                 <div class="info">
                                     <h2 class="title"><%= model.escape('title') %></h2>
-                                    <div class="date"><span class="label">Created:</span> <%= model.escape('date') %></div>
+                                    <% if (model.get('date')) { %>
+                                        <div class="date"><span class="label">Created:</span> <%= model.escape('date') %></div>
+                                    <% } %>
+                                    <% if (model.get('medium')) { %>
+                                        <div class="date"><span class="label">Medium:</span> <%= model.escape('medium') %></div>
+                                    <% } %>
                                     <p><%= model.escape('text') %></p>
                                 </div>
                             </div>
