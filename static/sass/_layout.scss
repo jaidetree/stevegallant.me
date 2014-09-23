@@ -97,6 +97,11 @@
       }
     }
   }
+  @include at-breakpoint(($mobile-max - 10rem) 12 $moblie-max ) {
+    #logo {
+      width: 80%;
+    }
+  }
   @include at-breakpoint(12 ($mobile-max - 10rem)) {
     #navbar {
       margin-left: -1.5rem;
