@@ -242,10 +242,10 @@ body {
   }
   /* line 108, ../sass/_layout.scss */
   #l-header #navbar li a {
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 0.8em;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 0.7em;
   }
 }
 
