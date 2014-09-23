@@ -101,8 +101,6 @@
     #logo {
       width: 80%;
     }
-  }
-  @include at-breakpoint(12 ($mobile-max - 10rem)) {
     #navbar {
       margin-left: -1.5rem;
       li {

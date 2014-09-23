@@ -232,17 +232,15 @@ body {
   #l-header #logo {
     width: 80%;
   }
-}
-@media (max-width: 36em) {
-  /* line 106, ../sass/_layout.scss */
+  /* line 104, ../sass/_layout.scss */
   #l-header #navbar {
     margin-left: -1.5rem;
   }
-  /* line 108, ../sass/_layout.scss */
+  /* line 106, ../sass/_layout.scss */
   #l-header #navbar li {
     margin-left: 1.5rem;
   }
-  /* line 110, ../sass/_layout.scss */
+  /* line 108, ../sass/_layout.scss */
   #l-header #navbar li a {
     width: 80px;
     height: 80px;
@@ -251,11 +249,11 @@ body {
   }
 }
 
-/* line 120, ../sass/_layout.scss */
+/* line 118, ../sass/_layout.scss */
 #l-main {
   margin-top: 2em;
 }
-/* line 122, ../sass/_layout.scss */
+/* line 120, ../sass/_layout.scss */
 #l-main section {
   width: 100%;
   max-height: 0;
@@ -267,7 +265,7 @@ body {
   -o-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
 }
-/* line 129, ../sass/_layout.scss */
+/* line 127, ../sass/_layout.scss */
 #l-main section.active {
   max-height: 2000px;
   -webkit-transition: max-height 500ms ease-in-out;
@@ -275,7 +273,7 @@ body {
   -o-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
 }
-/* line 132, ../sass/_layout.scss */
+/* line 130, ../sass/_layout.scss */
 #l-main section.active header .title {
   text-indent: 0;
   -webkit-transition: text-indent 500ms ease-in-out;
@@ -283,27 +281,27 @@ body {
   -o-transition: text-indent 500ms ease-in-out;
   transition: text-indent 500ms ease-in-out;
 }
-/* line 138, ../sass/_layout.scss */
+/* line 136, ../sass/_layout.scss */
 #l-main section header h2 {
   color: #fff;
   font-size: 2.5em;
 }
-/* line 143, ../sass/_layout.scss */
+/* line 141, ../sass/_layout.scss */
 #l-main section header h3 {
   color: #fff;
   font-size: 1.4em;
   text-transform: uppercase;
 }
-/* line 149, ../sass/_layout.scss */
+/* line 147, ../sass/_layout.scss */
 #l-main section header h2, #l-main section header h3 {
   display: inline;
 }
-/* line 152, ../sass/_layout.scss */
+/* line 150, ../sass/_layout.scss */
 #l-main section header .inner {
   position: relative;
   padding: 0.8em;
 }
-/* line 156, ../sass/_layout.scss */
+/* line 154, ../sass/_layout.scss */
 #l-main section header .title {
   display: -moz-inline-stack;
   display: inline-block;
@@ -319,17 +317,17 @@ body {
   -o-transition: text-indent 500ms ease-in-out;
   transition: text-indent 500ms ease-in-out;
 }
-/* line 165, ../sass/_layout.scss */
+/* line 163, ../sass/_layout.scss */
 #l-main .content {
   background: #fff;
   padding: 2em 1em;
 }
-/* line 169, ../sass/_layout.scss */
+/* line 167, ../sass/_layout.scss */
 #l-main .nav {
   text-align: center;
   padding-bottom: 3em;
 }
-/* line 172, ../sass/_layout.scss */
+/* line 170, ../sass/_layout.scss */
 #l-main .nav .page-nav {
   display: -moz-inline-stack;
   display: inline-block;
@@ -363,7 +361,7 @@ body {
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 183, ../sass/_layout.scss */
+/* line 181, ../sass/_layout.scss */
 #l-main .nav .page-nav:after {
   position: absolute;
   top: 0;
@@ -381,7 +379,7 @@ body {
   -o-transition: all 150ms ease;
   transition: all 150ms ease;
 }
-/* line 197, ../sass/_layout.scss */
+/* line 195, ../sass/_layout.scss */
 #l-main .nav .page-nav:hover {
   -webkit-transform: scale(1.05, 1.05);
   -moz-transform: scale(1.05, 1.05);
@@ -393,7 +391,7 @@ body {
   -o-transition: all 150ms ease;
   transition: all 150ms ease;
 }
-/* line 200, ../sass/_layout.scss */
+/* line 198, ../sass/_layout.scss */
 #l-main .nav .page-nav:hover:after {
   right: 8px;
   -webkit-transition: all 150ms ease;
@@ -401,7 +399,7 @@ body {
   -o-transition: all 150ms ease;
   transition: all 150ms ease;
 }
-/* line 205, ../sass/_layout.scss */
+/* line 203, ../sass/_layout.scss */
 #l-main .nav .page-nav:active {
   -webkit-transition: all 150ms ease;
   -moz-transition: all 150ms ease;
@@ -413,57 +411,57 @@ body {
   -o-transform: scale(0.95, 0.95);
   transform: scale(0.95, 0.95);
 }
-/* line 209, ../sass/_layout.scss */
+/* line 207, ../sass/_layout.scss */
 #l-main .nav .page-nav.work {
   background: #00d97d;
 }
-/* line 211, ../sass/_layout.scss */
+/* line 209, ../sass/_layout.scss */
 #l-main .nav .page-nav.work:hover {
   background: #00ed89;
 }
-/* line 214, ../sass/_layout.scss */
+/* line 212, ../sass/_layout.scss */
 #l-main .nav .page-nav.work:active {
   background: #00c06e;
 }
-/* line 218, ../sass/_layout.scss */
+/* line 216, ../sass/_layout.scss */
 #l-main .nav .page-nav.resume {
   background: #7ed800;
 }
-/* line 220, ../sass/_layout.scss */
+/* line 218, ../sass/_layout.scss */
 #l-main .nav .page-nav.resume:hover {
   background: #8aec00;
 }
-/* line 223, ../sass/_layout.scss */
+/* line 221, ../sass/_layout.scss */
 #l-main .nav .page-nav.resume:active {
   background: #6fbf00;
 }
-/* line 227, ../sass/_layout.scss */
+/* line 225, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact {
   background: #d8eb00;
   color: #000;
 }
-/* line 230, ../sass/_layout.scss */
+/* line 228, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact:after {
   background-image: url(/static/images/page_nav_right_black.svg);
 }
-/* line 233, ../sass/_layout.scss */
+/* line 231, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact:hover {
   background: #eaff00;
   color: #000;
 }
-/* line 237, ../sass/_layout.scss */
+/* line 235, ../sass/_layout.scss */
 #l-main .nav .page-nav.contact:active {
   background: #c1d200;
   color: #000;
 }
 @media (max-width: 46em) {
-  /* line 245, ../sass/_layout.scss */
+  /* line 243, ../sass/_layout.scss */
   #l-main section.active {
     max-height: 2500px;
   }
 }
 
-/* line 250, ../sass/_layout.scss */
+/* line 248, ../sass/_layout.scss */
 #l-background {
   position: fixed;
   top: 0;
@@ -478,7 +476,7 @@ body {
   background: linear-gradient(#cce8e1, #f1f2c3);
 }
 
-/* line 259, ../sass/_layout.scss */
+/* line 257, ../sass/_layout.scss */
 #l-footer {
   position: fixed;
   bottom: 0;
@@ -486,7 +484,7 @@ body {
   right: 0;
   z-index: -1;
 }
-/* line 265, ../sass/_layout.scss */
+/* line 263, ../sass/_layout.scss */
 #l-footer img {
   width: 100%;
   height: auto;
