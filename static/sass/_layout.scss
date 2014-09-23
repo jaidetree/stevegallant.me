@@ -97,7 +97,7 @@
       }
     }
   }
-  @include at-breakpoint(($mobile-max - 10rem) 12 $moblie-max ) {
+  @include at-breakpoint(($mobile-max - 10rem) 12 $mobile-max ) {
     #logo {
       width: 80%;
     }
