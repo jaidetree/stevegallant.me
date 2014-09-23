@@ -10,9 +10,7 @@
     <body>
         <div class="app-steve-portfolio">
             <div id="l-background">
-                <div id="l-footer">
-                    <img src="/static/images/footer.svg" alt="Site Footer" />
-                </div>
+                &nbsp;
             </div>
 
             <div id="wrapper">

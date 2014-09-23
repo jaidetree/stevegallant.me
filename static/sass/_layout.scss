@@ -252,7 +252,8 @@
   bottom: 0;
   right: 0;
   z-index: -2;
-  @include background(linear-gradient(#cce8e1, #f1f2c3));
+  @include background(image-url("/static/images/footer.svg") no-repeat left bottom, linear-gradient(#cce8e1, #f1f2c3));
+  background-size: contain;
 }
 #l-footer {
   position: fixed;

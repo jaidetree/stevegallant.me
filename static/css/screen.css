@@ -469,14 +469,15 @@ body {
   bottom: 0;
   right: 0;
   z-index: -2;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cce8e1), color-stop(100%, #f1f2c3));
-  background: -webkit-linear-gradient(#cce8e1, #f1f2c3);
-  background: -moz-linear-gradient(#cce8e1, #f1f2c3);
-  background: -o-linear-gradient(#cce8e1, #f1f2c3);
-  background: linear-gradient(#cce8e1, #f1f2c3);
+  background: url(/static/images/footer.svg) no-repeat left bottom, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cce8e1), color-stop(100%, #f1f2c3));
+  background: url(/static/images/footer.svg) no-repeat left bottom, -webkit-linear-gradient(#cce8e1, #f1f2c3);
+  background: url(/static/images/footer.svg) no-repeat left bottom, -moz-linear-gradient(#cce8e1, #f1f2c3);
+  background: url(/static/images/footer.svg) no-repeat left bottom, -o-linear-gradient(#cce8e1, #f1f2c3);
+  background: url(/static/images/footer.svg) no-repeat left bottom, linear-gradient(#cce8e1, #f1f2c3);
+  background-size: contain;
 }
 
-/* line 257, ../sass/_layout.scss */
+/* line 258, ../sass/_layout.scss */
 #l-footer {
   position: fixed;
   bottom: 0;
@@ -484,7 +485,7 @@ body {
   right: 0;
   z-index: -1;
 }
-/* line 263, ../sass/_layout.scss */
+/* line 264, ../sass/_layout.scss */
 #l-footer img {
   width: 100%;
   height: auto;
