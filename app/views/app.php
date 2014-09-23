@@ -3,6 +3,7 @@
     <head>
         <title>Steve Gallant: 2D Animator</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" href="<?php static_url(); ?>css/build/screen.css">
         <link rel="icon" type="image/png" href="/static/images/favicon.png" />
     </head>

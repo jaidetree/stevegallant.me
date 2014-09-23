@@ -67,6 +67,39 @@ section#home {
       }
     }
   }
+  @include at-breakpoint($tablet-min 12 $tablet-max) {
+    .video {
+      width: 644px;
+      height: 340px;
+      &, .inner, .inner iframe {
+        height: 340px;
+      }
+    }
+  }
+  @include at-breakpoint($mobile-max 12 $tablet-min) {
+    .video {
+      width: 504px;
+      &, .inner, .inner iframe {
+        height: 280px;
+      }
+    }
+  }
+  @include at-breakpoint(($mobile-max - 10rem) 12 $mobile-max) {
+    .video {
+      width: 344px;
+      &, .inner, .inner iframe {
+        height: 180px;
+      }
+    }
+  }
+  @include at-breakpoint(12 ($mobile-max - 10rem)) {
+    .video {
+      width: auto;
+      &, .inner, .inner iframe {
+        height: 140px;
+      }
+    }
+  }
 }
 section#work {
   border-top-color: $work;
@@ -141,6 +174,18 @@ section#contact {
     float: right;
     width: 43%;
     margin-left: 2%;
+  }
+  @include at-breakpoint(12 $tablet-min) {
+    .form {
+      float: none;
+      width: auto;
+    }    
+    .about {
+      float: none;
+      width: auto;
+      margin-left: 0;
+      margin-top: 3rem;
+    }
   }
 }
 .resume-sections {
@@ -225,6 +270,16 @@ section#contact {
       font-size: 0.85rem;
       line-height: 1.4rem;
     }
+    @include at-breakpoint(12 $tablet-min) {
+      .overview {
+        float: none;
+        width: auto;
+      }
+      .download {
+        float: none;
+        width: auto;
+      }
+    }
   }
   .jobs {
     .header {
@@ -289,6 +344,12 @@ section#contact {
       @extend %font-heading-light;
       font-size: 0.8em;
     }
+    @include at-breakpoint(12 $tablet-min) {
+      .job {
+        float: none;
+        width: auto;
+      }
+    }
   }
   .education {
     .header {
@@ -299,6 +360,9 @@ section#contact {
     .inner {
       padding-top: 10rem;
       padding-bottom: 10rem;
+    }
+    @include at-breakpoint(12 $mobile-max) {
+      display: none;
     }
   }
   .timeline {
@@ -558,6 +622,7 @@ form.contact {
   .works {
     padding: 3px;
     padding-right: 0;
+    padding-bottom: 0;
     border: 3px solid $work;
     @include border-radius(10rem);
     @include clearfix;
@@ -572,6 +637,7 @@ form.contact {
     border: 5px solid #aaa;
     background: #ccc;
     margin-right: 3px;
+    margin-bottom: 3px;
     cursor: pointer;
     img {
       box-sizing: border-box;
@@ -587,6 +653,14 @@ form.contact {
     }
     &:hover {
       border: 5px solid $work;
+    }
+  }
+  @include at-breakpoint(0 12 $tablet-max) {
+    .gallery {
+      width: auto;
+    }
+    .works {
+      @include border-radius(3.5rem);
     }
   }
 }
@@ -606,12 +680,12 @@ form.contact {
     top: 0;
     height: 4.5rem;
     box-sizing: border-box;
-    @include clearfix;
     padding: 1rem;
     background: $work;
     nav {
-      float: left;
-      width: 25%;
+      position: absolute;
+      top: 1rem;
+      width: 11rem;
     }
     button {
       padding: 0.5rem;
@@ -636,8 +710,10 @@ form.contact {
       }
     }
     .page-info {
-      float: left;
-      width: 50%;
+      position: absolute;
+      top: 1rem;
+      left: 12rem;
+      right: 7rem;
       padding: 0.5rem;
       box-sizing: border-box;
       font-size: 1.8em;
@@ -651,8 +727,9 @@ form.contact {
       }
     }
     .actions {
-      float: right;
-      width: 25%;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
       text-align: right;
     }
     .next {
@@ -724,6 +801,9 @@ form.contact {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid $work;
+    p {
+      line-height: 1.6rem;
+    }
     .title {
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
@@ -736,6 +816,28 @@ form.contact {
       .label {
         margin-right: 0.5rem;
         color: #888;
+      }
+    }
+  }
+  @include at-breakpoint(12 $tablet-max) {
+    .modal-content {
+      display: block;
+      float: none;
+      width: auto;
+      .gallery-video {
+        height: 420px;
+      }
+    }
+    .info {
+      display: block;
+      float: none;
+      width: auto;
+    } 
+  }
+  @include at-breakpoint(12 $tablet-min) {
+    .modal-content {
+      .gallery-video {
+        height: 250px;
       }
     }
   }

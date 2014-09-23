@@ -76,6 +76,41 @@
       }
     }
   }
+
+  @include at-breakpoint(12 $tablet-min) {
+    #logo,
+    #navbar {
+      float: none;
+      width: auto;
+    }
+    #logo {
+      width: 22rem;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+    #navbar {
+      text-align: center;
+      margin: 2rem 0;
+      margin-left: -10%;
+      li {
+        margin-left: 10%;
+      }
+    }
+  }
+  @include at-breakpoint(12 ($mobile-max - 10rem)) {
+    #navbar {
+      margin-left: -1.5rem;
+      li {
+        margin-left: 1.5rem;
+        a {
+          width: 80px;
+          height: 80px;
+          line-height: 80px;
+          font-size: 0.8em;
+        }
+      }
+    } 
+  }
 }
 #l-main {
   margin-top: 2em;
@@ -199,6 +234,11 @@
           color: #000;
         }
       }
+    }
+  }
+  @include at-breakpoint(12 $mobile-max) {
+    section.active {
+      max-height: 2500px;
     }
   }
 }
